@@ -6,3 +6,6 @@ node_modules/
 
 # snyk
 .dccache
+
+# css map file
+index.css.map
