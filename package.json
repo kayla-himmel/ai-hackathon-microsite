@@ -1,0 +1,20 @@
+{
+  "name": "ai-hackathon-microsite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "sass --watch styles/index.scss index.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kayla-himmel/ai-hackathon-microsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kayla-himmel/ai-hackathon-microsite/issues"
+  },
+  "homepage": "https://github.com/kayla-himmel/ai-hackathon-microsite#readme"
+}
