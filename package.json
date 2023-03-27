@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/kayla-himmel/ai-hackathon-microsite/issues"
   },
-  "homepage": "https://github.com/kayla-himmel/ai-hackathon-microsite#readme"
+  "homepage": "https://github.com/kayla-himmel/ai-hackathon-microsite#readme",
+  "devDependencies": {
+    "prettier": "^2.8.7"
+  }
 }

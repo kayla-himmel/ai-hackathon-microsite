@@ -1,10 +1,11 @@
-.hero {
+#hero {
   background: hotpink;
   font-size: 40px;
 }
 
 body {
   color: white;
+  font-family: "Tomorrow", sans-serif;
 }
 
 /*# sourceMappingURL=index.css.map */
