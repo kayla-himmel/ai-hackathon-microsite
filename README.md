@@ -20,3 +20,8 @@ Any other time after the first time:
   - Ticket number: Commit message in past tense
   - Ex: `AI-16: Added project setup`
 - See for ticket numbers: <https://github.com/users/kayla-himmel/projects/1>
+
+## Releases
+
+- Project is setup to use Github Pages
+- On merge, Github automatically starts a workflow in Actions to build and deploy to production
