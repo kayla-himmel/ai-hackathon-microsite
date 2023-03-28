@@ -1,6 +1,7 @@
 #hero {
-  background: hotpink;
-  font-size: 40px;
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 1rem;
 }
 
 body {

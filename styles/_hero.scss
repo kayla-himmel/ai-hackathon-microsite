@@ -1,4 +1,8 @@
+$hero-background: #1a1a1a;
+$hero-color: #fff;
+
 #hero {
-  background: hotpink;
-  font-size: 40px;
+  background-color: $hero-background;
+  color: $hero-color;
+  padding: 1rem;
 }
