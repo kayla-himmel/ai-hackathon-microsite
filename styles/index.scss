@@ -1,6 +1,18 @@
+@use './reset';
+@use './colors';
 @use './hero';
 
 body {
-  color: white;
+  background-color: colors.$color-blue;
+  color: colors.$color-text;
   font-family: 'Tomorrow', sans-serif;
+}
+
+#gradient {
+  border-radius: 50%;
+  width: 700px;
+  height: 700px;
+  filter: blur(400px);
+  background: radial-gradient(colors.$color-teal, transparent);
+  opacity: 50%;
 }
