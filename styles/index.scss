@@ -1,6 +1,7 @@
 @use './reset';
 @use './colors';
-@use './hero';
+@use './sections/nav';
+@use './sections/hero';
 
 body {
   background-color: colors.$color-blue;

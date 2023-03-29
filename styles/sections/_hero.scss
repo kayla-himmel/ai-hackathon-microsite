@@ -1,0 +1,14 @@
+@use '../colors';
+
+// General
+#hero {
+  padding: 24px;
+}
+
+@container body (min-width: 1024px) {
+  #hero {
+    padding: 65px 100px;
+  }
+}
+
+// Hero content
