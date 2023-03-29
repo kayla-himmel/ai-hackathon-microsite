@@ -5,14 +5,25 @@
 body {
   background-color: colors.$color-blue;
   color: colors.$color-text;
+  container: body / inline-size;
   font-family: 'Tomorrow', sans-serif;
+  width: 100vw;
+  height: 100vh;
 }
 
 #gradient {
-  border-radius: 50%;
-  width: 700px;
-  height: 700px;
-  filter: blur(400px);
-  background: radial-gradient(colors.$color-teal, transparent);
-  opacity: 50%;
+  position: absolute;
+  // border-radius: 50%;
+  // width: 350px;
+  // height: 350px;
+  // filter: blur(400px);
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at top left,
+      colors.$color-teal,
+      transparent 40%
+    ),
+    radial-gradient(circle at bottom right, colors.$color-teal, transparent 50%);
+  z-index: -1;
 }
