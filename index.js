@@ -18,4 +18,4 @@ const createHero = () => {
   return hero;
 };
 
-heroSectionId.appendChild(createHero());
+// heroSectionId.appendChild(createHero());
