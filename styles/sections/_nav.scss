@@ -1,6 +1,7 @@
 @use '../containerQueries';
 @use '../colors';
 
+// TO-DO: ADD STYLES TO KEEP TOP NAV SECTION ALWAYS SHOWING REGARDLESS OF SCROLL POSITION (STICKY) AND REGARDLESS OF VIEWPORT WIDTH
 // General
 #top-nav {
   display: flex;
@@ -8,6 +9,11 @@
   justify-content: flex-start;
   align-items: center;
   padding: 16px 22px;
+  background: colors.$color-blue;
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999; */
 
   @container body (min-width: containerQueries.$cq1024) {
     justify-content: space-between;
