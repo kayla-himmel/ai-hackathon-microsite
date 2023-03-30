@@ -60,25 +60,39 @@
 }
 
 // Navigation
-nav ul {
+#top-nav nav ul {
   display: none;
+
+  @container body (min-width: 1024px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
-nav ul li a {
-  font-size: 14px;
-  // opacity: 0.25;
+#site-nav ul {
+  gap: 48px;
+
+  & li a {
+    font-size: 14px;
+    opacity: 0.3;
+
+    &.-active {
+      font-weight: 500;
+      opacity: 1;
+
+      &:after {
+        content: '';
+        display: block;
+        width: 14px;
+        border-bottom: 1px solid colors.$color-white;
+        margin: 0 auto;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
-@container body (min-width: 1024px) {
-  #site-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 48px;
-  }
-
-  #social-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 16px;
-  }
+.social-nav ul {
+  gap: 16px;
 }
