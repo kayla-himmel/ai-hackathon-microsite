@@ -14,21 +14,20 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
-
 #gradient {
   position: absolute;
-  // border-radius: 50%;
-  // width: 350px;
-  // height: 350px;
-  // filter: blur(400px);
   width: 100%;
   height: 100%;
   background-image: radial-gradient(
       circle at top left,
-      colors.$color-teal,
-      transparent 40%
+      colors.$color-teal-50,
+      transparent 30%
     ),
-    radial-gradient(circle at bottom right, colors.$color-teal, transparent 50%);
+    radial-gradient(
+      circle at bottom right,
+      colors.$color-teal-50,
+      colors.$color-blue 30%
+    );
   z-index: -1;
 }
 
