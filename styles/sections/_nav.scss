@@ -5,17 +5,17 @@
 // General
 #top-nav {
   display: flex;
-  width: 100%;
   justify-content: flex-start;
   align-items: center;
-  padding: 16px 22px;
+  padding: 24px;
   background: colors.$color-blue;
   /* position: fixed;
   top: 0;
   left: 0;
   z-index: 9999; */
 
-  @container body (min-width: containerQueries.$cq1024) {
+  @container body (min-width: 1024px) {
+    padding: 65px 100px;
     justify-content: space-between;
   }
 }
@@ -25,7 +25,7 @@
   width: 32px;
   height: 32px;
 
-  @container body (min-width: containerQueries.$cq1024) {
+  @container body (min-width: 1024px) {
     width: 48px;
     height: 48px;
   }
@@ -39,7 +39,7 @@
   padding: 15px 12px;
   margin-right: calc((100% - 170px) / 2);
 
-  @container body (min-width: containerQueries.$cq1024) {
+  @container body (min-width: 1024px) {
     display: none;
   }
 }
@@ -65,12 +65,11 @@ nav ul {
 }
 
 nav ul li a {
-  color: colors.$color-text;
-  text-decoration: none;
+  font-size: 14px;
   // opacity: 0.25;
 }
 
-@container body (min-width: containerQueries.$cq1024) {
+@container body (min-width: 1024px) {
   #site-nav ul {
     display: flex;
     justify-content: center;

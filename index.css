@@ -116,18 +116,18 @@ table {
 
 #top-nav {
   display: flex;
-  width: 100%;
   justify-content: flex-start;
   align-items: center;
-  padding: 16px 22px;
+  padding: 24px;
   background: #00023d;
   /* position: fixed;
   top: 0;
   left: 0;
   z-index: 9999; */
 }
-@container body (min-width: containerQueries.$cq1024) {
+@container body (min-width: 1024px) {
   #top-nav {
+    padding: 65px 100px;
     justify-content: space-between;
   }
 }
@@ -136,7 +136,7 @@ table {
   width: 32px;
   height: 32px;
 }
-@container body (min-width: containerQueries.$cq1024) {
+@container body (min-width: 1024px) {
   #logo {
     width: 48px;
     height: 48px;
@@ -150,7 +150,7 @@ table {
   padding: 15px 12px;
   margin-right: calc((100% - 170px) / 2);
 }
-@container body (min-width: containerQueries.$cq1024) {
+@container body (min-width: 1024px) {
   #hamburgerNav {
     display: none;
   }
@@ -176,11 +176,10 @@ nav ul {
 }
 
 nav ul li a {
-  color: #ffffff;
-  text-decoration: none;
+  font-size: 14px;
 }
 
-@container body (min-width: containerQueries.$cq1024) {
+@container body (min-width: 1024px) {
   #site-nav ul {
     display: flex;
     justify-content: center;
@@ -193,14 +192,34 @@ nav ul li a {
   }
 }
 #hero {
-  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
 }
 
+#hero-caption {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
 @container body (min-width: 1024px) {
-  #hero {
-    padding: 65px 100px;
+  #hero-caption {
+    margin-top: 24px;
+    margin-bottom: 64px;
   }
 }
+
+.date-header {
+  color: #ffffff;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 0em;
+  padding: 0 0.25em 0.75em 0.25em;
+  background-color: rgba(26, 187, 169, 0.5);
+}
+
 body {
   background-color: #00023d;
   color: #ffffff;
@@ -216,6 +235,41 @@ body {
   height: 100%;
   background-image: radial-gradient(circle at top left, #1abba9, transparent 40%), radial-gradient(circle at bottom right, #1abba9, transparent 50%);
   z-index: -1;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 400;
+}
+@container body (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+  }
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.link-register {
+  padding: 24px 32px;
+  border: 1px solid #ffffff;
+  border-radius: 54px;
+  font-weight: 300;
+}
+@container body (min-width: 1024px) {
+  .link-register {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

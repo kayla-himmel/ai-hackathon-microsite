@@ -28,3 +28,36 @@ body {
     radial-gradient(circle at bottom right, colors.$color-teal, transparent 50%);
   z-index: -1;
 }
+
+h1 {
+  font-size: 72px;
+  font-weight: 400;
+
+  @container body (min-width: 1024px) {
+    font-size: 96px;
+  }
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: colors.$color-text;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.link-register {
+  padding: 24px 32px;
+  border: 1px solid colors.$color-text;
+  border-radius: 54px;
+  font-weight: 300;
+
+  @container body (min-width: 1024px) {
+    font-size: 20px;
+  }
+}
