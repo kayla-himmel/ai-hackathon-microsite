@@ -5,7 +5,7 @@
 
 body {
   background-color: colors.$color-blue;
-  color: colors.$color-text;
+  color: colors.$color-white;
   container: body / inline-size;
   font-family: 'Tomorrow', sans-serif;
   width: 100vw;
@@ -51,14 +51,14 @@ p {
 }
 
 a {
-  color: colors.$color-text;
+  color: colors.$color-white;
   text-decoration: none;
   letter-spacing: 0.05em;
 }
 
 .link-register {
   padding: 24px 32px;
-  border: 1px solid colors.$color-text;
+  border: 1px solid colors.$color-white;
   border-radius: 54px;
   font-weight: 300;
 
