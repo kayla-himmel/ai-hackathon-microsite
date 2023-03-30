@@ -31,3 +31,13 @@
 #hero-scroll {
   font-size: 10px;
 }
+
+#hero-scroll:after {
+  content: '';
+  display: block;
+  height: 24px;
+  width: 0;
+  border: 1px solid colors.$color-text;
+  margin: 0 auto;
+  margin-top: 8px;
+}

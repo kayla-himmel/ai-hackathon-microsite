@@ -224,6 +224,16 @@ nav ul li a {
   font-size: 10px;
 }
 
+#hero-scroll:after {
+  content: "";
+  display: block;
+  height: 24px;
+  width: 0;
+  border: 1px solid #ffffff;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
 body {
   background-color: #00023d;
   color: #ffffff;
