@@ -220,6 +220,10 @@ nav ul li a {
   background-color: rgba(26, 187, 169, 0.5);
 }
 
+#hero-scroll {
+  font-size: 10px;
+}
+
 body {
   background-color: #00023d;
   color: #ffffff;
