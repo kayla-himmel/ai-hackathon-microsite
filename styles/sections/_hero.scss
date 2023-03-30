@@ -9,6 +9,22 @@
   height: 100vh;
 }
 
+#heroH1 {
+  white-space: pre-line;
+
+  @container body (min-width: 1024px) {
+    white-space: normal;
+
+    span:nth-child(2) {
+      margin-left: -20px;
+    }
+
+    span:nth-child(3) {
+      margin-left: -25px;
+    }
+  }
+}
+
 #hero-caption {
   margin-top: 16px;
   margin-bottom: 48px;

@@ -200,6 +200,21 @@ nav ul li a {
   height: 100vh;
 }
 
+#heroH1 {
+  white-space: pre-line;
+}
+@container body (min-width: 1024px) {
+  #heroH1 {
+    white-space: normal;
+  }
+  #heroH1 span:nth-child(2) {
+    margin-left: -20px;
+  }
+  #heroH1 span:nth-child(3) {
+    margin-left: -25px;
+  }
+}
+
 #hero-caption {
   margin-top: 16px;
   margin-bottom: 48px;
