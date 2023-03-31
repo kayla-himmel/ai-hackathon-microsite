@@ -1,12 +1,331 @@
-#hero {
-  background-color: #1a1a1a;
-  color: #fff;
-  padding: 1rem;
+/* http://meyerweb.com/eric/tools/css/reset/ */
+/* v1.0 | 20080212 */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
 
 body {
-  color: white;
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+/* remember to define focus styles! */
+:focus {
+  outline: 0;
+}
+
+/* remember to highlight inserts somehow! */
+ins {
+  text-decoration: none;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+#top-nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 24px;
+  background: #00023d;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+}
+@container body (min-width: 1024px) {
+  #top-nav {
+    padding: 65px 100px;
+    justify-content: space-between;
+  }
+}
+
+#logo {
+  width: 32px;
+  height: 32px;
+}
+@container body (min-width: 1024px) {
+  #logo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+#hamburgerNav {
+  box-sizing: border-box;
+  height: 48px;
+  width: 48px;
+  padding: 15px 12px;
+  margin-right: calc((100% - 170px) / 2);
+}
+@container body (min-width: 1024px) {
+  #hamburgerNav {
+    display: none;
+  }
+}
+
+#hamburger1,
+#hamburger2,
+#hamburger3 {
+  margin-bottom: 6px;
+  display: block;
+  width: calc(100% - 2px);
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+}
+
+#hamburger3 {
+  width: 58%;
+  margin-bottom: 0;
+}
+
+#top-nav nav ul {
+  display: none;
+}
+@container body (min-width: 1024px) {
+  #top-nav nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+#site-nav ul {
+  gap: 48px;
+}
+#site-nav ul li a {
+  font-size: 14px;
+  opacity: 0.3;
+}
+#site-nav ul li a.-active {
+  font-weight: 500;
+  opacity: 1;
+}
+#site-nav ul li a.-active:after {
+  content: "";
+  display: block;
+  width: 14px;
+  border-bottom: 1px solid #ffffff;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.social-nav ul {
+  gap: 16px;
+}
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+#hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#heroH1 {
+  white-space: pre-line;
+}
+@container body (min-width: 1024px) {
+  #heroH1 {
+    white-space: normal;
+  }
+  #heroH1 span:nth-child(2) {
+    margin-left: -20px;
+  }
+  #heroH1 span:nth-child(3) {
+    margin-left: -25px;
+  }
+}
+
+#hero-caption {
+  margin-top: 16px;
+  margin-bottom: 48px;
+}
+@container body (min-width: 1024px) {
+  #hero-caption {
+    margin-top: 24px;
+    margin-bottom: 64px;
+  }
+}
+
+.date-header {
+  color: #ffffff;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 0em;
+  padding: 0 0.25em 0.75em 0.25em;
+  background-color: rgba(26, 187, 169, 0.5);
+}
+
+#hero-scroll {
+  font-size: 10px;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+#hero-scroll:after {
+  content: "";
+  display: block;
+  height: 24px;
+  width: 0;
+  border: 1px solid #ffffff;
+  margin: 0 auto;
+  margin-top: 8px;
+}
+
+body {
+  background-color: #00023d;
+  color: #ffffff;
+  container: body/inline-size;
   font-family: "Tomorrow", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+#gradient {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(circle at top left, rgba(26, 187, 169, 0.5), transparent 30%), radial-gradient(circle at bottom right, rgba(26, 187, 169, 0.5), #00023d 30%);
+  z-index: -1;
+}
+
+h1 {
+  font-size: 72px;
+  font-weight: 400;
+}
+@container body (min-width: 1024px) {
+  h1 {
+    font-size: 96px;
+  }
+}
+
+p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 32px;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.link-register {
+  padding: 24px 32px;
+  border: 1px solid #ffffff;
+  border-radius: 54px;
+  font-weight: 300;
+}
+@container body (min-width: 1024px) {
+  .link-register {
+    font-size: 20px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

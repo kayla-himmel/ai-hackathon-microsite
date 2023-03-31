@@ -1,0 +1,67 @@
+@use '../colors';
+
+#hero {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+#hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#heroH1 {
+  white-space: pre-line;
+
+  @container body (min-width: 1024px) {
+    white-space: normal;
+
+    span:nth-child(2) {
+      margin-left: -20px;
+    }
+
+    span:nth-child(3) {
+      margin-left: -25px;
+    }
+  }
+}
+
+#hero-caption {
+  margin-top: 16px;
+  margin-bottom: 48px;
+
+  @container body (min-width: 1024px) {
+    margin-top: 24px;
+    margin-bottom: 64px;
+  }
+}
+
+.date-header {
+  color: colors.$color-white;
+  font-weight: 500;
+  display: inline-block;
+  line-height: 0em;
+  padding: 0 0.25em 0.75em 0.25em;
+  background-color: colors.$color-teal-50;
+}
+
+#hero-scroll {
+  font-size: 10px;
+  margin-top: auto;
+  margin-bottom: 50px;
+}
+
+#hero-scroll:after {
+  content: '';
+  display: block;
+  height: 24px;
+  width: 0;
+  border: 1px solid colors.$color-white;
+  margin: 0 auto;
+  margin-top: 8px;
+}

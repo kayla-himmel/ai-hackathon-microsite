@@ -7,41 +7,102 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Tomorrow&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
     <title>AI Hackathon</title>
   </head>
   <body>
-    <!-- HERO SECTION -->
-    <section id="hero">
-      <h1>#ChatSavesTD</h1>
-      <p>content here...</p>
-      <nav>
+    <div id="gradient"></div>
+    <!-- NAV SECTION -->
+    <section id="top-nav" class="container">
+      <button id="hamburgerNav">
+        <span id="hamburger1"></span>
+        <span id="hamburger2"></span>
+        <span id="hamburger3"></span>
+      </button>
+      <a href="#hero">
+        <img id="logo" src="assets/WT_logo_white.svg" alt="home" />
+      </a>
+      <nav id="site-nav">
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#hero" class="-active">Home</a></li>
+          <li><a href="#about">The Mission</a></li>
           <li><a href="#schedule">Schedule</a></li>
           <li><a href="#rules">Rules</a></li>
+          <li><a href="#faqs">FAQs</a></li>
           <li><a href="#registration">Registration</a></li>
+        </ul>
+      </nav>
+      <nav class="social-nav">
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/willowtreeapps/" target="_blank"
+              ><img src="./assets/facebook.svg" alt="facebook"
+            /></a>
+          </li>
+          <li>
+            <a href="https://twitter.com/willowtreeapps/" target="_blank"
+              ><img src="./assets/twitter.svg" alt="twitter"
+            /></a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/willowtreeapps/" target="_blank"
+              ><img src="./assets/instagram.svg" alt="instagram"
+            /></a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/company/willowtreeapps"
+              target="_blank"
+              ><img src="./assets/linkedin.svg" alt="linkedin"
+            /></a>
+          </li>
         </ul>
       </nav>
     </section>
 
+    <!-- HERO SECTION -->
+    <section id="hero" class="container">
+      <div id="hero-content">
+        <h1 id="heroH1" aria-label="#Chat Saves TD">
+          <span aria-hidden="true">#Chat</span>
+          <span aria-hidden="true">Saves</span>
+          <span aria-hidden="true">TD</span>
+        </h1>
+        <p id="hero-caption">
+          Join us on <mark class="date-header">April 13, 2023</mark> for a
+          ChatGPT hackathon at WillowTree!
+        </p>
+        <a
+          class="link-register"
+          href="https://willowtreeapps.com"
+          target="_blank"
+        >
+          Register Now
+        </a>
+      </div>
+      <a href="#about" id="hero-scroll">Scroll</a>
+    </section>
+
     <!-- ABOUT SECTION -->
-    <section></section>
+    <section id="about" class="container"></section>
 
     <!-- SCHEDULE SECTION -->
-    <section></section>
+    <section id="schedule" class="container"></section>
 
-    <!-- RULES/FAQS SECTION -->
-    <section></section>
+    <!-- RULES SECTION -->
+    <section id="rules" class="container"></section>
+
+    <!-- FAQS SECTION -->
+    <section id="faqs" class="container"></section>
 
     <!-- REGISTRATION SECTION -->
-    <section></section>
+    <section id="registration" class="container"></section>
 
     <!-- FOOTER SECTION -->
-    <footer></footer>
+    <footer class="container"></footer>
   </body>
   <script src="index.js"></script>
 </html>
