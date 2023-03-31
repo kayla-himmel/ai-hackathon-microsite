@@ -1,7 +1,5 @@
-@use '../containerQueries';
 @use '../colors';
 
-// TO-DO: ADD STYLES TO KEEP TOP NAV SECTION ALWAYS SHOWING REGARDLESS OF SCROLL POSITION (STICKY) AND REGARDLESS OF VIEWPORT WIDTH
 // General
 #top-nav {
   display: flex;
@@ -51,7 +49,7 @@
   margin-bottom: 6px;
   display: block;
   width: calc(100% - 2px);
-  border: 1px solid white;
+  border: 1px solid colors.$color-white;
   border-radius: 2px;
 }
 

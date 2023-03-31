@@ -163,7 +163,7 @@ table {
   margin-bottom: 6px;
   display: block;
   width: calc(100% - 2px);
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   border-radius: 2px;
 }
 
