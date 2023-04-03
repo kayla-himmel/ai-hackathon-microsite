@@ -169,7 +169,7 @@ table {
   margin-bottom: 0;
 }
 
-#hamburger-menu {
+.hamburger-menu {
   position: absolute;
   top: 0;
   left: 0;
@@ -178,15 +178,15 @@ table {
   width: 295px;
 }
 @container body (min-width: 1024px) {
-  #hamburger-menu {
+  .hamburger-menu {
     display: none;
   }
 }
-#hamburger-menu ul {
+.hamburger-menu ul {
   display: flex;
   flex-direction: column;
 }
-#hamburger-menu ul li a {
+.hamburger-menu ul li a {
   color: #ffffff;
 }
 
@@ -203,31 +203,37 @@ table {
   }
 }
 
-#top-nav #site-nav ul,
+#top-nav .site-nav ul,
 #top-nav .social-nav ul {
   display: none;
 }
 @container body (min-width: 1024px) {
-  #top-nav #site-nav ul,
+  #top-nav .site-nav ul,
   #top-nav .social-nav ul {
     display: flex;
   }
 }
 
-#site-nav ul {
-  gap: 48px;
+.site-nav ul {
+  gap: 16px;
 }
-#site-nav ul a {
+@container body (min-width: 1240px) {
+  .site-nav ul {
+    gap: 48px;
+  }
+}
+
+.site-nav ul a {
   color: #ffffff;
   text-decoration: none;
   font-size: 14px;
   opacity: 0.3;
 }
-#site-nav ul a.-active, #site-nav ul a:hover, #site-nav ul a:focus {
+.site-nav ul a.-active, .site-nav ul a:hover, .site-nav ul a:focus {
   font-weight: 500;
   opacity: 1;
 }
-#site-nav ul a.-active:after, #site-nav ul a:hover:after, #site-nav ul a:focus:after {
+.site-nav ul a.-active:after, .site-nav ul a:hover:after, .site-nav ul a:focus:after {
   content: "";
   display: block;
   width: 14px;

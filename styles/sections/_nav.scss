@@ -1,6 +1,6 @@
 @use '../colors';
 
-// Top Navigation
+// Top Navigation Bar
 #top-nav {
   background: colors.$color-blue;
   padding: 24px 0;
@@ -56,7 +56,7 @@
 }
 
 // Hamburger Menu Modal for mobile/tablet
-#hamburger-menu {
+.hamburger-menu {
   position: absolute;
   top: 0;
   left: 0;
@@ -78,7 +78,7 @@
   }
 }
 
-// Navigation
+// Site Navigation
 #top-nav .container {
   display: flex;
   justify-content: flex-start;
@@ -91,7 +91,7 @@
   }
 }
 
-#top-nav #site-nav ul,
+#top-nav .site-nav ul,
 #top-nav .social-nav ul {
   display: none;
 
@@ -100,33 +100,38 @@
   }
 }
 
-#site-nav ul {
-  gap: 48px;
+.site-nav ul {
+  gap: 16px;
 
-  & a {
-    color: colors.$color-white;
-    text-decoration: none;
-    font-size: 14px;
-    opacity: 0.3;
+  @container body (min-width: 1240px) {
+    gap: 48px;
+  }
+}
 
-    &.-active,
-    &:hover,
-    &:focus {
-      font-weight: 500;
-      opacity: 1;
+.site-nav ul a {
+  color: colors.$color-white;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.3;
 
-      &:after {
-        content: '';
-        display: block;
-        width: 14px;
-        border-bottom: 1px solid colors.$color-white;
-        margin: 0 auto;
-        margin-top: 10px;
-      }
+  &.-active,
+  &:hover,
+  &:focus {
+    font-weight: 500;
+    opacity: 1;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 14px;
+      border-bottom: 1px solid colors.$color-white;
+      margin: 0 auto;
+      margin-top: 10px;
     }
   }
 }
 
+// Social Navigation
 .social-nav li:not(:first-child) a {
   padding-left: 8px;
 }
