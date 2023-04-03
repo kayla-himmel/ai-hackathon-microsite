@@ -86,23 +86,22 @@
 // Desktop: Top Navigation
 .site-nav {
   background: colors.$color-blue;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   left: 0;
   top: 0;
   min-width: 295px;
-  padding: 64px 32px 40px 32px;
   position: absolute;
   visibility: hidden;
 
   @container body (min-width: 1024px) {
     align-items: center;
     background: none;
-    display: flex;
     flex-direction: row;
     height: auto;
     justify-content: space-between;
     position: static;
-    padding: 0;
     width: 100%;
     visibility: visible;
   }
@@ -114,10 +113,12 @@
   &.site-nav-links {
     flex-direction: column;
     gap: 24px;
+    padding: 64px 32px 0 32px;
 
     @container body (min-width: 1024px) {
       flex-direction: row;
       gap: 16px;
+      padding: 0;
     }
 
     @container body (min-width: 1240px) {
@@ -143,6 +144,10 @@
         height: 15px;
       }
     }
+  }
+
+  & li {
+    position: relative;
   }
 
   & li a {
@@ -180,13 +185,26 @@
         right: 0;
         margin-left: auto;
         margin-right: auto;
-        position: relative;
+        position: absolute;
       }
     }
   }
 }
 
 // Social Navigation
+.social-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: auto;
+  padding-bottom: 40px;
+
+  @container body (min-width: 1024px) {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+}
+
 .social-nav li:not(:first-child) a {
   padding-left: 12px;
 
@@ -200,5 +218,14 @@
 
   @container body (min-width: 1024px) {
     padding-right: 8px;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+
+  @container body (min-width: 1024px) {
+    display: none;
   }
 }

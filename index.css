@@ -197,11 +197,12 @@ table {
 
 .site-nav {
   background: #00023d;
+  display: flex;
+  flex-direction: column;
   height: 100vh;
   left: 0;
   top: 0;
   min-width: 295px;
-  padding: 64px 32px 40px 32px;
   position: absolute;
   visibility: hidden;
 }
@@ -209,12 +210,10 @@ table {
   .site-nav {
     align-items: center;
     background: none;
-    display: flex;
     flex-direction: row;
     height: auto;
     justify-content: space-between;
     position: static;
-    padding: 0;
     width: 100%;
     visibility: visible;
   }
@@ -226,11 +225,13 @@ table {
 .site-nav ul.site-nav-links {
   flex-direction: column;
   gap: 24px;
+  padding: 64px 32px 0 32px;
 }
 @container body (min-width: 1024px) {
   .site-nav ul.site-nav-links {
     flex-direction: row;
     gap: 16px;
+    padding: 0;
   }
 }
 @container body (min-width: 1240px) {
@@ -255,6 +256,9 @@ table {
     width: 15px;
     height: 15px;
   }
+}
+.site-nav ul li {
+  position: relative;
 }
 .site-nav ul li a {
   color: #ffffff;
@@ -290,7 +294,21 @@ table {
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    position: relative;
+    position: absolute;
+  }
+}
+
+.social-nav-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: auto;
+  padding-bottom: 40px;
+}
+@container body (min-width: 1024px) {
+  .social-nav-container {
+    margin-top: 0;
+    padding-bottom: 0;
   }
 }
 
@@ -309,6 +327,16 @@ table {
 @container body (min-width: 1024px) {
   .social-nav li:not(:last-child) a {
     padding-right: 8px;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+}
+@container body (min-width: 1024px) {
+  .copyright {
+    display: none;
   }
 }
 
