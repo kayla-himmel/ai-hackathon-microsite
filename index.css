@@ -115,21 +115,17 @@ table {
 }
 
 #top-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 24px;
   background: #00023d;
+  padding: 24px 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  width: 100vw;
+  width: 100%;
 }
 @container body (min-width: 1024px) {
   #top-nav {
-    padding: 65px 100px;
-    justify-content: space-between;
+    padding: 50px 0 25px 0;
   }
 }
 
@@ -150,6 +146,7 @@ table {
   width: 48px;
   padding: 15px 12px;
   margin-right: calc((100% - 170px) / 2);
+  cursor: pointer;
 }
 @container body (min-width: 1024px) {
   #hamburgerNav {
@@ -172,29 +169,65 @@ table {
   margin-bottom: 0;
 }
 
-#top-nav nav ul {
+#hamburger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #00023d;
+  height: 100vh;
+  width: 295px;
+}
+@container body (min-width: 1024px) {
+  #hamburger-menu {
+    display: none;
+  }
+}
+#hamburger-menu ul {
+  display: flex;
+  flex-direction: column;
+}
+#hamburger-menu ul li a {
+  color: #ffffff;
+}
+
+#top-nav .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 24px;
+}
+@container body (min-width: 1024px) {
+  #top-nav .container {
+    padding: 0 200px;
+    justify-content: space-between;
+  }
+}
+
+#top-nav #site-nav ul,
+#top-nav .social-nav ul {
   display: none;
 }
 @container body (min-width: 1024px) {
-  #top-nav nav ul {
+  #top-nav #site-nav ul,
+  #top-nav .social-nav ul {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 }
 
 #site-nav ul {
   gap: 48px;
 }
-#site-nav ul li a {
+#site-nav ul a {
+  color: #ffffff;
+  text-decoration: none;
   font-size: 14px;
   opacity: 0.3;
 }
-#site-nav ul li a.-active {
+#site-nav ul a.-active, #site-nav ul a:hover, #site-nav ul a:focus {
   font-weight: 500;
   opacity: 1;
 }
-#site-nav ul li a.-active:after {
+#site-nav ul a.-active:after, #site-nav ul a:hover:after, #site-nav ul a:focus:after {
   content: "";
   display: block;
   width: 14px;
@@ -203,8 +236,12 @@ table {
   margin-top: 10px;
 }
 
-.social-nav ul {
-  gap: 16px;
+.social-nav li:not(:first-child) a {
+  padding-left: 8px;
+}
+
+.social-nav li:not(:last-child) a {
+  padding-right: 8px;
 }
 
 #hero {
@@ -261,6 +298,8 @@ table {
   font-size: 10px;
   margin-top: auto;
   margin-bottom: 50px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #hero-scroll:after {
@@ -311,19 +350,31 @@ p {
 }
 
 a {
-  color: #ffffff;
-  text-decoration: none;
   letter-spacing: 0.05em;
+  color: #1abba9;
+}
+a:hover, a:focus, a:active {
+  color: #00ffe2;
 }
 
-.link-register {
+.button {
+  color: #ffffff;
   padding: 24px 32px;
   border: 1px solid #ffffff;
   border-radius: 54px;
   font-weight: 300;
+  text-decoration: none;
+}
+.button:hover, .button:focus {
+  background-color: #ffffff;
+  color: #00023d;
+}
+.button:active {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #00023d;
 }
 @container body (min-width: 1024px) {
-  .link-register {
+  .button {
     font-size: 20px;
   }
 }

@@ -1,21 +1,17 @@
 @use '../colors';
 
-// General
+// Top Navigation
 #top-nav {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 24px;
   background: colors.$color-blue;
+  padding: 24px 0;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  width: 100vw;
+  width: 100%;
 
   @container body (min-width: 1024px) {
-    padding: 65px 100px;
-    justify-content: space-between;
+    padding: 50px 0 25px 0;
   }
 }
 
@@ -30,13 +26,14 @@
   }
 }
 
-// Hamburger Menu for mobile/tablet
+// Hamburger Menu Button for mobile/tablet
 #hamburgerNav {
   box-sizing: border-box;
   height: 48px;
   width: 48px;
   padding: 15px 12px;
   margin-right: calc((100% - 170px) / 2);
+  cursor: pointer;
 
   @container body (min-width: 1024px) {
     display: none;
@@ -58,25 +55,63 @@
   margin-bottom: 0;
 }
 
+// Hamburger Menu Modal for mobile/tablet
+#hamburger-menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: colors.$color-blue;
+  height: 100vh;
+  width: 295px;
+
+  @container body (min-width: 1024px) {
+    display: none;
+  }
+
+  & ul {
+    display: flex;
+    flex-direction: column;
+
+    & li a {
+      color: colors.$color-white;
+    }
+  }
+}
+
 // Navigation
-#top-nav nav ul {
+#top-nav .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 24px;
+
+  @container body (min-width: 1024px) {
+    padding: 0 200px;
+    justify-content: space-between;
+  }
+}
+
+#top-nav #site-nav ul,
+#top-nav .social-nav ul {
   display: none;
 
   @container body (min-width: 1024px) {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
   }
 }
 
 #site-nav ul {
   gap: 48px;
 
-  & li a {
+  & a {
+    color: colors.$color-white;
+    text-decoration: none;
     font-size: 14px;
     opacity: 0.3;
 
-    &.-active {
+    &.-active,
+    &:hover,
+    &:focus {
       font-weight: 500;
       opacity: 1;
 
@@ -92,6 +127,10 @@
   }
 }
 
-.social-nav ul {
-  gap: 16px;
+.social-nav li:not(:first-child) a {
+  padding-left: 8px;
+}
+
+.social-nav li:not(:last-child) a {
+  padding-right: 8px;
 }
