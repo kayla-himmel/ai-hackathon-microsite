@@ -47,8 +47,10 @@ socialLinks.forEach((link) => {
 });
 
 // HAMBURGER MENU
+const hamburgerMenu = document.querySelector('.hamburger-menu');
 const openHamburgerMenu = () => {
   console.log('open hamburger menu');
+  hamburgerMenu.style.visibility = 'visible';
 };
 
 const closeHamburgerMenu = () => {

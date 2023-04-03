@@ -170,12 +170,13 @@ table {
 }
 
 .hamburger-menu {
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
   background: #00023d;
   height: 100vh;
-  width: 295px;
+  padding: 64px 32px 40px 32px;
 }
 @container body (min-width: 1024px) {
   .hamburger-menu {
@@ -185,9 +186,11 @@ table {
 .hamburger-menu ul {
   display: flex;
   flex-direction: column;
+  gap: 24px;
 }
 .hamburger-menu ul li a {
   color: #ffffff;
+  font-size: 24px;
 }
 
 #top-nav .container {
@@ -222,24 +225,37 @@ table {
     gap: 48px;
   }
 }
+.site-nav ul li {
+  font-size: 14px;
+  position: relative;
+}
 
-.site-nav ul a {
+.site-nav-links a {
   color: #ffffff;
   text-decoration: none;
-  font-size: 14px;
   opacity: 0.3;
 }
-.site-nav ul a.-active, .site-nav ul a:hover, .site-nav ul a:focus {
+.site-nav-links a.-active, .site-nav-links a:hover, .site-nav-links a:focus {
+  color: #ffffff;
   font-weight: 500;
   opacity: 1;
 }
-.site-nav ul a.-active:after, .site-nav ul a:hover:after, .site-nav ul a:focus:after {
+.site-nav-links a.-active:after, .site-nav-links a:hover:after, .site-nav-links a:focus:after {
   content: "";
   display: block;
+  position: absolute;
   width: 14px;
   border-bottom: 1px solid #ffffff;
-  margin: 0 auto;
-  margin-top: 10px;
+  margin-top: 8px;
+}
+@container body (min-width: 1024px) {
+  .site-nav-links a.-active:after, .site-nav-links a:hover:after, .site-nav-links a:focus:after {
+    margin-top: 10px;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .social-nav li:not(:first-child) a {
