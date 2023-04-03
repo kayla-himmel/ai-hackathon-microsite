@@ -278,6 +278,15 @@ body {
   color: #ffffff;
   container: body/inline-size;
   font-family: "Tomorrow", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 200%;
+  letter-spacing: 0.05em;
+}
+@container body (min-width: 1024px) {
+  body {
+    text-align: center;
+  }
 }
 
 .container {
@@ -293,9 +302,19 @@ body {
   z-index: -1;
 }
 
+section {
+  padding: 0 24px;
+}
+@container body (min-width: 1024px) {
+  section {
+    padding: 0 200px;
+  }
+}
+
 h1 {
   font-size: 72px;
   font-weight: 400;
+  letter-spacing: 0;
 }
 @container body (min-width: 1024px) {
   h1 {
@@ -303,11 +322,29 @@ h1 {
   }
 }
 
-p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 32px;
-  letter-spacing: 0.05em;
+h2 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 58px;
+}
+@container body (min-width: 1024px) {
+  h2 {
+    font-size: 60px;
+    line-height: 72px;
+    text-align: center;
+  }
+}
+
+h3 {
+  /* font-size: 36px;
+  font-weight: 400;
+  line-height: 44px; */
+}
+@container body (min-width: 1024px) {
+  h3 {
+    font-size: 2rem;
+    line-height: 150%;
+  }
 }
 
 a {
