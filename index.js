@@ -47,7 +47,7 @@ socialLinks.forEach((link) => {
 });
 
 // HAMBURGER MENU
-const hamburgerMenu = document.querySelector('.hamburger-menu');
+const hamburgerMenu = document.querySelector('.site-nav');
 const openHamburgerMenu = () => {
   console.log('open hamburger menu');
   hamburgerMenu.style.visibility = 'visible';

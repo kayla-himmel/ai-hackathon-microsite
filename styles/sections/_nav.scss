@@ -15,14 +15,40 @@
   }
 }
 
+#top-nav .container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 24px;
+
+  @container body (min-width: 1024px) {
+    padding: 0 200px;
+    justify-content: space-between;
+  }
+}
+
 // WillowTree Logo
-#logo {
+.logo {
   width: 32px;
   height: 32px;
 
   @container body (min-width: 1024px) {
     width: 48px;
     height: 48px;
+  }
+
+  &.-mobile {
+    @container body (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &.-desktop {
+    display: none;
+
+    @container body (min-width: 1024px) {
+      display: block;
+    }
   }
 }
 
@@ -55,63 +81,83 @@
   margin-bottom: 0;
 }
 
-// Hamburger Menu Modal for mobile/tablet
-.hamburger-menu {
-  position: absolute;
-  top: 0;
-  left: 0;
+// Site Navigation
+// Mobile: Hamburger Menu
+// Desktop: Top Navigation
+.site-nav {
   background: colors.$color-blue;
   height: 100vh;
-  width: 295px;
+  left: 0;
+  top: 0;
+  min-width: 295px;
+  padding: 64px 32px 40px 32px;
+  position: absolute;
+  visibility: hidden;
 
   @container body (min-width: 1024px) {
-    display: none;
-  }
-
-  & ul {
+    align-items: center;
+    background: none;
     display: flex;
-    flex-direction: column;
-
-    & li a {
-      color: colors.$color-white;
-    }
-  }
-}
-
-// Site Navigation
-#top-nav .container {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0 24px;
-
-  @container body (min-width: 1024px) {
-    padding: 0 200px;
+    flex-direction: row;
+    height: auto;
     justify-content: space-between;
-  }
-}
-
-#top-nav .site-nav ul,
-#top-nav .social-nav ul {
-  display: none;
-
-  @container body (min-width: 1024px) {
-    display: flex;
+    position: static;
+    padding: 0;
+    width: 100%;
+    visibility: visible;
   }
 }
 
 .site-nav ul {
-  gap: 16px;
+  display: flex;
 
-  @container body (min-width: 1240px) {
-    gap: 48px;
+  &.site-nav-links {
+    flex-direction: column;
+    gap: 24px;
+
+    @container body (min-width: 1024px) {
+      flex-direction: row;
+      gap: 16px;
+    }
+
+    @container body (min-width: 1240px) {
+      gap: 48px;
+    }
+  }
+
+  &.social-nav {
+    flex-direction: row;
+    width: max-content;
+    margin: 0 auto;
+
+    & img {
+      width: 22px;
+      height: 22px;
+    }
+
+    @container body (min-width: 1024px) {
+      margin: 0;
+
+      & img {
+        width: 15px;
+        height: 15px;
+      }
+    }
+  }
+
+  & li a {
+    color: colors.$color-white;
+    font-size: 24px;
+
+    @container body (min-width: 1024px) {
+      font-size: 14px;
+    }
   }
 }
 
-.site-nav ul a {
+.site-nav-links a {
   color: colors.$color-white;
   text-decoration: none;
-  font-size: 14px;
   opacity: 0.3;
 
   &.-active,
@@ -123,19 +169,36 @@
     &:after {
       content: '';
       display: block;
+      position: absolute;
       width: 14px;
       border-bottom: 1px solid colors.$color-white;
-      margin: 0 auto;
-      margin-top: 10px;
+      margin-top: 8px;
+
+      @container body (min-width: 1024px) {
+        margin-top: 10px;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        position: relative;
+      }
     }
   }
 }
 
 // Social Navigation
 .social-nav li:not(:first-child) a {
-  padding-left: 8px;
+  padding-left: 12px;
+
+  @container body (min-width: 1024px) {
+    padding-left: 8px;
+  }
 }
 
 .social-nav li:not(:last-child) a {
-  padding-right: 8px;
+  padding-right: 12px;
+
+  @container body (min-width: 1024px) {
+    padding-right: 8px;
+  }
 }
