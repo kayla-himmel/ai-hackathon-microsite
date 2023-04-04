@@ -3,16 +3,12 @@
 // Top Navigation Bar
 #top-nav {
   background: colors.$color-blue;
-  padding: 24px 0;
+  padding: 25px 0;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 9999;
+  z-index: 99;
   width: 100%;
-
-  @container body (min-width: 1024px) {
-    padding: 50px 0 25px 0;
-  }
 }
 
 #top-nav .container {
@@ -27,20 +23,11 @@
   }
 }
 
-// WillowTree Logo
+// WillowTree Logo link
 .logo {
-  width: 32px;
-  height: 32px;
-
-  @container body (min-width: 1024px) {
-    width: 48px;
-    height: 48px;
-  }
-
-  &.-mobile {
-    @container body (min-width: 1024px) {
-      display: none;
-    }
+  &:focus {
+    outline: 2px dashed colors.$color-white;
+    outline-offset: 5px;
   }
 
   &.-desktop {
@@ -50,16 +37,37 @@
       display: block;
     }
   }
+
+  @container body (min-width: 1024px) {
+    &.-mobile {
+      display: none;
+    }
+  }
+
+  & img {
+    width: 32px;
+    height: 32px;
+
+    @container body (min-width: 1024px) {
+      width: 48px;
+      height: 48px;
+    }
+  }
 }
 
 // Hamburger Menu Button for mobile/tablet
-#hamburgerNav {
+#hamburgerNavOpenButton {
   box-sizing: border-box;
   height: 48px;
   width: 48px;
   padding: 15px 12px;
-  margin-right: calc((100% - 170px) / 2);
+  margin-right: calc((100% - 140px) / 2);
   cursor: pointer;
+
+  &:focus {
+    outline: 2px dashed colors.$color-white;
+    outline-offset: 5px;
+  }
 
   @container body (min-width: 1024px) {
     display: none;
@@ -81,6 +89,40 @@
   margin-bottom: 0;
 }
 
+#hamburgerNavCloseButton {
+  color: colors.$color-white;
+  position: absolute;
+  right: -45px;
+  margin-top: 32px;
+  width: 24px;
+  height: 24px;
+
+  &:focus {
+    outline: 2px dashed colors.$color-white;
+    outline-offset: 5px;
+  }
+
+  @container body (min-width: 1024px) {
+    display: none;
+  }
+}
+
+#hamburgerMenuBackground {
+  display: none;
+
+  &:has(+ .container > .site-nav.-open) {
+    @container body (max-width: 1024px) {
+      display: block;
+      position: absolute;
+      background-color: colors.$color-black-25;
+      width: 100vh;
+      height: 100vh;
+      top: 0;
+      z-index: 100;
+    }
+  }
+}
+
 // Site Navigation
 // Mobile: Hamburger Menu
 // Desktop: Top Navigation
@@ -94,6 +136,11 @@
   min-width: 295px;
   position: absolute;
   visibility: hidden;
+
+  &.-open {
+    visibility: visible;
+    z-index: 101;
+  }
 
   @container body (min-width: 1024px) {
     align-items: center;
@@ -168,8 +215,11 @@
   &.-active,
   &:hover,
   &:focus {
-    font-weight: 500;
     opacity: 1;
+
+    @container body (min-width: 1024px) {
+      font-weight: 500;
+    }
 
     &:after {
       content: '';
