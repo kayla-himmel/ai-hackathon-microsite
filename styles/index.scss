@@ -59,6 +59,7 @@ a {
   }
 }
 
+// Global button styles
 .button {
   color: colors.$color-white;
   padding: 24px 32px;
@@ -81,4 +82,31 @@ a {
   @container body (min-width: 1024px) {
     font-size: 20px;
   }
+}
+
+.close-button {
+  position: relative;
+  display: block;
+  width: 24px;
+}
+
+.close-button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid colors.$color-white;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  width: 24px;
+}
+
+.close-button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid colors.$color-white;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  left: -1px;
+  width: 24px;
 }
