@@ -76,7 +76,6 @@ body {
   line-height: 1;
 }
 
-ol,
 ul {
   list-style: none;
 }
@@ -248,19 +247,12 @@ table {
   }
 }
 
-.date-header {
-  color: #ffffff;
-  font-weight: 500;
-  display: inline-block;
-  line-height: 0em;
-  padding: 0 0.25em 0.75em 0.25em;
-  background-color: rgba(26, 187, 169, 0.5);
-}
-
 #hero-scroll {
-  font-size: 10px;
+  font-size: 0.625rem;
   margin-top: auto;
-  margin-bottom: 50px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  text-decoration: none;
 }
 
 #hero-scroll:after {
@@ -273,6 +265,86 @@ table {
   margin-top: 8px;
 }
 
+@container body (min-width: 1024px) {
+  .mission-header-goals-wrapper p {
+    max-width: 600px;
+    margin-left: 100px;
+  }
+}
+.mission-header-goals-wrapper ul {
+  max-width: 380px;
+  margin: 0 auto;
+}
+@container body (min-width: 1024px) {
+  .mission-header-goals-wrapper ul {
+    max-width: unset;
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    place-items: start;
+    position: relative;
+  }
+}
+@container body (min-width: 1024px) {
+  .mission-header-goals-wrapper li p {
+    margin-left: 0;
+  }
+}
+
+.goals {
+  justify-content: center;
+  text-align: center;
+}
+
+@container body (min-width: 1024px) {
+  .mission-briefing-wrapper {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    place-items: start;
+    position: relative;
+    padding-top: 202px;
+  }
+}
+@container body (min-width: 1440px) {
+  .mission-briefing-wrapper {
+    column-gap: 100px;
+  }
+}
+.mission-briefing-wrapper .briefing,
+.mission-briefing-wrapper .debriefing {
+  display: block;
+}
+@container body (min-width: 1024px) {
+  .mission-briefing-wrapper .briefing h3,
+  .mission-briefing-wrapper .debriefing h3 {
+    margin-left: -2px;
+    padding: 0;
+  }
+}
+.mission-briefing-wrapper .briefing ul,
+.mission-briefing-wrapper .debriefing ul {
+  list-style-type: disc;
+  flex-direction: column;
+  text-align: left;
+  padding-top: 6px;
+}
+.mission-briefing-wrapper .briefing ul li,
+.mission-briefing-wrapper .debriefing ul li {
+  padding-top: 0;
+}
+@container body (min-width: 1024px) {
+  .mission-briefing-wrapper .briefing {
+    padding-right: 40px;
+    border-right: 1px solid #ffffff;
+  }
+}
+@container body (min-width: 1440px) {
+  .mission-briefing-wrapper .briefing {
+    padding-right: 100px;
+  }
+}
+
 body {
   background-color: #00023d;
   color: #ffffff;
@@ -281,17 +353,16 @@ body {
   font-weight: 300;
   font-size: 1rem;
   line-height: 200%;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.05rem;
 }
 @container body (min-width: 1024px) {
   body {
     text-align: center;
   }
 }
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
+body mark {
+  font-weight: 500;
+  display: inline-block;
 }
 
 #gradient {
@@ -303,11 +374,24 @@ body {
 }
 
 section {
-  padding: 0 24px;
+  margin: 0 auto;
+  padding: 82px 24px 0;
+}
+@container body (min-width: 768px) {
+  section {
+    padding: 200px 72px 0;
+    max-width: 1040px;
+  }
+}
+@container body (min-width: 1440px) {
+  section {
+    padding: 200px 200px 0;
+  }
 }
 @container body (min-width: 1024px) {
-  section {
-    padding: 0 200px;
+  section div > div {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -315,6 +399,7 @@ h1 {
   font-size: 72px;
   font-weight: 400;
   letter-spacing: 0;
+  line-height: 1.1944;
 }
 @container body (min-width: 1024px) {
   h1 {
@@ -323,34 +408,123 @@ h1 {
 }
 
 h2 {
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: 400;
-  line-height: 58px;
+  line-height: 120.8333%;
+  margin: 0 0 24px -10px;
 }
 @container body (min-width: 1024px) {
   h2 {
-    font-size: 60px;
-    line-height: 72px;
-    text-align: center;
+    font-size: 3.75rem;
+    line-height: 120%;
   }
+}
+h2 .mark-teal {
+  font-weight: 400;
+  display: block;
+  padding: 0 0.5908rem 2.125rem 0.5908rem;
+  width: fit-content;
+}
+h2 span {
+  margin: 0 0 30px 10px;
+  display: block;
 }
 
 h3 {
-  /* font-size: 36px;
-  font-weight: 400;
-  line-height: 44px; */
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 2rem;
+  line-height: 150%;
+  padding-top: 64px;
 }
 @container body (min-width: 1024px) {
   h3 {
-    font-size: 2rem;
-    line-height: 150%;
+    padding-top: 202px;
   }
+}
+h3 img {
+  padding-right: 18px;
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 200%;
+  text-transform: capitalize;
 }
 
 a {
-  color: #ffffff;
-  text-decoration: none;
   letter-spacing: 0.05em;
+  color: #1abba9;
+}
+a:hover, a:focus, a:active {
+  color: #00ffe2;
+}
+
+ul {
+  text-align: center;
+  /* li {
+    @container body (min-width: 1024px) {
+      padding-left: 52px;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+    }
+  } */
+}
+@container body (min-width: 1024px) {
+  ul:first-of-type {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+@container body (min-width: 1440px) {
+  ul:first-of-type {
+    margin: 0;
+  }
+}
+ul li > img {
+  padding: 50px 0 22px;
+}
+@container body (min-width: 1024px) {
+  ul li > img {
+    padding: 88px 0 32px;
+  }
+}
+ul a {
+  text-decoration: underline;
+}
+
+ol {
+  list-style: auto;
+  padding-left: 20px;
+}
+ol li::marker {
+  font-weight: 500;
+  font-size: 1.125rem;
+}
+ol li {
+  padding: 36px 0 0 8px;
+}
+@container body (min-width: 1024px) {
+  ol li {
+    padding: 50px 0 0 8px;
+  }
+  ol li:first-of-type {
+    padding-top: 56px;
+  }
+}
+ol li > p {
+  margin-left: -30px;
+}
+
+.mark-teal {
+  color: #ffffff;
+  line-height: 0;
+  padding: 0 0.25rem 0.75rem 0.25rem;
+  background-color: rgba(26, 187, 169, 0.5);
 }
 
 .link-register {
@@ -358,10 +532,13 @@ a {
   border: 1px solid #ffffff;
   border-radius: 54px;
   font-weight: 300;
+  line-height: 118.75%;
+  color: #ffffff;
+  text-decoration: none;
 }
 @container body (min-width: 1024px) {
   .link-register {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 
