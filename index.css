@@ -315,15 +315,7 @@ table {
   text-decoration: none;
   opacity: 0.3;
 }
-.site-nav-links a.-active, .site-nav-links a:hover, .site-nav-links a:focus {
-  opacity: 1;
-}
-@container body (min-width: 1024px) {
-  .site-nav-links a.-active, .site-nav-links a:hover, .site-nav-links a:focus {
-    font-weight: 500;
-  }
-}
-.site-nav-links a.-active:after, .site-nav-links a:hover:after, .site-nav-links a:focus:after {
+.site-nav-links a.-active:after {
   content: "";
   display: block;
   position: absolute;
@@ -332,13 +324,20 @@ table {
   margin-top: 8px;
 }
 @container body (min-width: 1024px) {
-  .site-nav-links a.-active:after, .site-nav-links a:hover:after, .site-nav-links a:focus:after {
+  .site-nav-links a.-active:after {
     margin-top: 10px;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
-    position: absolute;
+  }
+}
+.site-nav-links a.-active, .site-nav-links a:hover, .site-nav-links a:focus {
+  opacity: 1;
+}
+@container body (min-width: 1024px) {
+  .site-nav-links a.-active, .site-nav-links a:hover, .site-nav-links a:focus {
+    font-weight: 500;
   }
 }
 

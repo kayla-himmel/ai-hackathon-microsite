@@ -212,6 +212,23 @@
   text-decoration: none;
   opacity: 0.3;
 
+  &.-active:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 14px;
+    border-bottom: 1px solid colors.$color-white;
+    margin-top: 8px;
+
+    @container body (min-width: 1024px) {
+      margin-top: 10px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
   &.-active,
   &:hover,
   &:focus {
@@ -219,24 +236,6 @@
 
     @container body (min-width: 1024px) {
       font-weight: 500;
-    }
-
-    &:after {
-      content: '';
-      display: block;
-      position: absolute;
-      width: 14px;
-      border-bottom: 1px solid colors.$color-white;
-      margin-top: 8px;
-
-      @container body (min-width: 1024px) {
-        margin-top: 10px;
-        left: 0;
-        right: 0;
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-      }
     }
   }
 }
