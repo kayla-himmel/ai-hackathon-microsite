@@ -14,6 +14,7 @@ body {
   max-width: 1400px;
   margin: 0 auto;
 }
+
 #gradient {
   position: absolute;
   width: 100%;
@@ -48,18 +49,64 @@ p {
 }
 
 a {
-  color: colors.$color-white;
-  text-decoration: none;
   letter-spacing: 0.05em;
+  color: colors.$color-teal;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: colors.$color-bright-teal;
+  }
 }
 
-.link-register {
+// Global button styles
+.button {
+  color: colors.$color-white;
   padding: 24px 32px;
   border: 1px solid colors.$color-white;
   border-radius: 54px;
   font-weight: 300;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    background-color: colors.$color-white;
+    color: colors.$color-blue;
+  }
+
+  &:active {
+    background-color: colors.$color-white-50;
+    color: colors.$color-blue;
+  }
 
   @container body (min-width: 1024px) {
     font-size: 20px;
   }
+}
+
+.close-button {
+  position: relative;
+  display: block;
+  width: 24px;
+}
+
+.close-button:before {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid colors.$color-white;
+  border-radius: 2px;
+  transform: rotate(45deg);
+  width: 24px;
+}
+
+.close-button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid colors.$color-white;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  left: -1px;
+  width: 24px;
 }

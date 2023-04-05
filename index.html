@@ -16,51 +16,75 @@
   <body>
     <div id="gradient"></div>
     <!-- NAV SECTION -->
-    <section id="top-nav" class="container">
-      <button id="hamburgerNav">
-        <span id="hamburger1"></span>
-        <span id="hamburger2"></span>
-        <span id="hamburger3"></span>
-      </button>
-      <a href="#hero">
-        <img id="logo" src="assets/WT_logo_white.svg" alt="home" />
-      </a>
-      <nav id="site-nav">
-        <ul>
-          <li><a href="#hero" class="-active">Home</a></li>
-          <li><a href="#about">The Mission</a></li>
-          <li><a href="#schedule">Schedule</a></li>
-          <li><a href="#rules">Rules</a></li>
-          <li><a href="#faqs">FAQs</a></li>
-          <li><a href="#registration">Registration</a></li>
-        </ul>
-      </nav>
-      <nav class="social-nav">
-        <ul>
-          <li>
-            <a href="https://www.facebook.com/willowtreeapps/" target="_blank"
-              ><img src="./assets/facebook.svg" alt="facebook"
-            /></a>
-          </li>
-          <li>
-            <a href="https://twitter.com/willowtreeapps/" target="_blank"
-              ><img src="./assets/twitter.svg" alt="twitter"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/willowtreeapps/" target="_blank"
-              ><img src="./assets/instagram.svg" alt="instagram"
-            /></a>
-          </li>
-          <li>
-            <a
-              href="https://www.linkedin.com/company/willowtreeapps"
-              target="_blank"
-              ><img src="./assets/linkedin.svg" alt="linkedin"
-            /></a>
-          </li>
-        </ul>
-      </nav>
+    <section id="top-nav">
+      <div id="hamburgerMenuBackground"></div>
+      <div class="container">
+        <button
+          id="hamburgerNavOpenButton"
+          aria-label="Open navigation"
+          onClick="openHamburgerMenu()"
+        >
+          <span id="hamburger1"></span>
+          <span id="hamburger2"></span>
+          <span id="hamburger3"></span>
+        </button>
+        <a href="#hero" class="logo -mobile">
+          <img src="assets/WT_logo_white.svg" alt="home" />
+        </a>
+        <nav class="site-nav">
+          <button
+            id="hamburgerNavCloseButton"
+            aria-label="Close navigation"
+            onClick="closeHamburgerMenu()"
+          >
+            <span class="close-button"></span>
+          </button>
+          <a href="#hero" class="logo -desktop">
+            <img src="assets/WT_logo_white.svg" alt="home" />
+          </a>
+          <ul class="site-nav-links">
+            <li><a href="#hero" class="-active">Home</a></li>
+            <li><a href="#about">The Mission</a></li>
+            <li><a href="#schedule">Schedule</a></li>
+            <li><a href="#rules">Rules</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+            <li><a href="#registration">Registration</a></li>
+          </ul>
+          <div class="social-nav-container">
+            <ul class="social-nav">
+              <li>
+                <a
+                  href="https://www.facebook.com/willowtreeapps/"
+                  target="_blank"
+                  ><img src="./assets/facebook.svg" alt="facebook"
+                /></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/willowtreeapps/" target="_blank"
+                  ><img src="./assets/twitter.svg" alt="twitter"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.instagram.com/willowtreeapps/"
+                  target="_blank"
+                  ><img src="./assets/instagram.svg" alt="instagram"
+                /></a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/willowtreeapps"
+                  target="_blank"
+                  ><img src="./assets/linkedin.svg" alt="linkedin"
+                /></a>
+              </li>
+            </ul>
+            <p class="copyright">
+              &#169; WillowTree, LLC <span id="copyrightYear"></span>
+            </p>
+          </div>
+        </nav>
+      </div>
     </section>
 
     <!-- HERO SECTION -->
@@ -75,11 +99,7 @@
           Join us on <mark class="date-header">April 13, 2023</mark> for a
           ChatGPT hackathon at WillowTree!
         </p>
-        <a
-          class="link-register"
-          href="https://willowtreeapps.com"
-          target="_blank"
-        >
+        <a class="button" href="https://willowtreeapps.com" target="_blank">
           Register Now
         </a>
       </div>
