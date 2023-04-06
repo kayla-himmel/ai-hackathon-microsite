@@ -485,6 +485,7 @@ table {
 
 .goals {
   justify-content: center;
+  flex-wrap: wrap;
   text-align: center;
 }
 
