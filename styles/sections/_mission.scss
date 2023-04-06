@@ -1,4 +1,3 @@
-@use '../reset';
 @use '../colors';
 
 // TO-DO: ADD IN BACKGROUND IMAGES
@@ -20,7 +19,15 @@
     background: url('./assets/stairs-wireframe.svg') no-repeat;
   } */
 
-  p {
+  h2 {
+    margin: 0 0 24px -10px;
+
+    @container body (min-width: 1024px) {
+      margin: 0;
+    }
+  }
+
+  .mission-description {
     @container body (min-width: 1024px) {
       max-width: 600px;
       margin-left: 100px;
@@ -40,20 +47,16 @@
       position: relative;
     }
   }
-
-  li {
-    p {
-      @container body (min-width: 1024px) {
-        margin-left: 0;
-      }
-    }
-  }
 }
 
 .goals {
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+
+  @container body (min-width: 1024px) {
+    padding-top: 202px;
+  }
 }
 
 .mission-briefing-wrapper {

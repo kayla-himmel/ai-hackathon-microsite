@@ -208,6 +208,7 @@
   color: colors.$color-white;
   text-decoration: none;
   opacity: 0.3;
+  font-weight: 400;
 
   &.-active:after {
     content: '';

@@ -311,6 +311,7 @@ table {
   color: #ffffff;
   text-decoration: none;
   opacity: 0.3;
+  font-weight: 400;
 }
 .site-nav-links a.-active:after {
   content: "";
@@ -463,8 +464,16 @@ table {
     background: url('./assets/stairs-wireframe.svg') no-repeat;
   } */
 }
+.mission-header-goals-wrapper h2 {
+  margin: 0 0 24px -10px;
+}
 @container body (min-width: 1024px) {
-  .mission-header-goals-wrapper p {
+  .mission-header-goals-wrapper h2 {
+    margin: 0;
+  }
+}
+@container body (min-width: 1024px) {
+  .mission-header-goals-wrapper .mission-description {
     max-width: 600px;
     margin-left: 100px;
   }
@@ -483,16 +492,16 @@ table {
     position: relative;
   }
 }
-@container body (min-width: 1024px) {
-  .mission-header-goals-wrapper li p {
-    margin-left: 0;
-  }
-}
 
 .goals {
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+}
+@container body (min-width: 1024px) {
+  .goals {
+    padding-top: 202px;
+  }
 }
 
 @container body (min-width: 1024px) {
@@ -566,6 +575,13 @@ body mark {
   display: inline-block;
 }
 
+.mark-teal {
+  color: #ffffff;
+  line-height: 0;
+  padding: 0 4px 12px;
+  background-color: rgba(26, 187, 169, 0.5);
+}
+
 .container {
   max-width: 1400px;
   margin: 0 auto;
@@ -617,7 +633,7 @@ h2 {
   font-size: 3rem;
   font-weight: 400;
   line-height: 120.8333%;
-  margin: 0 0 24px -10px;
+  margin-bottom: 24px;
 }
 @container body (min-width: 1024px) {
   h2 {
@@ -628,8 +644,13 @@ h2 {
 h2 .mark-teal {
   font-weight: 400;
   display: block;
-  padding: 0 0.5908rem 2.125rem 0.5908rem;
+  padding: 0 16px 36px;
   width: fit-content;
+}
+@container body (min-width: 1024px) {
+  h2 .mark-teal {
+    padding-bottom: 42px;
+  }
 }
 h2 span {
   margin: 0 0 30px 10px;
@@ -643,11 +664,6 @@ h3 {
   font-size: 2rem;
   line-height: 150%;
   padding-top: 64px;
-}
-@container body (min-width: 1024px) {
-  h3 {
-    padding-top: 202px;
-  }
 }
 h3 img {
   padding-right: 18px;
@@ -663,6 +679,7 @@ h4 {
 a {
   letter-spacing: 0.05em;
   color: #1abba9;
+  text-decoration: underline;
 }
 a:hover, a:focus, a:active {
   color: #00ffe2;
@@ -690,9 +707,6 @@ ul li > img {
     padding: 88px 0 32px;
   }
 }
-ul a {
-  text-decoration: underline;
-}
 
 ol {
   list-style: auto;
@@ -717,13 +731,6 @@ ol li > p {
   margin-left: -30px;
 }
 
-.mark-teal {
-  color: #ffffff;
-  line-height: 0;
-  padding: 0 0.25rem 0.75rem 0.25rem;
-  background-color: rgba(26, 187, 169, 0.5);
-}
-
 .button {
   color: #ffffff;
   padding: 24px 32px;
@@ -731,7 +738,6 @@ ol li > p {
   border-radius: 54px;
   font-weight: 300;
   line-height: 118.75%;
-  color: #ffffff;
   text-decoration: none;
 }
 .button:hover, .button:focus {
