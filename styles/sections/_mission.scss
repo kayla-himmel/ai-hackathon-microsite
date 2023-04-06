@@ -1,7 +1,25 @@
 @use '../reset';
 @use '../colors';
 
+// TO-DO: ADD IN BACKGROUND IMAGES
+/* #mission {
+  position: relative;
+  height: 100%;
+} */
+
 .mission-header-goals-wrapper {
+  // TO-DO: ADD IN BACKGROUND IMAGES
+  /* &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 545px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: url('./assets/stairs-wireframe.svg') no-repeat;
+  } */
+
   p {
     @container body (min-width: 1024px) {
       max-width: 600px;

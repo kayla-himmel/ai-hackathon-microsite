@@ -441,6 +441,22 @@ table {
   margin-top: 8px;
 }
 
+/* #mission {
+  position: relative;
+  height: 100%;
+} */
+.mission-header-goals-wrapper {
+  /* &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 545px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: url('./assets/stairs-wireframe.svg') no-repeat;
+  } */
+}
 @container body (min-width: 1024px) {
   .mission-header-goals-wrapper p {
     max-width: 600px;
@@ -530,6 +546,8 @@ body {
   font-size: 1rem;
   line-height: 200%;
   letter-spacing: 0.05rem;
+  position: relative;
+  height: 100%;
 }
 @container body (min-width: 1024px) {
   body {
