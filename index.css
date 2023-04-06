@@ -174,7 +174,7 @@ table {
 }
 #hamburgerNavOpenButton:focus {
   outline: 2px dashed #ffffff;
-  outline-offset: 5px;
+  outline-offset: 6px;
 }
 @container body (min-width: 1024px) {
   #hamburgerNavOpenButton {
@@ -258,54 +258,52 @@ table {
   }
 }
 
-.site-nav ul {
+.site-nav-links {
   display: flex;
-}
-.site-nav ul.site-nav-links {
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
   padding: 64px 32px 0 32px;
+  text-align: left;
 }
 @container body (min-width: 1024px) {
-  .site-nav ul.site-nav-links {
+  .site-nav-links {
     flex-direction: row;
-    gap: 16px;
+    gap: 14px;
     padding: 0;
   }
 }
 @container body (min-width: 1240px) {
-  .site-nav ul.site-nav-links {
+  .site-nav-links {
     gap: 48px;
   }
 }
-.site-nav ul.social-nav {
-  flex-direction: row;
+.site-nav-links.social-nav {
   width: max-content;
   margin: 0 auto;
 }
-.site-nav ul.social-nav img {
+.site-nav-links.social-nav img {
   width: 22px;
   height: 22px;
 }
 @container body (min-width: 1024px) {
-  .site-nav ul.social-nav {
+  .site-nav-links.social-nav {
     margin: 0;
   }
-  .site-nav ul.social-nav img {
+  .site-nav-links.social-nav img {
     width: 15px;
     height: 15px;
   }
 }
-.site-nav ul li {
+.site-nav-links li {
   position: relative;
 }
-.site-nav ul li a {
+.site-nav-links li a {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 @container body (min-width: 1024px) {
-  .site-nav ul li a {
-    font-size: 14px;
+  .site-nav-links li a {
+    font-size: 0.875rem;
   }
 }
 
@@ -320,15 +318,13 @@ table {
   position: absolute;
   width: 14px;
   border-bottom: 1px solid #ffffff;
-  margin-top: 8px;
+  margin-top: 2px;
 }
 @container body (min-width: 1024px) {
   .site-nav-links a.-active:after {
-    margin-top: 10px;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 2px auto 0;
   }
 }
 .site-nav-links a.-active, .site-nav-links a:hover, .site-nav-links a:focus {
@@ -341,11 +337,8 @@ table {
 }
 
 .social-nav-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
   margin-top: auto;
-  padding-bottom: 40px;
+  padding-bottom: 31px;
 }
 @container body (min-width: 1024px) {
   .social-nav-container {
@@ -354,27 +347,30 @@ table {
   }
 }
 
-.social-nav li:not(:first-child) a {
-  padding-left: 12px;
+.social-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
 }
 @container body (min-width: 1024px) {
-  .social-nav li:not(:first-child) a {
-    padding-left: 8px;
+  .social-nav {
+    gap: 18px;
   }
 }
-
-.social-nav li:not(:last-child) a {
-  padding-right: 12px;
+.social-nav img {
+  height: 22px;
 }
 @container body (min-width: 1024px) {
-  .social-nav li:not(:last-child) a {
-    padding-right: 8px;
+  .social-nav img {
+    height: 15px;
   }
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 0.75rem;
   text-align: center;
+  padding-top: 8px;
 }
 @container body (min-width: 1024px) {
   .copyright {
@@ -387,6 +383,12 @@ table {
   flex-direction: column;
   text-align: center;
   height: 100vh;
+  padding: 0 24px;
+}
+@container body (min-width: 768px) {
+  #hero {
+    padding: 0 72px 0;
+  }
 }
 
 #hero-content {
@@ -430,13 +432,17 @@ table {
   color: #ffffff;
   text-decoration: none;
 }
+#hero-scroll:active, #hero-scroll:hover, #hero-scroll:focus {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
 
 #hero-scroll:after {
   content: "";
   display: block;
   height: 24px;
   width: 0;
-  border: 1px solid #ffffff;
+  border-right: 1px solid #ffffff;
   margin: 0 auto;
   margin-top: 8px;
 }
@@ -596,14 +602,14 @@ section {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 4.5rem;
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.1944;
 }
 @container body (min-width: 1024px) {
   h1 {
-    font-size: 96px;
+    font-size: 6rem;
   }
 }
 
@@ -664,15 +670,6 @@ a:hover, a:focus, a:active {
 
 ul {
   text-align: center;
-  /* li {
-    @container body (min-width: 1024px) {
-      padding-left: 52px;
-
-      &:first-of-type {
-        padding-left: 0;
-      }
-    }
-  } */
 }
 @container body (min-width: 1024px) {
   ul:first-of-type {

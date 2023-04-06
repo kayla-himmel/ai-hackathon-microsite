@@ -66,7 +66,7 @@
 
   &:focus {
     outline: 2px dashed colors.$color-white;
-    outline-offset: 5px;
+    outline-offset: 6px;
   }
 
   @container body (min-width: 1024px) {
@@ -154,27 +154,24 @@
   }
 }
 
-.site-nav ul {
+.site-nav-links {
   display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 64px 32px 0 32px;
+  text-align: left;
 
-  &.site-nav-links {
-    flex-direction: column;
-    gap: 24px;
-    padding: 64px 32px 0 32px;
+  @container body (min-width: 1024px) {
+    flex-direction: row;
+    gap: 14px;
+    padding: 0;
+  }
 
-    @container body (min-width: 1024px) {
-      flex-direction: row;
-      gap: 16px;
-      padding: 0;
-    }
-
-    @container body (min-width: 1240px) {
-      gap: 48px;
-    }
+  @container body (min-width: 1240px) {
+    gap: 48px;
   }
 
   &.social-nav {
-    flex-direction: row;
     width: max-content;
     margin: 0 auto;
 
@@ -199,10 +196,10 @@
 
   & li a {
     color: colors.$color-white;
-    font-size: 24px;
+    font-size: 1.5rem; // 24px
 
     @container body (min-width: 1024px) {
-      font-size: 14px;
+      font-size: 0.875rem; // 14px
     }
   }
 }
@@ -218,14 +215,12 @@
     position: absolute;
     width: 14px;
     border-bottom: 1px solid colors.$color-white;
-    margin-top: 8px;
+    margin-top: 2px;
 
     @container body (min-width: 1024px) {
-      margin-top: 10px;
       left: 0;
       right: 0;
-      margin-left: auto;
-      margin-right: auto;
+      margin: 2px auto 0;
     }
   }
 
@@ -242,11 +237,8 @@
 
 // Social Navigation
 .social-nav-container {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
   margin-top: auto;
-  padding-bottom: 40px;
+  padding-bottom: 31px;
 
   @container body (min-width: 1024px) {
     margin-top: 0;
@@ -254,25 +246,29 @@
   }
 }
 
-.social-nav li:not(:first-child) a {
-  padding-left: 12px;
+.social-nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
 
   @container body (min-width: 1024px) {
-    padding-left: 8px;
+    gap: 18px;
   }
-}
 
-.social-nav li:not(:last-child) a {
-  padding-right: 12px;
+  img {
+    height: 22px;
 
-  @container body (min-width: 1024px) {
-    padding-right: 8px;
+    @container body (min-width: 1024px) {
+      height: 15px;
+    }
   }
 }
 
 .copyright {
-  font-size: 12px;
+  font-size: 0.75rem; // 12px
   text-align: center;
+  padding-top: 8px;
 
   @container body (min-width: 1024px) {
     display: none;

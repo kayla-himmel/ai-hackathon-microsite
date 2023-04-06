@@ -70,13 +70,13 @@ section {
 }
 
 h1 {
-  font-size: 72px;
+  font-size: 4.5rem; // 72px
   font-weight: 400;
   letter-spacing: 0;
   line-height: 1.1944; // 86px
 
   @container body (min-width: 1024px) {
-    font-size: 96px;
+    font-size: 6rem; // 96px
   }
 }
 
@@ -152,16 +152,6 @@ ul {
       margin: 0;
     }
   }
-
-  /* li {
-    @container body (min-width: 1024px) {
-      padding-left: 52px;
-
-      &:first-of-type {
-        padding-left: 0;
-      }
-    }
-  } */
 
   li > img {
     padding: 50px 0 22px;
