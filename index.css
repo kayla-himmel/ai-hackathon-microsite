@@ -554,6 +554,15 @@ table {
   }
 }
 
+#rules h3 {
+  padding-top: 0;
+}
+@container body (max-width: 1024px) {
+  #rules li {
+    padding-top: 24px;
+  }
+}
+
 body {
   background-color: #00023d;
   color: #ffffff;
@@ -600,6 +609,9 @@ section {
     padding: 200px 72px 0;
     max-width: 1024px;
   }
+  section.max-width-686 {
+    max-width: 686px;
+  }
 }
 @container body (min-width: 1440px) {
   section {
@@ -643,6 +655,9 @@ h2 .mark-teal {
   padding: 0 16px 36px;
   width: fit-content;
 }
+h2 .mark-teal.-center {
+  margin: 0 auto;
+}
 @container body (min-width: 1024px) {
   h2 .mark-teal {
     padding-bottom: 42px;
@@ -665,11 +680,13 @@ h3 img {
   padding-right: 18px;
 }
 
-h4 {
+h4,
+.h4 {
   font-weight: 500;
   font-size: 1.125rem;
   line-height: 200%;
   text-transform: capitalize;
+  margin-bottom: 8px;
 }
 
 a {
