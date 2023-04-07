@@ -123,14 +123,14 @@ table {
   width: 100%;
 }
 
-#top-nav .container {
+.container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   padding: 0 24px;
 }
 @container body (min-width: 1024px) {
-  #top-nav .container {
+  .container {
     padding: 0 200px;
     justify-content: space-between;
   }
@@ -140,17 +140,21 @@ table {
   outline: 2px dashed #ffffff;
   outline-offset: 5px;
 }
+.logo.-mobile {
+  display: flex;
+  flex-direction: column;
+}
+@container body (min-width: 1024px) {
+  .logo.-mobile {
+    display: none;
+  }
+}
 .logo.-desktop {
   display: none;
 }
 @container body (min-width: 1024px) {
   .logo.-desktop {
     display: block;
-  }
-}
-@container body (min-width: 1024px) {
-  .logo.-mobile {
-    display: none;
   }
 }
 .logo img {
@@ -277,23 +281,6 @@ table {
     gap: 48px;
   }
 }
-.site-nav-links.social-nav {
-  width: max-content;
-  margin: 0 auto;
-}
-.site-nav-links.social-nav img {
-  width: 22px;
-  height: 22px;
-}
-@container body (min-width: 1024px) {
-  .site-nav-links.social-nav {
-    margin: 0;
-  }
-  .site-nav-links.social-nav img {
-    width: 15px;
-    height: 15px;
-  }
-}
 .site-nav-links li {
   position: relative;
 }
@@ -304,6 +291,30 @@ table {
 @container body (min-width: 1024px) {
   .site-nav-links li a {
     font-size: 0.875rem;
+  }
+}
+
+.social-nav-links {
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  margin: 0 auto;
+  gap: 26px;
+}
+@container body (min-width: 1024px) {
+  .social-nav-links {
+    margin: 0;
+    gap: 17px;
+  }
+}
+.social-nav-links img {
+  width: 22px;
+  height: 22px;
+}
+@container body (min-width: 1024px) {
+  .social-nav-links img {
+    width: 15px;
+    height: 15px;
   }
 }
 
@@ -429,9 +440,14 @@ table {
 #hero-scroll {
   font-size: 0.625rem;
   margin-top: auto;
-  margin-bottom: 50px;
+  margin-bottom: 16px;
   color: #ffffff;
   text-decoration: none;
+}
+@container body (min-width: 768px) {
+  #hero-scroll {
+    margin-bottom: 50px;
+  }
 }
 #hero-scroll:active, #hero-scroll:hover, #hero-scroll:focus {
   font-weight: 500;
@@ -580,11 +596,6 @@ body mark {
   line-height: 0;
   padding: 0 4px 12px;
   background-color: rgba(26, 187, 169, 0.5);
-}
-
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
 }
 
 #gradient {

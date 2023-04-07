@@ -49,9 +49,13 @@
 #hero-scroll {
   font-size: 0.625rem; // 10px
   margin-top: auto;
-  margin-bottom: 50px;
+  margin-bottom: 16px;
   color: colors.$color-white;
   text-decoration: none;
+
+  @container body (min-width: 768px) {
+    margin-bottom: 50px;
+  }
 
   &:active,
   &:hover,
