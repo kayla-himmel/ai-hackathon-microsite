@@ -2,17 +2,35 @@
 @use './colors';
 @use './sections/nav';
 @use './sections/hero';
+@use './sections/mission';
 
 body {
   background-color: colors.$color-blue;
   color: colors.$color-white;
   container: body / inline-size;
   font-family: 'Tomorrow', sans-serif;
+  font-weight: 300;
+  font-size: 1rem; // 16px
+  line-height: 200%;
+  letter-spacing: 0.05rem;
+  position: relative;
+  height: 100%;
+
+  @container body (min-width: 1024px) {
+    text-align: center;
+  }
+
+  mark {
+    font-weight: 500;
+    display: inline-block;
+  }
 }
 
-.container {
-  max-width: 1400px;
-  margin: 0 auto;
+.mark-teal {
+  color: colors.$color-white;
+  line-height: 0;
+  padding: 0 4px 12px;
+  background-color: colors.$color-teal-50;
 }
 
 #gradient {
@@ -32,30 +50,144 @@ body {
   z-index: -1;
 }
 
-h1 {
-  font-size: 72px;
-  font-weight: 400;
+section {
+  margin: 0 auto;
+  padding: 82px 24px 0;
 
-  @container body (min-width: 1024px) {
-    font-size: 96px;
+  @container body (min-width: 768px) {
+    padding: 200px 72px 0;
+    max-width: 1024px;
+  }
+
+  @container body (min-width: 1440px) {
+    padding: 200px 200px 0;
+  }
+
+  div > div {
+    @container body (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
-p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 32px;
-  letter-spacing: 0.05em;
+h1 {
+  font-size: 4.5rem; // 72px
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 1.1944; // 86px
+
+  @container body (min-width: 1024px) {
+    font-size: 6rem; // 96px
+  }
+}
+
+h2 {
+  font-size: 3rem; // 48px
+  font-weight: 400;
+  line-height: 120.8333%; // 58px
+  margin-bottom: 24px;
+
+  @container body (min-width: 1024px) {
+    font-size: 3.75rem; // 60px
+    line-height: 120%; // 72px
+  }
+
+  .mark-teal {
+    font-weight: 400;
+    display: block;
+    padding: 0 16px 36px;
+    width: fit-content;
+
+    @container body (min-width: 1024px) {
+      padding-bottom: 42px;
+    }
+  }
+
+  span {
+    margin: 0 0 30px 10px;
+    display: block;
+  }
+}
+
+h3 {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 2rem; // 32px
+  line-height: 150%; // 48px
+  padding-top: 64px;
+
+  img {
+    padding-right: 18px;
+  }
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.125rem; // 18px
+  line-height: 200%; // 36px
+  text-transform: capitalize;
 }
 
 a {
   letter-spacing: 0.05em;
   color: colors.$color-teal;
+  text-decoration: underline;
 
   &:hover,
   &:focus,
   &:active {
     color: colors.$color-bright-teal;
+  }
+}
+
+ul {
+  text-align: center;
+
+  &:first-of-type {
+    @container body (min-width: 1024px) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @container body (min-width: 1440px) {
+      margin: 0;
+    }
+  }
+
+  li > img {
+    padding: 50px 0 22px;
+
+    @container body (min-width: 1024px) {
+      padding: 88px 0 32px;
+    }
+  }
+}
+
+ol {
+  list-style: auto;
+  padding-left: 20px;
+
+  li::marker {
+    font-weight: 500;
+    font-size: 1.125rem; // 18px
+  }
+
+  li {
+    padding: 36px 0 0 8px;
+
+    @container body (min-width: 1024px) {
+      padding: 50px 0 0 8px;
+
+      &:first-of-type {
+        padding-top: 56px;
+      }
+    }
+  }
+
+  li > p {
+    margin-left: -30px;
   }
 }
 
@@ -66,6 +198,7 @@ a {
   border: 1px solid colors.$color-white;
   border-radius: 54px;
   font-weight: 300;
+  line-height: 118.75%; // 19px
   text-decoration: none;
 
   &:hover,
@@ -80,7 +213,7 @@ a {
   }
 
   @container body (min-width: 1024px) {
-    font-size: 20px;
+    font-size: 1.25rem; // 20px
   }
 }
 

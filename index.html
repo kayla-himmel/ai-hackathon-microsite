@@ -16,7 +16,7 @@
   <body>
     <div id="gradient"></div>
     <!-- NAV SECTION -->
-    <section id="top-nav">
+    <div id="top-nav">
       <div id="hamburgerMenuBackground"></div>
       <div class="container">
         <button
@@ -44,7 +44,7 @@
           </a>
           <ul class="site-nav-links">
             <li><a href="#hero" class="-active">Home</a></li>
-            <li><a href="#about">The Mission</a></li>
+            <li><a href="#mission">The Mission</a></li>
             <li><a href="#schedule">Schedule</a></li>
             <li><a href="#rules">Rules</a></li>
             <li><a href="#faqs">FAQs</a></li>
@@ -85,10 +85,10 @@
           </div>
         </nav>
       </div>
-    </section>
+    </div>
 
     <!-- HERO SECTION -->
-    <section id="hero" class="container">
+    <section id="hero">
       <div id="hero-content">
         <h1 id="heroH1" aria-label="#Chat Saves TD">
           <span aria-hidden="true">#Chat</span>
@@ -96,33 +96,172 @@
           <span aria-hidden="true">TD</span>
         </h1>
         <p id="hero-caption">
-          Join us on <mark class="date-header">April 13, 2023</mark> for a
-          ChatGPT hackathon at WillowTree!
+          Join us on <mark class="mark-teal">April 13, 2023</mark> for a ChatGPT
+          hackathon at WillowTree!
         </p>
         <a class="button" href="https://willowtreeapps.com" target="_blank">
           Register Now
         </a>
       </div>
-      <a href="#about" id="hero-scroll">Scroll</a>
+      <a href="#mission" id="hero-scroll">Scroll</a>
     </section>
 
-    <!-- ABOUT SECTION -->
-    <section id="about" class="container"></section>
+    <!-- THE MISSION SECTION -->
+    <section id="mission">
+      <div class="mission-header-goals-wrapper">
+        <div>
+          <h2>
+            <span>The </span>
+            <mark class="mark-teal">Mission</mark>
+          </h2>
+          <p class="mission-description">
+            We have received an urgent mission! Our esteemed President, TD, has
+            been "kidnapped," and we need your unique skills, creativity, and
+            expertise to rescue him. We're holding a Hackathon event that will
+            not only put your problem-solving abilities to the test but also
+            serve as an opportunity for team bonding and exploration.
+          </p>
+        </div>
+
+        <h3 class="goals">Goals Of The Hackathon</h3>
+        <ul>
+          <li>
+            <img src="assets/star-sparkle-line.svg" alt="star" />
+            <p>
+              Spark enthusiasm for using AI tools like
+              <a href="https://openai.com/blog/chatgpt" target="_blank"
+                >ChatGPT</a
+              >
+              and
+              <a href="https://github.com/features/copilot" target="_blank"
+                >GitHub CoPilot</a
+              >.
+            </p>
+          </li>
+          <li>
+            <img src="assets/face-head-line.svg" alt="head" />
+            <p>
+              Foster a deeper understanding of how these tools can impact the
+              way we work together.
+            </p>
+          </li>
+          <li>
+            <img src="assets/diamond-line.svg" alt="diamond" />
+            <p>
+              Develop expertise to help us deliver more value to our clients.
+            </p>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mission-briefing-wrapper">
+        <div class="briefing">
+          <h3>
+            <img src="assets/clipboard.svg" alt="clipboard" />
+            Briefing
+          </h3>
+          <ol>
+            <li>
+              <h4>Assemble Your Elite Team</h4>
+              <p>
+                Each branch must form a special task force of cross-discipline
+                members, including design, development, testing, and project
+                management experts.
+              </p>
+            </li>
+            <li>
+              <h4>Choose your rescue mission app</h4>
+              <p>
+                Each team will brainstorm and choose an app that could play a
+                critical role in rescuing TD. Make sure to think of ways to
+                incorporate ChatGPT, GitHub CoPilot, and various APIs to
+                streamline the development process and enhance the app's
+                functionality.
+              </p>
+            </li>
+            <li>
+              <h4>Scope out the operation</h4>
+              <p>
+                Determine the scope and requirements for an app that can be
+                feasibly built within a 3-hour time frame.
+              </p>
+            </li>
+            <li>
+              <h4>Harness the power of AI</h4>
+              <p>
+                Maximize the use of ChatGPT and GitHub CoPilot throughout the
+                development process, including requirements documentation, code
+                generation, design ideas, problem-solving, and more.
+              </p>
+            </li>
+            <li>
+              <h4>Build your prototype</h4>
+              <ul>
+                <li>
+                  Create a user-friendly UI for managing suspects, evidence, and
+                  other critical information related to the rescue mission.
+                </li>
+                <li>
+                  Develop backend logic for processing input and interacting
+                  with ChatGPT and APIs.
+                </li>
+                <li>
+                  Integrate with APIs for gathering valuable information and
+                  unveiling unexpected twists in the investigation.
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+        <div class="debriefing">
+          <h3>
+            <img src="assets/movie-users.svg" alt="movie users" />
+            Debriefing
+          </h3>
+          <ol>
+            <li>
+              <h4>Showcase your creation</h4>
+              <p>
+                Each team will present their app to the other branches,
+                demonstrating its functionality and how it can assist in solving
+                the mystery.
+              </p>
+            </li>
+            <li>
+              <h4>Share your learnings</h4>
+              <p>
+                Discuss the insights gained during the Hackathon, including new
+                techniques, AI tool usage, and potential applications for future
+                projects.
+              </p>
+            </li>
+            <li>
+              <h4>Celebrate your success</h4>
+              <p>
+                Take a moment to appreciate the hard work and creativity that
+                went into building your app, and enjoy the camaraderie with your
+                colleagues.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
     <!-- SCHEDULE SECTION -->
-    <section id="schedule" class="container"></section>
+    <section id="schedule"></section>
 
     <!-- RULES SECTION -->
-    <section id="rules" class="container"></section>
+    <section id="rules"></section>
 
     <!-- FAQS SECTION -->
-    <section id="faqs" class="container"></section>
+    <section id="faqs"></section>
 
     <!-- REGISTRATION SECTION -->
-    <section id="registration" class="container"></section>
+    <section id="registration"></section>
 
     <!-- FOOTER SECTION -->
-    <footer class="container"></footer>
+    <footer></footer>
   </body>
   <script src="index.js"></script>
 </html>

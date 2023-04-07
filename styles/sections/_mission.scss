@@ -1,0 +1,109 @@
+@use '../colors';
+
+// TO-DO: ADD IN BACKGROUND IMAGES
+/* #mission {
+  position: relative;
+  height: 100%;
+} */
+
+.mission-header-goals-wrapper {
+  // TO-DO: ADD IN BACKGROUND IMAGES
+  /* &:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 545px;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    background: url('./assets/stairs-wireframe.svg') no-repeat;
+  } */
+
+  h2 {
+    margin: 0 0 24px -10px;
+
+    @container body (min-width: 1024px) {
+      margin: 0;
+    }
+  }
+
+  .mission-description {
+    @container body (min-width: 1024px) {
+      max-width: 600px;
+      margin-left: 100px;
+    }
+  }
+
+  ul {
+    max-width: 380px;
+    margin: 0 auto;
+
+    @container body (min-width: 1024px) {
+      max-width: unset;
+      display: inline-grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 50px;
+      place-items: start;
+      position: relative;
+    }
+  }
+}
+
+.goals {
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+
+  @container body (min-width: 1024px) {
+    padding-top: 202px;
+  }
+}
+
+.mission-briefing-wrapper {
+  @container body (min-width: 1024px) {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
+    place-items: start;
+    position: relative;
+    padding-top: 202px;
+  }
+
+  @container body (min-width: 1440px) {
+    column-gap: 100px;
+  }
+
+  .briefing,
+  .debriefing {
+    display: block;
+
+    h3 {
+      @container body (min-width: 1024px) {
+        margin-left: -2px;
+        padding: 0;
+      }
+    }
+
+    ul {
+      list-style-type: disc;
+      flex-direction: column;
+      text-align: left;
+      padding-top: 6px;
+
+      li {
+        padding-top: 0;
+      }
+    }
+  }
+
+  .briefing {
+    @container body (min-width: 1024px) {
+      padding-right: 40px;
+      border-right: 1px solid colors.$color-white;
+    }
+
+    @container body (min-width: 1440px) {
+      padding-right: 100px;
+    }
+  }
+}
