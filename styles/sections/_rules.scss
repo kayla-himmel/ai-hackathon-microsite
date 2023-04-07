@@ -1,0 +1,11 @@
+#rules {
+  h3 {
+    padding-top: 0;
+  }
+
+  li {
+    @container body (max-width: 1024px) {
+      padding-top: 24px;
+    }
+  }
+}
