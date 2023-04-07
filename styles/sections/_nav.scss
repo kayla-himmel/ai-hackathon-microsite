@@ -18,8 +18,12 @@
   padding: 0 24px;
 
   @container body (min-width: 1024px) {
-    padding: 0 200px;
+    padding: 0 150px;
     justify-content: space-between;
+  }
+
+  @container body (min-width: 1240px) {
+    padding: 0 200px;
   }
 }
 
@@ -118,7 +122,7 @@
       display: block;
       position: absolute;
       background-color: colors.$color-black-25;
-      width: 100vh;
+      width: 100vw;
       height: 100vh;
       top: 0;
       z-index: 100;
@@ -166,7 +170,6 @@
 
   @container body (min-width: 1024px) {
     flex-direction: row;
-    gap: 14px;
     padding: 0;
   }
 
@@ -181,36 +184,15 @@
   & li a {
     color: colors.$color-white;
     font-size: 1.5rem; // 24px
+    text-decoration: none;
+    opacity: 0.3;
+    font-weight: 400;
 
     @container body (min-width: 1024px) {
       font-size: 0.875rem; // 14px
     }
   }
 }
-
-.social-nav-links {
-  display: flex;
-  flex-direction: row;
-  width: max-content;
-  margin: 0 auto;
-  gap: 26px;
-
-  @container body (min-width: 1024px) {
-    margin: 0;
-    gap: 17px;
-  }
-
-  & img {
-    width: 22px;
-    height: 22px;
-
-    @container body (min-width: 1024px) {
-      width: 15px;
-      height: 15px;
-    }
-  }
-}
-
 .site-nav-links a {
   color: colors.$color-white;
   text-decoration: none;
@@ -257,18 +239,20 @@
 .social-nav {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  gap: 25px;
+  width: max-content;
+  margin: 0 auto;
+  gap: 26px;
 
   @container body (min-width: 1024px) {
-    gap: 18px;
+    margin: 0;
+    gap: 17px;
   }
 
-  img {
-    height: 22px;
+  & img {
+    width: 22px;
 
     @container body (min-width: 1024px) {
-      height: 15px;
+      width: 15px;
     }
   }
 }
