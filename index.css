@@ -498,6 +498,7 @@ table {
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+  padding-top: 64px;
 }
 @container body (min-width: 1024px) {
   .goals {
@@ -523,6 +524,10 @@ table {
 .mission-briefing-wrapper .briefing,
 .mission-briefing-wrapper .debriefing {
   display: block;
+}
+.mission-briefing-wrapper .briefing h3,
+.mission-briefing-wrapper .debriefing h3 {
+  padding-top: 64px;
 }
 @container body (min-width: 1024px) {
   .mission-briefing-wrapper .briefing h3,
@@ -561,6 +566,26 @@ table {
   #rules li {
     padding-top: 24px;
   }
+}
+
+.faq-list li {
+  text-align: left;
+  border-bottom: 1px solid;
+  padding-bottom: 24px;
+}
+.faq-list .faq-details {
+  position: relative;
+}
+.faq-list summary {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.faq-list summary:-webkit-details-marker {
+  display: none;
+}
+.faq-list .h4 {
+  padding-right: 20px;
 }
 
 body {
@@ -674,7 +699,7 @@ h3 {
   font-weight: 500;
   font-size: 2rem;
   line-height: 150%;
-  padding-top: 64px;
+  padding-top: 24px;
 }
 h3 img {
   padding-right: 18px;
@@ -772,7 +797,6 @@ ol li > p {
   display: block;
   width: 24px;
 }
-
 .close-button:before {
   content: "";
   display: block;
@@ -781,6 +805,11 @@ ol li > p {
   border-radius: 2px;
   transform: rotate(45deg);
   width: 24px;
+}
+.close-button.faq-toggle:before {
+  transform: rotate(0deg);
+  margin-top: 42px;
+  width: 16px;
 }
 
 .close-button:after {
@@ -792,6 +821,12 @@ ol li > p {
   transform: rotate(-45deg);
   left: -1px;
   width: 24px;
+}
+.close-button.faq-toggle:after {
+  transform: rotate(90deg);
+  left: 0;
+  margin-top: 42px;
+  width: 16px;
 }
 
 /*# sourceMappingURL=index.css.map */

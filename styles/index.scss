@@ -4,6 +4,7 @@
 @use './sections/hero';
 @use './sections/mission';
 @use './sections/rules';
+@use './sections/faqs';
 
 body {
   background-color: colors.$color-blue;
@@ -125,7 +126,7 @@ h3 {
   font-weight: 500;
   font-size: 2rem; // 32px
   line-height: 150%; // 48px
-  padding-top: 64px;
+  padding-top: 24px;
 
   img {
     padding-right: 18px;
@@ -232,25 +233,40 @@ ol {
   position: relative;
   display: block;
   width: 24px;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid colors.$color-white;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    width: 24px;
+  }
+
+  &.faq-toggle:before {
+    transform: rotate(0deg);
+    margin-top: 42px;
+    width: 16px;
+  }
 }
 
-.close-button:before {
-  content: '';
-  display: block;
-  position: absolute;
-  border: 1px solid colors.$color-white;
-  border-radius: 2px;
-  transform: rotate(45deg);
-  width: 24px;
-}
+.close-button {
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid colors.$color-white;
+    border-radius: 2px;
+    transform: rotate(-45deg);
+    left: -1px;
+    width: 24px;
+  }
 
-.close-button:after {
-  content: '';
-  display: block;
-  position: absolute;
-  border: 1px solid colors.$color-white;
-  border-radius: 2px;
-  transform: rotate(-45deg);
-  left: -1px;
-  width: 24px;
+  &.faq-toggle:after {
+    transform: rotate(90deg);
+    left: 0;
+    margin-top: 42px;
+    width: 16px;
+  }
 }

@@ -1,19 +1,27 @@
-.faq {
+@use '../colors';
+
+.faq-list {
+  li {
+    text-align: left;
+    border-bottom: 1px solid;
+    padding-bottom: 24px;
+  }
+
   .faq-details {
     position: relative;
   }
 
-  summary::marker {
-    /* color: colors.$color-white;
-    position: absolute;
-    right: -45px;
-    margin-top: 32px;
-    width: 24px;
-    height: 24px;
+  summary {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
 
-    &:focus {
-      outline: 2px dashed colors.$color-white;
-      outline-offset: 5px;
-    } */
+    &:-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  .h4 {
+    padding-right: 20px;
   }
 }
