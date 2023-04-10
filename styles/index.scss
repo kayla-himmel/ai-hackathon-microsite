@@ -4,6 +4,8 @@
 @use './sections/hero';
 @use './sections/mission';
 @use './sections/rules';
+@use './sections/registration';
+@use './sections/footer';
 
 body {
   background-color: colors.$color-blue;
