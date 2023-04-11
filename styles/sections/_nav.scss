@@ -238,13 +238,11 @@
 
 .social-nav {
   display: flex;
-  flex-direction: row;
   width: max-content;
   margin: 0 auto;
   gap: 26px;
 
   @container body (min-width: 1024px) {
-    margin: 0;
     gap: 17px;
   }
 
@@ -262,7 +260,9 @@
   text-align: center;
   padding-top: 8px;
 
-  @container body (min-width: 1024px) {
-    display: none;
+  &.-hamburgerMenu {
+    @container body (min-width: 1024px) {
+      display: none;
+    }
   }
 }

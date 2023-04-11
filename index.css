@@ -344,14 +344,12 @@ table {
 
 .social-nav {
   display: flex;
-  flex-direction: row;
   width: max-content;
   margin: 0 auto;
   gap: 26px;
 }
 @container body (min-width: 1024px) {
   .social-nav {
-    margin: 0;
     gap: 17px;
   }
 }
@@ -370,7 +368,7 @@ table {
   padding-top: 8px;
 }
 @container body (min-width: 1024px) {
-  .copyright {
+  .copyright.-hamburgerMenu {
     display: none;
   }
 }
@@ -578,11 +576,11 @@ table {
 }
 
 footer {
-  padding: 90px 0 40px 0;
+  padding: 65px 0 40px 0;
 }
 @container body (min-width: 768px) {
   footer {
-    padding: 100px 0 50px 0;
+    padding: 75px 0 50px 0;
   }
 }
 
@@ -725,13 +723,13 @@ ul {
   text-align: center;
 }
 @container body (min-width: 1024px) {
-  ul:first-of-type {
+  ul:first-of-type:not(.social-nav) {
     display: flex;
     justify-content: space-between;
   }
 }
 @container body (min-width: 1440px) {
-  ul:first-of-type {
+  ul:first-of-type:not(.social-nav) {
     margin: 0;
   }
 }
