@@ -27,7 +27,7 @@
   }
 }
 
-.container > .site-nav.-open:before {
+.container:has(.site-nav.-open):before {
   content: '';
   display: block;
   position: absolute;
