@@ -141,7 +141,7 @@ table {
   }
 }
 
-.container > .site-nav.-open:before {
+.container:has(.site-nav.-open):before {
   content: "";
   display: block;
   position: absolute;
@@ -152,7 +152,7 @@ table {
   z-index: 100;
 }
 @container body (min-width: 1024px) {
-  .container > .site-nav.-open:before {
+  .container:has(.site-nav.-open):before {
     display: none;
   }
 }
@@ -588,7 +588,6 @@ footer {
 body {
   background-color: #00023d;
   color: #ffffff;
-  container: body/inline-size;
   font-family: "Tomorrow", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -597,14 +596,21 @@ body {
   position: relative;
   height: 100%;
 }
-@container body (min-width: 1024px) {
-  body {
-    text-align: center;
+body.-navOpen {
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  body.-navOpen {
+    overflow: auto;
   }
 }
 body mark {
   font-weight: 500;
   display: inline-block;
+}
+
+.body-container {
+  container: body/inline-size;
 }
 
 .mark-teal {
@@ -724,13 +730,13 @@ ul {
   text-align: center;
 }
 @container body (min-width: 1024px) {
-  ul:first-of-type:not(.social-nav) {
+  ul:first-of-type {
     display: flex;
     justify-content: space-between;
   }
 }
 @container body (min-width: 1440px) {
-  ul:first-of-type:not(.social-nav) {
+  ul:first-of-type {
     margin: 0;
   }
 }
