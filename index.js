@@ -57,12 +57,14 @@ const openHamburgerMenu = () => {
   );
 
   hamburgerMenu.classList.add('-open');
+  document.body.classList.add('-navOpen');
   hamburgerMenuCloseButton.focus();
   hamburgerMenu.addEventListener('keydown', (e) => trapHamburgerMenuFocus(e));
 };
 
 const closeHamburgerMenu = () => {
   hamburgerMenu.classList.remove('-open');
+  document.body.classList.remove('-navOpen');
   hamburgerMenu.removeEventListener('keydown', (e) =>
     trapHamburgerMenuFocus(e)
   );
