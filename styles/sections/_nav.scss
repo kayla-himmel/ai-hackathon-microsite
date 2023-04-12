@@ -192,6 +192,7 @@
     }
   }
 }
+
 .site-nav-links a {
   color: colors.$color-white;
   text-decoration: none;
@@ -246,10 +247,10 @@
   }
 
   & img {
-    width: 22px;
+    width: 24px;
 
     @container body (min-width: 1024px) {
-      width: 15px;
+      width: 16px;
     }
   }
 }

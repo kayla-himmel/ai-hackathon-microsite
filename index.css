@@ -355,11 +355,11 @@ table {
   }
 }
 .social-nav img {
-  width: 22px;
+  width: 24px;
 }
 @container body (min-width: 1024px) {
   .social-nav img {
-    width: 15px;
+    width: 16px;
   }
 }
 
@@ -578,6 +578,11 @@ table {
 
 footer {
   padding: 65px 0 40px 0;
+}
+@container body (min-width: 1440px) {
+  footer ul:first-of-type {
+    margin: 0 auto;
+  }
 }
 @container body (min-width: 768px) {
   footer {
