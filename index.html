@@ -14,560 +14,596 @@
     <title>AI Hackathon</title>
   </head>
   <body>
-    <div id="gradient"></div>
-    <!-- NAV SECTION -->
-    <div id="top-nav">
-      <div id="hamburgerMenuBackground"></div>
-      <div class="container">
-        <button
-          id="hamburgerNavOpenButton"
-          aria-label="Open navigation"
-          onClick="openHamburgerMenu()"
-        >
-          <span id="hamburger1"></span>
-          <span id="hamburger2"></span>
-          <span id="hamburger3"></span>
-        </button>
-        <a href="#hero" class="logo -mobile">
-          <img src="assets/WT_logo_white.svg" alt="home" />
-        </a>
-        <nav class="site-nav">
+    <div class="body-container">
+      <div id="gradient"></div>
+      <!-- NAV SECTION -->
+      <div id="top-nav">
+        <div class="container">
           <button
-            id="hamburgerNavCloseButton"
-            aria-label="Close navigation"
-            onClick="closeHamburgerMenu()"
+            id="hamburgerNavOpenButton"
+            aria-label="Open navigation"
+            onClick="openHamburgerMenu()"
           >
-            <span class="close-button"></span>
+            <span id="hamburger1"></span>
+            <span id="hamburger2"></span>
+            <span id="hamburger3"></span>
           </button>
-          <a href="#hero" class="logo -desktop">
+          <a href="#hero" class="logo -mobile">
             <img src="assets/WT_logo_white.svg" alt="home" />
           </a>
-          <ul class="site-nav-links">
-            <li><a href="#hero" class="-active">Home</a></li>
-            <li><a href="#mission">The Mission</a></li>
-            <li><a href="#schedule">Schedule</a></li>
-            <li><a href="#rules">Rules</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#registration">Registration</a></li>
-          </ul>
-          <div class="social-nav-container">
-            <ul class="social-nav">
-              <li>
-                <a
-                  href="https://www.facebook.com/willowtreeapps/"
-                  target="_blank"
-                  ><img src="./assets/facebook.svg" alt="facebook"
-                /></a>
-              </li>
-              <li>
-                <a href="https://twitter.com/willowtreeapps/" target="_blank"
-                  ><img src="./assets/twitter.svg" alt="twitter"
-                /></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.instagram.com/willowtreeapps/"
-                  target="_blank"
-                  ><img src="./assets/instagram.svg" alt="instagram"
-                /></a>
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/company/willowtreeapps"
-                  target="_blank"
-                  ><img src="./assets/linkedin.svg" alt="linkedin"
-                /></a>
-              </li>
+          <nav class="site-nav">
+            <button
+              id="hamburgerNavCloseButton"
+              aria-label="Close navigation"
+              onClick="closeHamburgerMenu()"
+            >
+              <span class="close-button"></span>
+            </button>
+            <a href="#hero" class="logo -desktop">
+              <img src="assets/WT_logo_white.svg" alt="home" />
+            </a>
+            <ul class="site-nav-links">
+              <li><a href="#hero" class="-active">Home</a></li>
+              <li><a href="#mission">The Mission</a></li>
+              <li><a href="#schedule">Schedule</a></li>
+              <li><a href="#rules">Rules</a></li>
+              <li><a href="#faqs">FAQs</a></li>
+              <li><a href="#registration">Registration</a></li>
             </ul>
-            <p class="copyright">
-              &#169; WillowTree, LLC <span id="copyrightYear"></span>
-            </p>
-          </div>
-        </nav>
-      </div>
-    </div>
-
-    <!-- HERO SECTION -->
-    <section id="hero">
-      <div id="hero-content">
-        <h1 id="heroH1" aria-label="#Chat Saves TD">
-          <span aria-hidden="true">#Chat</span>
-          <span aria-hidden="true">Saves</span>
-          <span aria-hidden="true">TD</span>
-        </h1>
-        <p id="hero-caption">
-          Join us on <mark class="mark-teal">April 13, 2023</mark> for a ChatGPT
-          hackathon at WillowTree!
-        </p>
-        <a class="button" href="https://willowtreeapps.com" target="_blank">
-          Register Now
-        </a>
-      </div>
-      <a href="#mission" id="hero-scroll">Scroll</a>
-    </section>
-
-    <!-- THE MISSION SECTION -->
-    <section id="mission">
-      <div class="mission-header-goals-wrapper">
-        <div>
-          <h2>
-            <span>The </span>
-            <mark class="mark-teal">Mission</mark>
-          </h2>
-          <p class="mission-description">
-            We have received an urgent mission! Our esteemed President, TD, has
-            been "kidnapped," and we need your unique skills, creativity, and
-            expertise to rescue him. We're holding a Hackathon event that will
-            not only put your problem-solving abilities to the test but also
-            serve as an opportunity for team bonding and exploration.
-          </p>
-        </div>
-
-        <h3 class="goals">Goals Of The Hackathon</h3>
-        <ul>
-          <li>
-            <img src="assets/star-sparkle-line.svg" alt="star" />
-            <p>
-              Spark enthusiasm for using AI tools like
-              <a href="https://openai.com/blog/chatgpt" target="_blank"
-                >ChatGPT</a
-              >
-              and
-              <a href="https://github.com/features/copilot" target="_blank"
-                >GitHub CoPilot</a
-              >.
-            </p>
-          </li>
-          <li>
-            <img src="assets/face-head-line.svg" alt="head" />
-            <p>
-              Foster a deeper understanding of how these tools can impact the
-              way we work together.
-            </p>
-          </li>
-          <li>
-            <img src="assets/diamond-line.svg" alt="diamond" />
-            <p>
-              Develop expertise to help us deliver more value to our clients.
-            </p>
-          </li>
-        </ul>
-      </div>
-
-      <div class="mission-briefing-wrapper">
-        <div class="briefing">
-          <h3>
-            <img src="assets/clipboard.svg" alt="clipboard" />
-            Briefing
-          </h3>
-          <ol>
-            <li>
-              <h4>Assemble Your Elite Team</h4>
-              <p>
-                Each branch must form a special task force of cross-discipline
-                members, including design, development, testing, and project
-                management experts.
-              </p>
-            </li>
-            <li>
-              <h4>Choose your rescue mission app</h4>
-              <p>
-                Each team will brainstorm and choose an app that could play a
-                critical role in rescuing TD. Make sure to think of ways to
-                incorporate ChatGPT, GitHub CoPilot, and various APIs to
-                streamline the development process and enhance the app's
-                functionality.
-              </p>
-            </li>
-            <li>
-              <h4>Scope out the operation</h4>
-              <p>
-                Determine the scope and requirements for an app that can be
-                feasibly built within a 3-hour time frame.
-              </p>
-            </li>
-            <li>
-              <h4>Harness the power of AI</h4>
-              <p>
-                Maximize the use of ChatGPT and GitHub CoPilot throughout the
-                development process, including requirements documentation, code
-                generation, design ideas, problem-solving, and more.
-              </p>
-            </li>
-            <li>
-              <h4>Build your prototype</h4>
-              <ul>
+            <div class="social-nav-container">
+              <ul class="social-nav">
                 <li>
-                  Create a user-friendly UI for managing suspects, evidence, and
-                  other critical information related to the rescue mission.
+                  <a
+                    href="https://www.facebook.com/willowtreeapps/"
+                    target="_blank"
+                    ><img src="./assets/facebook.svg" alt="facebook"
+                  /></a>
                 </li>
                 <li>
-                  Develop backend logic for processing input and interacting
-                  with ChatGPT and APIs.
+                  <a href="https://twitter.com/willowtreeapps/" target="_blank"
+                    ><img src="./assets/twitter.svg" alt="twitter"
+                  /></a>
                 </li>
                 <li>
-                  Integrate with APIs for gathering valuable information and
-                  unveiling unexpected twists in the investigation.
+                  <a
+                    href="https://www.instagram.com/willowtreeapps/"
+                    target="_blank"
+                    ><img src="./assets/instagram.svg" alt="instagram"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/company/willowtreeapps"
+                    target="_blank"
+                    ><img src="./assets/linkedin.svg" alt="linkedin"
+                  /></a>
                 </li>
               </ul>
-            </li>
-          </ol>
-        </div>
-        <div class="debriefing">
-          <h3>
-            <img src="assets/movie-users.svg" alt="movie users" />
-            Debriefing
-          </h3>
-          <ol>
-            <li>
-              <h4>Showcase your creation</h4>
-              <p>
-                Each team will present their app to the other branches,
-                demonstrating its functionality and how it can assist in solving
-                the mystery.
+              <p class="copyright">
+                &#169; WillowTree, LLC <span id="copyrightYear"></span>
               </p>
-            </li>
-            <li>
-              <h4>Share your learnings</h4>
-              <p>
-                Discuss the insights gained during the Hackathon, including new
-                techniques, AI tool usage, and potential applications for future
-                projects.
-              </p>
-            </li>
-            <li>
-              <h4>Celebrate your success</h4>
-              <p>
-                Take a moment to appreciate the hard work and creativity that
-                went into building your app, and enjoy the camaraderie with your
-                colleagues.
-              </p>
-            </li>
-          </ol>
+            </div>
+          </nav>
         </div>
       </div>
-    </section>
 
-    <!-- SCHEDULE SECTION -->
-    <section id="schedule"></section>
+      <!-- HERO SECTION -->
+      <section id="hero">
+        <div id="hero-content">
+          <h1 id="heroH1" aria-label="#Chat Saves TD">
+            <span aria-hidden="true">#Chat</span>
+            <span aria-hidden="true">Saves</span>
+            <span aria-hidden="true">TD</span>
+          </h1>
+          <p id="hero-caption">
+            Join us on <mark class="mark-teal">April 13, 2023</mark> for a
+            ChatGPT hackathon at WillowTree!
+          </p>
+          <a
+            class="button"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSceII7-F0S1y7R1oP0k3efCzbihi11UaT_r_rZ8rLPvU29qgg/viewform?usp=sharing"
+            target="_blank"
+          >
+            Register Now
+          </a>
+        </div>
+        <a href="#mission" id="hero-scroll">Scroll</a>
+      </section>
 
-    <!-- RULES SECTION -->
-    <section id="rules" class="max-width-686">
-      <h2>
-        <mark class="mark-teal -center">Rules</mark>
-      </h2>
-      <ol>
-        <li>
-          <h3 class="h4">team formation</h3>
-          <p>
-            Participants will sign up individually, and based on the volume of
-            interest, we will form one or more balanced teams per office
-            location. Each team will include a mix of role. This approach
-            encourages cross-discipline collaboration and helps ensure that each
-            team has the necessary skills to complete their app.
-          </p>
-        </li>
-        <li>
-          <h3 class="h4">pre-event preparations</h3>
-          <p>
-            Team members are allowed to arrange licenses and learn technologies
-            in advance, but they must not write any code for their team's app
-            prior to the event's start time. This ensures a level playing field
-            for all participants.
-          </p>
-        </li>
-        <li>
-          <h3 class="h4">cross-discipline collaboration</h3>
-          <p>
-            There are no strict boundaries for team members to stick to their
-            primary discipline during the event. We encourage participants to be
-            flexible and contribute to various aspects of the project as needed,
-            fostering creativity and collaboration within the team.
-          </p>
-        </li>
-        <li>
-          <h3 class="h4">time</h3>
-          <p>
-            Each team will have exactly 180 minutes to plan, design, and develop
-            their app. This includes design, coding, testing, and finalizing the
-            prototype. Teams must ensure they complete their work within the
-            allotted time.
-          </p>
-        </li>
-        <li>
-          <h3 class="h4">code submission</h3>
-          <p>
-            Upon completion of the development phase, teams must commit their
-            final code to a project in WillowTree's GitHub account. This will
-            enable the organization to view the work and learn from the teams'
-            experiences.
-          </p>
-        </li>
-        <li>
-          <h3 class="h4">post-development activities</h3>
-          <p>
-            After the development phase, team members should take some time to
-            synthesize their learnings and prepare a presentation to share their
-            experiences, insights, and the app's functionality with the
-            organization.
-          </p>
-        </li>
-        <li>
-          <h3 class="h4">AI tool usage</h3>
-          <p>
-            To demonstrate the potential of AI tools, we encourage participants
-            to use AI technologies like ChatGPT and GitHub CoPilot as much as
-            possible throughout the event. Be creative in finding ways to
-            integrate these tools into your development process and maximize
-            their impact on your project.
-          </p>
-        </li>
-      </ol>
-    </section>
+      <!-- THE MISSION SECTION -->
+      <section id="mission">
+        <div class="mission-header-goals-wrapper">
+          <div>
+            <h2>
+              <span>The </span>
+              <mark class="mark-teal">Mission</mark>
+            </h2>
+            <p class="mission-description">
+              We have received an urgent mission! Our esteemed President, TD,
+              has been "kidnapped," and we need your unique skills, creativity,
+              and expertise to rescue him. We're holding a Hackathon event that
+              will not only put your problem-solving abilities to the test but
+              also serve as an opportunity for team bonding and exploration.
+            </p>
+          </div>
 
-    <!-- FAQS SECTION -->
-    <section id="faqs">
-      <h2>
-        <mark class="mark-teal -center">FAQs</mark>
-      </h2>
-      <ul
-        class="faq-list"
-        role="list"
-        aria-roledescription="frequently asked questions"
-      >
-        <li id="faq-1">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                Can I use open-source resources in the app we develop during the
-                hackathon?
-              </h3>
-            </summary>
-            <p>
-              You're welcome to use any open source tooling or libraries that
-              exist, but your application's own source code should all be
-              written “from scratch” during the hackathony.
-            </p>
-          </details>
-        </li>
-        <li id="faq-2">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                What resources will be provided to us during the Hackathon? Can
-                we request additional tools or equipment?
-              </h3>
-            </summary>
-            <p>
-              TBD, but we encourage the use of
-              <a href="https://openai.com/blog/chatgpt" target="_blank"
-                >ChatGPT</a
-              >, <a href="https://bard.google.com/" target="_blank">Bard</a>,
-              <a href="https://github.com/features/copilot" target="_blank"
-                >GitHub CoPilot</a
-              >, and any other
-              <a
-                href="https://willowtree.atlassian.net/l/cp/nT8mB5Qw"
-                target="_blank"
-                >approved AI tools</a
-              >.
-            </p>
-          </details>
-        </li>
-        <li id="faq-3">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">What is the theme or topic of the hackathon?</h3>
-            </summary>
-            <p>
-              The idea is to build tools during the short time of the hackathon
-              that will 1) help rescue TD, and 2) familiarize ourselves with AI
-              tools that we can use in our work.
-            </p>
-          </details>
-        </li>
-        <li id="faq-4">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                What are the judging criteria for the hackathon?
-              </h3>
-            </summary>
-            <p>TBD</p>
-          </details>
-        </li>
-        <li id="faq-5">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                What are the rules and regulations of the hackathon?
-              </h3>
-            </summary>
-            <p>
-              See the <a href="#rules" id="faq-scroll">Rules</a> section above.
-            </p>
-          </details>
-        </li>
-        <li id="faq-6">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">What is the schedule of the hackathon?</h3>
-            </summary>
-            <p>
-              See the <a href="#schedule" id="faq-scroll">Schedule</a> section
-              above.
-            </p>
-          </details>
-        </li>
-        <li id="faq-7">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                Can I work on my own project or do I need to form a team?
-              </h3>
-            </summary>
-            <p>TBD.</p>
-          </details>
-        </li>
-        <li id="faq-8">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">Can I switch teams during the hackathon?</h3>
-            </summary>
-            <p>
-              Due to the short timeline of the hackathon, we ask that you stay
-              on your original team for the duration of the event.
-            </p>
-          </details>
-        </li>
-        <li id="faq-9">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                How can I find teammates if I don't have a team already?
-              </h3>
-            </summary>
-            <p>
-              Each office will have a DRI for the hackathon. Reach out to them
-              to find out how to get involved.
-            </p>
-          </details>
-        </li>
-        <li id="faq-10">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                Are there any mentors or experts available to help me during the
-                hackathon?
-              </h3>
-            </summary>
-            <p>TBD</p>
-          </details>
-        </li>
-        <li id="faq-11">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                Can I present a project that I have worked on before the
-                hackathon?
-              </h3>
-            </summary>
-            <p>
-              Unfortunately, no. You're welcome to use any open source tooling
-              or libraries that exist, but your application's own source code
-              should all be written “from scratch” during the hackathon.
-            </p>
-          </details>
-        </li>
-        <li id="faq-12">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">Can I submit multiple projects?</h3>
-            </summary>
-            <p>
-              Due to the timeline, we recommend that you focus on one project.
-              However, if you have time to work on multiple projects, you're
-              welcome to submit them.
-            </p>
-          </details>
-        </li>
-        <li id="faq-13">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                What happens to the projects after the hackathon?
-              </h3>
-            </summary>
-            <p>
-              In the week following the hackathon, teams will present their
-              projects and what worked well in terms of the AI tools at a Grow
-              session. The projects will be available for anyone to use and
-              build on afterward via a gallery on this site that will include
-              GitHub links to the projects.
-            </p>
-          </details>
-        </li>
-        <li id="faq-14">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                Is there a chance for my project to get funding or support after
-                the hackathon?
-              </h3>
-            </summary>
-            <p>TBD</p>
-          </details>
-        </li>
-        <li id="faq-15">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">
-                Can I attend the hackathon remotely or do I need to be
-                physically present?
-              </h3>
-            </summary>
-            <p>
-              We want everyone to be included and have accommodated that with
-              the schedule so that WFA, Poatek, and Maark folks are included,
-              not just the WFA Trees.
-            </p>
-          </details>
-        </li>
-        <li id="faq-16">
-          <span class="close-button faq-toggle"></span>
-          <details class="faq-details">
-            <summary>
-              <h3 class="h4">What should I bring to the hackathon?</h3>
-            </summary>
-            <p>
-              If possible, sign up for the AI tools you plan to use prior to the
-              start of the hackathon.
-            </p>
-          </details>
-        </li>
-      </ul>
-    </section>
+          <h3 class="goals">Goals Of The Hackathon</h3>
+          <ul>
+            <li>
+              <img src="assets/star-sparkle-line.svg" alt="star" />
+              <p>
+                Spark enthusiasm for using AI tools like
+                <a href="https://openai.com/blog/chatgpt" target="_blank"
+                  >ChatGPT</a
+                >
+                and
+                <a href="https://github.com/features/copilot" target="_blank"
+                  >GitHub CoPilot</a
+                >.
+              </p>
+            </li>
+            <li>
+              <img src="assets/face-head-line.svg" alt="head" />
+              <p>
+                Foster a deeper understanding of how these tools can impact the
+                way we work together.
+              </p>
+            </li>
+            <li>
+              <img src="assets/diamond-line.svg" alt="diamond" />
+              <p>
+                Develop expertise to help us deliver more value to our clients.
+              </p>
+            </li>
+          </ul>
+        </div>
 
-    <!-- REGISTRATION SECTION -->
-    <section id="registration"></section>
+        <div class="mission-briefing-wrapper">
+          <div class="briefing">
+            <h3>
+              <img src="assets/clipboard.svg" alt="clipboard" />
+              Briefing
+            </h3>
+            <ol>
+              <li>
+                <h4>Assemble Your Elite Team</h4>
+                <p>
+                  Each branch must form a special task force of cross-discipline
+                  members, including design, development, testing, and project
+                  management experts.
+                </p>
+              </li>
+              <li>
+                <h4>Choose your rescue mission app</h4>
+                <p>
+                  Each team will brainstorm and choose an app that could play a
+                  critical role in rescuing TD. Make sure to think of ways to
+                  incorporate ChatGPT, GitHub CoPilot, and various APIs to
+                  streamline the development process and enhance the app's
+                  functionality.
+                </p>
+              </li>
+              <li>
+                <h4>Scope out the operation</h4>
+                <p>
+                  Determine the scope and requirements for an app that can be
+                  feasibly built within a 3-hour time frame.
+                </p>
+              </li>
+              <li>
+                <h4>Harness the power of AI</h4>
+                <p>
+                  Maximize the use of ChatGPT and GitHub CoPilot throughout the
+                  development process, including requirements documentation,
+                  code generation, design ideas, problem-solving, and more.
+                </p>
+              </li>
+              <li>
+                <h4>Build your prototype</h4>
+                <ul>
+                  <li>
+                    Create a user-friendly UI for managing suspects, evidence,
+                    and other critical information related to the rescue
+                    mission.
+                  </li>
+                  <li>
+                    Develop backend logic for processing input and interacting
+                    with ChatGPT and APIs.
+                  </li>
+                  <li>
+                    Integrate with APIs for gathering valuable information and
+                    unveiling unexpected twists in the investigation.
+                  </li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+          <div class="debriefing">
+            <h3>
+              <img src="assets/movie-users.svg" alt="movie users" />
+              Debriefing
+            </h3>
+            <ol>
+              <li>
+                <h4>Showcase your creation</h4>
+                <p>
+                  Each team will present their app to the other branches,
+                  demonstrating its functionality and how it can assist in
+                  solving the mystery.
+                </p>
+              </li>
+              <li>
+                <h4>Share your learnings</h4>
+                <p>
+                  Discuss the insights gained during the Hackathon, including
+                  new techniques, AI tool usage, and potential applications for
+                  future projects.
+                </p>
+              </li>
+              <li>
+                <h4>Celebrate your success</h4>
+                <p>
+                  Take a moment to appreciate the hard work and creativity that
+                  went into building your app, and enjoy the camaraderie with
+                  your colleagues.
+                </p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
 
-    <!-- FOOTER SECTION -->
-    <footer></footer>
+      <!-- SCHEDULE SECTION -->
+      <section id="schedule"></section>
+
+      <!-- RULES SECTION -->
+      <section id="rules" class="max-width-686">
+        <h2>
+          <mark class="mark-teal -center">Rules</mark>
+        </h2>
+        <ol>
+          <li>
+            <h3 class="h4">team formation</h3>
+            <p>
+              Participants will sign up individually, and based on the volume of
+              interest, we will form one or more balanced teams per office
+              location. Each team will include a mix of role. This approach
+              encourages cross-discipline collaboration and helps ensure that
+              each team has the necessary skills to complete their app.
+            </p>
+          </li>
+          <li>
+            <h3 class="h4">pre-event preparations</h3>
+            <p>
+              Team members are allowed to arrange licenses and learn
+              technologies in advance, but they must not write any code for
+              their team's app prior to the event's start time. This ensures a
+              level playing field for all participants.
+            </p>
+          </li>
+          <li>
+            <h3 class="h4">cross-discipline collaboration</h3>
+            <p>
+              There are no strict boundaries for team members to stick to their
+              primary discipline during the event. We encourage participants to
+              be flexible and contribute to various aspects of the project as
+              needed, fostering creativity and collaboration within the team.
+            </p>
+          </li>
+          <li>
+            <h3 class="h4">time</h3>
+            <p>
+              Each team will have exactly 180 minutes to plan, design, and
+              develop their app. This includes design, coding, testing, and
+              finalizing the prototype. Teams must ensure they complete their
+              work within the allotted time.
+            </p>
+          </li>
+          <li>
+            <h3 class="h4">code submission</h3>
+            <p>
+              Upon completion of the development phase, teams must commit their
+              final code to a project in WillowTree's GitHub account. This will
+              enable the organization to view the work and learn from the teams'
+              experiences.
+            </p>
+          </li>
+          <li>
+            <h3 class="h4">post-development activities</h3>
+            <p>
+              After the development phase, team members should take some time to
+              synthesize their learnings and prepare a presentation to share
+              their experiences, insights, and the app's functionality with the
+              organization.
+            </p>
+          </li>
+          <li>
+            <h3 class="h4">AI tool usage</h3>
+            <p>
+              To demonstrate the potential of AI tools, we encourage
+              participants to use AI technologies like ChatGPT and GitHub
+              CoPilot as much as possible throughout the event. Be creative in
+              finding ways to integrate these tools into your development
+              process and maximize their impact on your project.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <!-- FAQS SECTION -->
+      <section id="faqs">
+        <h2>
+          <mark class="mark-teal -center">FAQs</mark>
+        </h2>
+        <ul
+          class="faq-list"
+          role="list"
+          aria-roledescription="frequently asked questions"
+        >
+          <li id="faq-1">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  Can I use open-source resources in the app we develop during
+                  the hackathon?
+                </h3>
+              </summary>
+              <p>
+                You're welcome to use any open source tooling or libraries that
+                exist, but your application's own source code should all be
+                written “from scratch” during the hackathony.
+              </p>
+            </details>
+          </li>
+          <li id="faq-2">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  What resources will be provided to us during the Hackathon?
+                  Can we request additional tools or equipment?
+                </h3>
+              </summary>
+              <p>
+                TBD, but we encourage the use of
+                <a href="https://openai.com/blog/chatgpt" target="_blank"
+                  >ChatGPT</a
+                >, <a href="https://bard.google.com/" target="_blank">Bard</a>,
+                <a href="https://github.com/features/copilot" target="_blank"
+                  >GitHub CoPilot</a
+                >, and any other
+                <a
+                  href="https://willowtree.atlassian.net/l/cp/nT8mB5Qw"
+                  target="_blank"
+                  >approved AI tools</a
+                >.
+              </p>
+            </details>
+          </li>
+          <li id="faq-3">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">What is the theme or topic of the hackathon?</h3>
+              </summary>
+              <p>
+                The idea is to build tools during the short time of the
+                hackathon that will 1) help rescue TD, and 2) familiarize
+                ourselves with AI tools that we can use in our work.
+              </p>
+            </details>
+          </li>
+          <li id="faq-4">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  What are the judging criteria for the hackathon?
+                </h3>
+              </summary>
+              <p>TBD</p>
+            </details>
+          </li>
+          <li id="faq-5">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  What are the rules and regulations of the hackathon?
+                </h3>
+              </summary>
+              <p>
+                See the <a href="#rules" id="faq-scroll">Rules</a> section
+                above.
+              </p>
+            </details>
+          </li>
+          <li id="faq-6">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">What is the schedule of the hackathon?</h3>
+              </summary>
+              <p>
+                See the <a href="#schedule" id="faq-scroll">Schedule</a> section
+                above.
+              </p>
+            </details>
+          </li>
+          <li id="faq-7">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  Can I work on my own project or do I need to form a team?
+                </h3>
+              </summary>
+              <p>TBD.</p>
+            </details>
+          </li>
+          <li id="faq-8">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">Can I switch teams during the hackathon?</h3>
+              </summary>
+              <p>
+                Due to the short timeline of the hackathon, we ask that you stay
+                on your original team for the duration of the event.
+              </p>
+            </details>
+          </li>
+          <li id="faq-9">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  How can I find teammates if I don't have a team already?
+                </h3>
+              </summary>
+              <p>
+                Each office will have a DRI for the hackathon. Reach out to them
+                to find out how to get involved.
+              </p>
+            </details>
+          </li>
+          <li id="faq-10">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  Are there any mentors or experts available to help me during
+                  the hackathon?
+                </h3>
+              </summary>
+              <p>TBD</p>
+            </details>
+          </li>
+          <li id="faq-11">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  Can I present a project that I have worked on before the
+                  hackathon?
+                </h3>
+              </summary>
+              <p>
+                Unfortunately, no. You're welcome to use any open source tooling
+                or libraries that exist, but your application's own source code
+                should all be written “from scratch” during the hackathon.
+              </p>
+            </details>
+          </li>
+          <li id="faq-12">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">Can I submit multiple projects?</h3>
+              </summary>
+              <p>
+                Due to the timeline, we recommend that you focus on one project.
+                However, if you have time to work on multiple projects, you're
+                welcome to submit them.
+              </p>
+            </details>
+          </li>
+          <li id="faq-13">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  What happens to the projects after the hackathon?
+                </h3>
+              </summary>
+              <p>
+                In the week following the hackathon, teams will present their
+                projects and what worked well in terms of the AI tools at a Grow
+                session. The projects will be available for anyone to use and
+                build on afterward via a gallery on this site that will include
+                GitHub links to the projects.
+              </p>
+            </details>
+          </li>
+          <li id="faq-14">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  Is there a chance for my project to get funding or support
+                  after the hackathon?
+                </h3>
+              </summary>
+              <p>TBD</p>
+            </details>
+          </li>
+          <li id="faq-15">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">
+                  Can I attend the hackathon remotely or do I need to be
+                  physically present?
+                </h3>
+              </summary>
+              <p>
+                We want everyone to be included and have accommodated that with
+                the schedule so that WFA, Poatek, and Maark folks are included,
+                not just the WFA Trees.
+              </p>
+            </details>
+          </li>
+          <li id="faq-16">
+            <span class="close-button faq-toggle"></span>
+            <details class="faq-details">
+              <summary>
+                <h3 class="h4">What should I bring to the hackathon?</h3>
+              </summary>
+              <p>
+                If possible, sign up for the AI tools you plan to use prior to
+                the start of the hackathon.
+              </p>
+            </details>
+          </li>
+        </ul>
+      </section>
+
+      <!-- REGISTRATION SECTION -->
+      <section id="registration" class="max-width-686">
+        <h2>
+          <mark class="mark-teal -center">Registration</mark>
+        </h2>
+        <div class="registration-copy">
+          <p>
+            As we embark on this thrilling and imaginative journey to rescue our
+            President, TD, let's remember that this Hackathon is not only an
+            opportunity to sharpen our skills and explore innovative AI tools
+            but also a chance to strengthen our teamwork and create lasting
+            memories. So gear up, dive into the adventure, and let your
+            creativity and expertise shine. Good luck to all the teams, TD is
+            counting on us!
+          </p>
+          <br />
+          <p>
+            If you have any questions, please reach out to
+            <a href="mailto:michelle.avery@willowtreeapps.com"
+              >Michelle Avery.</a
+            >
+          </p>
+        </div>
+        <a
+          class="button"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSceII7-F0S1y7R1oP0k3efCzbihi11UaT_r_rZ8rLPvU29qgg/viewform?usp=sharing"
+          target="_blank"
+        >
+          Register Now
+        </a>
+      </section>
+
+      <!-- FOOTER SECTION -->
+      <footer></footer>
+    </div>
   </body>
   <script src="index.js"></script>
 </html>

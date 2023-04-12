@@ -27,6 +27,21 @@
   }
 }
 
+.container:has(.site-nav.-open):before {
+  content: '';
+  display: block;
+  position: absolute;
+  background-color: colors.$color-black-25;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+
+  @container body (min-width: 1024px) {
+    display: none;
+  }
+}
+
 // WillowTree Logo link
 .logo {
   &:focus {
@@ -111,22 +126,6 @@
 
   @container body (min-width: 1024px) {
     display: none;
-  }
-}
-
-#hamburgerMenuBackground {
-  display: none;
-
-  &:has(+ .container > .site-nav.-open) {
-    @container body (max-width: 1024px) {
-      display: block;
-      position: absolute;
-      background-color: colors.$color-black-25;
-      width: 100vw;
-      height: 100vh;
-      top: 0;
-      z-index: 100;
-    }
   }
 }
 
