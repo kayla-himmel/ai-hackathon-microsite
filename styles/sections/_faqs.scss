@@ -5,6 +5,30 @@
     text-align: left;
     border-bottom: 1px solid;
     padding-bottom: 24px;
+
+    .close-button.faq-toggle {
+      width: 16px;
+      display: flex;
+      position: absolute;
+      right: 24px;
+
+      &:before {
+        border-bottom: none;
+        border-top: 1px solid colors.$color-white;
+        transform: rotate(0deg);
+        margin-top: 42px;
+        width: 15px;
+      }
+
+      &:after {
+        border-left: none;
+        border-right: 1px solid colors.$color-white;
+        transform: rotate(90deg);
+        left: 0;
+        margin-top: 42px;
+        width: 16px;
+      }
+    }
   }
 
   .faq-details {
@@ -12,9 +36,8 @@
   }
 
   summary {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: block;
+    width: calc(100% - 26px);
 
     &:-webkit-details-marker {
       display: none;

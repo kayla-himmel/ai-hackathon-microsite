@@ -243,12 +243,6 @@ ol {
     transform: rotate(45deg);
     width: 24px;
   }
-
-  &.faq-toggle:before {
-    transform: rotate(0deg);
-    margin-top: 42px;
-    width: 16px;
-  }
 }
 
 .close-button {
@@ -262,11 +256,10 @@ ol {
     left: -1px;
     width: 24px;
   }
+}
 
-  &.faq-toggle:after {
-    transform: rotate(90deg);
-    left: 0;
-    margin-top: 42px;
-    width: 16px;
+details[open] {
+  .close-button.faq-toggle:after {
+    display: none;
   }
 }

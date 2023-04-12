@@ -573,13 +573,33 @@ table {
   border-bottom: 1px solid;
   padding-bottom: 24px;
 }
+.faq-list li .close-button.faq-toggle {
+  width: 16px;
+  display: flex;
+  position: absolute;
+  right: 24px;
+}
+.faq-list li .close-button.faq-toggle:before {
+  border-bottom: none;
+  border-top: 1px solid #ffffff;
+  transform: rotate(0deg);
+  margin-top: 42px;
+  width: 15px;
+}
+.faq-list li .close-button.faq-toggle:after {
+  border-left: none;
+  border-right: 1px solid #ffffff;
+  transform: rotate(90deg);
+  left: 0;
+  margin-top: 42px;
+  width: 16px;
+}
 .faq-list .faq-details {
   position: relative;
 }
 .faq-list summary {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
+  display: block;
+  width: calc(100% - 26px);
 }
 .faq-list summary:-webkit-details-marker {
   display: none;
@@ -806,11 +826,6 @@ ol li > p {
   transform: rotate(45deg);
   width: 24px;
 }
-.close-button.faq-toggle:before {
-  transform: rotate(0deg);
-  margin-top: 42px;
-  width: 16px;
-}
 
 .close-button:after {
   content: "";
@@ -822,11 +837,9 @@ ol li > p {
   left: -1px;
   width: 24px;
 }
-.close-button.faq-toggle:after {
-  transform: rotate(90deg);
-  left: 0;
-  margin-top: 42px;
-  width: 16px;
+
+details[open] .close-button.faq-toggle:after {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */
