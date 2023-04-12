@@ -10,7 +10,6 @@
 body {
   background-color: colors.$color-blue;
   color: colors.$color-white;
-  container: body / inline-size;
   font-family: 'Tomorrow', sans-serif;
   font-weight: 300;
   font-size: 1rem; // 16px
@@ -19,14 +18,22 @@ body {
   position: relative;
   height: 100%;
 
-  @container body (min-width: 1024px) {
-    text-align: center;
+  &.-navOpen {
+    overflow: hidden;
+
+    @media (min-width: 1024px) {
+      overflow: auto;
+    }
   }
 
   mark {
     font-weight: 500;
     display: inline-block;
   }
+}
+
+.body-container {
+  container: body / inline-size;
 }
 
 .mark-teal {

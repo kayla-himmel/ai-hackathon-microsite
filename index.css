@@ -141,6 +141,22 @@ table {
   }
 }
 
+.container:has(.site-nav.-open):before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.25);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: 100;
+}
+@container body (min-width: 1024px) {
+  .container:has(.site-nav.-open):before {
+    display: none;
+  }
+}
+
 .logo:focus {
   outline: 2px dashed #ffffff;
   outline-offset: 5px;
@@ -221,21 +237,6 @@ table {
 @container body (min-width: 1024px) {
   #hamburgerNavCloseButton {
     display: none;
-  }
-}
-
-#hamburgerMenuBackground {
-  display: none;
-}
-@container body (max-width: 1024px) {
-  #hamburgerMenuBackground:has(+ .container > .site-nav.-open) {
-    display: block;
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.25);
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    z-index: 100;
   }
 }
 
@@ -589,7 +590,6 @@ footer {
 body {
   background-color: #00023d;
   color: #ffffff;
-  container: body/inline-size;
   font-family: "Tomorrow", sans-serif;
   font-weight: 300;
   font-size: 1rem;
@@ -598,14 +598,21 @@ body {
   position: relative;
   height: 100%;
 }
-@container body (min-width: 1024px) {
-  body {
-    text-align: center;
+body.-navOpen {
+  overflow: hidden;
+}
+@media (min-width: 1024px) {
+  body.-navOpen {
+    overflow: auto;
   }
 }
 body mark {
   font-weight: 500;
   display: inline-block;
+}
+
+.body-container {
+  container: body/inline-size;
 }
 
 .mark-teal {
