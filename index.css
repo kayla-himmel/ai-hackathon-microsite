@@ -572,41 +572,49 @@ table {
 .faq-list li {
   text-align: left;
   border-bottom: 1px solid;
-  padding-bottom: 24px;
+  padding: 24px 0;
 }
-.faq-list li .close-button.faq-toggle {
-  width: 16px;
+.faq-list li .faq-toggle {
   display: flex;
-  position: absolute;
-  right: 24px;
-}
-.faq-list li .close-button.faq-toggle:before {
-  border-bottom: none;
-  border-top: 1px solid #ffffff;
-  transform: rotate(0deg);
-  margin-top: 42px;
-  width: 15px;
-}
-.faq-list li .close-button.faq-toggle:after {
-  border-left: none;
-  border-right: 1px solid #ffffff;
-  transform: rotate(90deg);
-  left: 0;
-  margin-top: 42px;
-  width: 16px;
-}
-.faq-list .faq-details {
+  padding-top: 10px;
   position: relative;
 }
-.faq-list summary {
+.faq-list li .faq-toggle .plus {
   display: block;
-  width: calc(100% - 26px);
+  border-right: 1px solid #ffffff;
+  height: 16px;
+  position: absolute;
+  right: 8px;
 }
-.faq-list summary:-webkit-details-marker {
+.faq-list li .faq-toggle .minus {
+  display: block;
+  border-top: 1px solid #ffffff;
+  width: 17px;
+  position: absolute;
+  top: 17px;
+  right: 0;
+}
+.faq-list li .h4,
+.faq-list li h3 {
+  padding: 0 32px 0 0;
+  margin-bottom: 0;
+}
+.faq-list li p {
+  margin-top: 8px;
+}
+.faq-list li .faq-details {
+  position: relative;
+}
+.faq-list li summary {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.faq-list li summary:-webkit-details-marker {
   display: none;
 }
-.faq-list .h4 {
-  padding-right: 20px;
+.faq-list li details[open] .plus {
+  display: none;
 }
 
 #registration {
@@ -866,10 +874,6 @@ ol li > p {
   transform: rotate(-45deg);
   left: -1px;
   width: 24px;
-}
-
-details[open] .close-button.faq-toggle:after {
-  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

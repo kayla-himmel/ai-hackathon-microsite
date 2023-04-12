@@ -266,9 +266,3 @@ ol {
     width: 24px;
   }
 }
-
-details[open] {
-  .close-button.faq-toggle:after {
-    display: none;
-  }
-}

@@ -4,47 +4,59 @@
   li {
     text-align: left;
     border-bottom: 1px solid;
-    padding-bottom: 24px;
+    padding: 24px 0;
 
-    .close-button.faq-toggle {
-      width: 16px;
+    .faq-toggle {
       display: flex;
-      position: absolute;
-      right: 24px;
+      padding-top: 10px;
+      position: relative;
 
-      &:before {
-        border-bottom: none;
-        border-top: 1px solid colors.$color-white;
-        transform: rotate(0deg);
-        margin-top: 42px;
-        width: 15px;
-      }
-
-      &:after {
-        border-left: none;
+      .plus {
+        display: block;
         border-right: 1px solid colors.$color-white;
-        transform: rotate(90deg);
-        left: 0;
-        margin-top: 42px;
-        width: 16px;
+        height: 16px;
+        position: absolute;
+        right: 8px;
+      }
+
+      .minus {
+        display: block;
+        border-top: 1px solid colors.$color-white;
+        width: 17px;
+        position: absolute;
+        top: 17px;
+        right: 0;
       }
     }
-  }
 
-  .faq-details {
-    position: relative;
-  }
-
-  summary {
-    display: block;
-    width: calc(100% - 26px);
-
-    &:-webkit-details-marker {
-      display: none;
+    .h4,
+    h3 {
+      padding: 0 32px 0 0;
+      margin-bottom: 0;
     }
-  }
 
-  .h4 {
-    padding-right: 20px;
+    p {
+      margin-top: 8px;
+    }
+
+    .faq-details {
+      position: relative;
+    }
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+
+      &:-webkit-details-marker {
+        display: none;
+      }
+    }
+
+    details[open] {
+      .plus {
+        display: none;
+      }
+    }
   }
 }
