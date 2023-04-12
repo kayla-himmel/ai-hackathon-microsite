@@ -122,35 +122,13 @@ const faqContent16 = document.getElementById('faq-16');
 const faqLiArray = document.getElementsByClassName('faq-details');
 const faqToggleButtonArray = document.querySelectorAll('.faq-toggle');
 const accordionButtonArray = document.getElementsByClassName('plus');
+const detailsArray = document.getElementsByTagName('details');
 
-accordionButtonArray.forEach((button) => {
-  button.addEventListener('click', () => {
-    details.setArrtibute('open', 'open');
-  });
-});
-
-// click event toggle on summary element that changes the "+" to a "-" and vice versa
-// change the button when anywhere on the FAQ is clicked
-// const onFaqContentClick = (content) => {
-//   for (let i = 0; i < faqLiArray.length; i++) {
-//     const li = faqLiArray[i];
-//     // check if faqContent has open attribute
-//     li.addEventListener('click', () => {
-//       // if so, show - button
-//       document.documentElement.style.setProperty('--color', 'red');
-//       // define close button after style, then display none
-//       // ___.style.display = 'none';
-//       // else, show + button
-//     });
-//   }
-// };
-
-// change the button when the actual button is clicked
-// const toggleAccordion = (faq) => {
-//   faqToggleButtonArray.forEach((button) => {
-//     plusSpanInButton.addEventListener('click', () => {
-//       button.style.display = 0.25;
-//     });
-//   });
-//   button.style.opacity = 1;
-// };
+const toggleAccordion = (i) => {
+  // for (let i = 0; i < faqLiArray.length; i++) {
+  detailsArray[i].hasAttribute('open')
+    ? detailsArray[i].removeAttribute('open')
+    : detailsArray[i].setAttribute('open', 'open');
+  // }
+  console.log(i);
+};
