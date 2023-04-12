@@ -345,23 +345,21 @@ table {
 
 .social-nav {
   display: flex;
-  flex-direction: row;
   width: max-content;
   margin: 0 auto;
   gap: 26px;
 }
 @container body (min-width: 1024px) {
   .social-nav {
-    margin: 0;
     gap: 17px;
   }
 }
 .social-nav img {
-  width: 22px;
+  width: 24px;
 }
 @container body (min-width: 1024px) {
   .social-nav img {
-    width: 15px;
+    width: 16px;
   }
 }
 
@@ -371,7 +369,7 @@ table {
   padding-top: 8px;
 }
 @container body (min-width: 1024px) {
-  .copyright {
+  .copyright.-hamburgerMenu {
     display: none;
   }
 }
@@ -579,11 +577,16 @@ table {
 }
 
 footer {
-  padding: 90px 0 40px 0;
+  padding: 65px 0 40px 0;
+}
+@container body (min-width: 1440px) {
+  footer ul:first-of-type {
+    margin: 0 auto;
+  }
 }
 @container body (min-width: 768px) {
   footer {
-    padding: 100px 0 50px 0;
+    padding: 75px 0 50px 0;
   }
 }
 
