@@ -95,10 +95,12 @@ siteNavLinks.forEach((link) =>
 );
 
 // COPYRIGHT YEAR
-const copyrightYearElement = document.getElementById('copyrightYear');
+const copyrightYearElements = document.querySelectorAll('.copyrightYear');
 const currentYear = new Date().getFullYear();
 
-copyrightYearElement.innerHTML = currentYear;
+copyrightYearElements.forEach((element) => {
+  element.innerHTML = currentYear;
+});
 
 // FAQ ACCORDION
 const faqContent1 = document.getElementById('faq-1');

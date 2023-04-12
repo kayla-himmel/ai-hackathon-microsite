@@ -192,6 +192,7 @@
     }
   }
 }
+
 .site-nav-links a {
   color: colors.$color-white;
   text-decoration: none;
@@ -237,21 +238,19 @@
 
 .social-nav {
   display: flex;
-  flex-direction: row;
   width: max-content;
   margin: 0 auto;
   gap: 26px;
 
   @container body (min-width: 1024px) {
-    margin: 0;
     gap: 17px;
   }
 
   & img {
-    width: 22px;
+    width: 24px;
 
     @container body (min-width: 1024px) {
-      width: 15px;
+      width: 16px;
     }
   }
 }
@@ -261,7 +260,9 @@
   text-align: center;
   padding-top: 8px;
 
-  @container body (min-width: 1024px) {
-    display: none;
+  &.-hamburgerMenu {
+    @container body (min-width: 1024px) {
+      display: none;
+    }
   }
 }
