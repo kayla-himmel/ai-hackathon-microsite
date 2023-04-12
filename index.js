@@ -101,34 +101,3 @@ const currentYear = new Date().getFullYear();
 copyrightYearElements.forEach((element) => {
   element.innerHTML = currentYear;
 });
-
-// FAQ ACCORDION
-const faqContent1 = document.getElementById('faq-1');
-const faqContent2 = document.getElementById('faq-2');
-const faqContent3 = document.getElementById('faq-3');
-const faqContent4 = document.getElementById('faq-4');
-const faqContent5 = document.getElementById('faq-5');
-const faqContent6 = document.getElementById('faq-6');
-const faqContent7 = document.getElementById('faq-7');
-const faqContent8 = document.getElementById('faq-8');
-const faqContent9 = document.getElementById('faq-9');
-const faqContent10 = document.getElementById('faq-10');
-const faqContent11 = document.getElementById('faq-11');
-const faqContent12 = document.getElementById('faq-12');
-const faqContent13 = document.getElementById('faq-13');
-const faqContent14 = document.getElementById('faq-14');
-const faqContent15 = document.getElementById('faq-15');
-const faqContent16 = document.getElementById('faq-16');
-const faqLiArray = document.getElementsByClassName('faq-details');
-const faqToggleButtonArray = document.querySelectorAll('.faq-toggle');
-const accordionButtonArray = document.getElementsByClassName('plus');
-const detailsArray = document.getElementsByTagName('details');
-
-const toggleAccordion = (i) => {
-  // for (let i = 0; i < faqLiArray.length; i++) {
-  detailsArray[i].hasAttribute('open')
-    ? detailsArray[i].removeAttribute('open')
-    : detailsArray[i].setAttribute('open', 'open');
-  // }
-  console.log(i);
-};

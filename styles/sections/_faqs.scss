@@ -1,61 +1,64 @@
 @use '../colors';
 
 .faq-list {
+  &:first-of-type {
+    @container body (min-width: 1024px) {
+      display: block;
+    }
+  }
+
   li {
     text-align: left;
     border-bottom: 1px solid;
     padding: 24px 0;
 
-    .faq-toggle {
-      display: flex;
-      padding-top: 10px;
-      position: relative;
-
-      .plus {
-        display: block;
-        border-right: 1px solid colors.$color-white;
-        height: 16px;
-        position: absolute;
-        right: 8px;
-      }
-
-      .minus {
-        display: block;
-        border-top: 1px solid colors.$color-white;
-        width: 17px;
-        position: absolute;
-        top: 17px;
-        right: 0;
-      }
-    }
-
     .h4,
     h3 {
       padding: 0 32px 0 0;
       margin-bottom: 0;
-    }
+      text-transform: none;
 
-    p {
-      margin-top: 8px;
+      @container body (min-width: 768px) {
+        padding-right: 48px;
+      }
     }
 
     .faq-details {
       position: relative;
-    }
 
-    summary {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-
-      &:-webkit-details-marker {
-        display: none;
+      &[open] {
+        summary:before {
+          display: none;
+        }
       }
-    }
 
-    details[open] {
-      .plus {
-        display: none;
+      summary {
+        list-style-type: none;
+        margin-bottom: 8px;
+
+        &::-webkit-details-marker {
+          display: none;
+        }
+
+        &:before {
+          content: '';
+          display: inline-block;
+          border-right: 1px solid colors.$color-white;
+          height: 16px;
+          position: absolute;
+          right: 8px;
+          top: 10px;
+        }
+
+        &:after {
+          content: '';
+          display: inline-block;
+          border-top: 1px solid colors.$color-white;
+          width: 17px;
+          position: absolute;
+          top: 17px;
+          right: 0;
+        }
       }
     }
   }
