@@ -192,7 +192,7 @@ ol {
 
   li::marker {
     font-weight: 500;
-    font-size: 1.125rem; // 18px
+    font-size: 1.125rem; 
   }
 
   li {
@@ -254,15 +254,13 @@ ol {
   }
 }
 
-.close-button {
-  &:after {
-    content: '';
-    display: block;
-    position: absolute;
-    border: 1px solid colors.$color-white;
-    border-radius: 2px;
-    transform: rotate(-45deg);
-    left: -1px;
-    width: 24px;
-  }
+.close-button:after {
+  content: '';
+  display: block;
+  position: absolute;
+  border: 1px solid colors.$color-white;
+  border-radius: 2px;
+  transform: rotate(-45deg);
+  left: -1px;
+  width: 24px;
 }

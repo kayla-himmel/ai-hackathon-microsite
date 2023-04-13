@@ -26,6 +26,11 @@
     .faq-details {
       position: relative;
 
+      &:focus-within {
+        outline: 2px dashed colors.$color-white;
+        outline-offset: 12px;
+      }
+
       &[open] {
         summary:before {
           display: none;

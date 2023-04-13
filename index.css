@@ -592,6 +592,10 @@ table {
 .faq-list li .faq-details {
   position: relative;
 }
+.faq-list li .faq-details:focus-within {
+  outline: 2px dashed #ffffff;
+  outline-offset: 12px;
+}
 .faq-list li .faq-details[open] summary:before {
   display: none;
 }
