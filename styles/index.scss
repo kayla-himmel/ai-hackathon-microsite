@@ -6,6 +6,7 @@
 @use './sections/rules';
 @use './sections/registration';
 @use './sections/footer';
+@use './sections/schedule';
 
 body {
   background-color: colors.$color-blue;
@@ -173,14 +174,6 @@ ul {
 
     @container body (min-width: 1440px) {
       margin: 0;
-    }
-  }
-
-  li > img {
-    padding: 50px 0 22px;
-
-    @container body (min-width: 1024px) {
-      padding: 88px 0 32px;
     }
   }
 }
