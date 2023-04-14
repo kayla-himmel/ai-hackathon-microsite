@@ -5,6 +5,31 @@
   flex-direction: column;
   text-transform: capitalize;
   padding-top: 8px;
+  position: relative;
+
+  @container body (min-width: 1024px) {
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: colors.$color-white;
+      left: -975px;
+      top: 80px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: colors.$color-white;
+      right: -990px;
+      top: 80px;
+    }
+  }
 
   li {
     @container body (min-width: 1024px) {
@@ -15,13 +40,27 @@
       min-width: 192px;
     }
 
-    &:not(:last-child):after {
+    & .arrow {
       content: '';
       display: block;
       height: 32px;
       width: 1px;
       background-color: colors.$color-white;
       margin: 24px auto;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        border-right: 1px solid colors.$color-white;
+        border-bottom: 1px solid colors.$color-white;
+        bottom: 0;
+        left: -4px;
+        transform: rotate(45deg);
+      }
     }
   }
 
@@ -41,24 +80,24 @@
     li {
       position: relative;
 
-      &:not(:last-child):after {
+      & .arrow {
         position: absolute;
-        top: 5px;
+        top: 6px;
         right: -60px;
         width: 100px;
         height: 1px;
+
+        &:after {
+          left: unset;
+          right: 0;
+          bottom: -4px;
+          transform: rotate(-45deg);
+        }
       }
     }
 
     img {
       margin-bottom: 16px;
-    }
-  }
-
-  @container body (min-width: 1440px) {
-    li:not(:last-child):after {
-      right: -70px;
-      width: 120px;
     }
   }
 }

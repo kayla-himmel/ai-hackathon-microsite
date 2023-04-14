@@ -603,6 +603,29 @@ footer {
   flex-direction: column;
   text-transform: capitalize;
   padding-top: 8px;
+  position: relative;
+}
+@container body (min-width: 1024px) {
+  .schedule-list:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    left: -975px;
+    top: 80px;
+  }
+  .schedule-list:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    right: -990px;
+    top: 80px;
+  }
 }
 @container body (min-width: 1024px) {
   .schedule-list li {
@@ -614,13 +637,26 @@ footer {
     min-width: 192px;
   }
 }
-.schedule-list li:not(:last-child):after {
+.schedule-list li .arrow {
   content: "";
   display: block;
   height: 32px;
   width: 1px;
   background-color: #ffffff;
   margin: 24px auto;
+  position: relative;
+}
+.schedule-list li .arrow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 8px;
+  width: 8px;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  bottom: 0;
+  left: -4px;
+  transform: rotate(45deg);
 }
 .schedule-list img {
   margin-bottom: 8px;
@@ -637,21 +673,21 @@ footer {
   .schedule-list li {
     position: relative;
   }
-  .schedule-list li:not(:last-child):after {
+  .schedule-list li .arrow {
     position: absolute;
-    top: 5px;
+    top: 6px;
     right: -60px;
     width: 100px;
     height: 1px;
   }
+  .schedule-list li .arrow:after {
+    left: unset;
+    right: 0;
+    bottom: -4px;
+    transform: rotate(-45deg);
+  }
   .schedule-list img {
     margin-bottom: 16px;
-  }
-}
-@container body (min-width: 1440px) {
-  .schedule-list li:not(:last-child):after {
-    right: -70px;
-    width: 120px;
   }
 }
 
