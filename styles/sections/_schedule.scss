@@ -1,0 +1,64 @@
+@use '../colors';
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  padding-top: 8px;
+
+  li {
+    @container body (min-width: 1024px) {
+      width: 162px;
+    }
+
+    @container body (min-width: 1440px) {
+      min-width: 192px;
+    }
+
+    &:not(:last-child):after {
+      content: '';
+      display: block;
+      height: 32px;
+      width: 1px;
+      background-color: colors.$color-white;
+      margin: 24px auto;
+    }
+  }
+
+  img {
+    margin-bottom: 8px;
+  }
+
+  p {
+    font-size: 1.25rem; // 20px
+  }
+
+  @container body (min-width: 1024px) {
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 50px;
+
+    li {
+      position: relative;
+
+      &:not(:last-child):after {
+        position: absolute;
+        top: 5px;
+        right: -60px;
+        width: 100px;
+        height: 1px;
+      }
+    }
+
+    img {
+      margin-bottom: 16px;
+    }
+  }
+
+  @container body (min-width: 1440px) {
+    li:not(:last-child):after {
+      right: -70px;
+      width: 120px;
+    }
+  }
+}
