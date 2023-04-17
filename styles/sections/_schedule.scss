@@ -1,13 +1,26 @@
 @use '../colors';
 
+#schedule {
+  padding: 82px 0 0 0;
+
+  @container body (min-width: 768px) {
+    padding: 200px 0 0 0;
+  }
+}
+
 .schedule-list {
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
   padding-top: 8px;
   position: relative;
+  justify-content: center !important;
 
   @container body (min-width: 1024px) {
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 50px;
+
     &:before {
       content: '';
       display: block;
@@ -15,7 +28,7 @@
       height: 1px;
       width: 100%;
       background-color: colors.$color-white;
-      left: -975px;
+      left: -920px;
       top: 80px;
     }
 
@@ -26,13 +39,24 @@
       height: 1px;
       width: 100%;
       background-color: colors.$color-white;
-      right: -990px;
+      right: -920px;
       top: 80px;
+    }
+  }
+
+  @container body (min-width: 1440px) {
+    &:before {
+      left: -985px;
+    }
+
+    &:after {
+      right: -985px;
     }
   }
 
   li {
     @container body (min-width: 1024px) {
+      position: relative;
       width: 162px;
     }
 
@@ -53,34 +77,16 @@
         content: '';
         display: block;
         position: absolute;
-        height: 8px;
-        width: 8px;
+        height: 6px;
+        width: 6px;
         border-right: 1px solid colors.$color-white;
         border-bottom: 1px solid colors.$color-white;
         bottom: 0;
-        left: -4px;
+        left: -3px;
         transform: rotate(45deg);
       }
-    }
-  }
 
-  img {
-    margin-bottom: 8px;
-  }
-
-  p {
-    font-size: 1.25rem; // 20px
-  }
-
-  @container body (min-width: 1024px) {
-    flex-direction: row;
-    gap: 20px;
-    padding-top: 50px;
-
-    li {
-      position: relative;
-
-      & .arrow {
+      @container body (min-width: 1024px) {
         position: absolute;
         top: 6px;
         right: -60px;
@@ -90,14 +96,27 @@
         &:after {
           left: unset;
           right: 0;
-          bottom: -4px;
+          bottom: -3px;
           transform: rotate(-45deg);
         }
       }
-    }
 
-    img {
+      @container body (min-width: 1440px) {
+        right: -70px;
+        width: 120px;
+      }
+    }
+  }
+
+  img {
+    margin-bottom: 8px;
+
+    @container body (min-width: 1024px) {
       margin-bottom: 16px;
     }
+  }
+
+  p {
+    font-size: 1.25rem; // 20px
   }
 }

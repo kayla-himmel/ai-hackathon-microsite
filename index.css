@@ -598,14 +598,29 @@ footer {
   }
 }
 
+#schedule {
+  padding: 82px 0 0 0;
+}
+@container body (min-width: 768px) {
+  #schedule {
+    padding: 200px 0 0 0;
+  }
+}
+
 .schedule-list {
   display: flex;
   flex-direction: column;
   text-transform: capitalize;
   padding-top: 8px;
   position: relative;
+  justify-content: center !important;
 }
 @container body (min-width: 1024px) {
+  .schedule-list {
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 50px;
+  }
   .schedule-list:before {
     content: "";
     display: block;
@@ -613,7 +628,7 @@ footer {
     height: 1px;
     width: 100%;
     background-color: #ffffff;
-    left: -975px;
+    left: -920px;
     top: 80px;
   }
   .schedule-list:after {
@@ -623,12 +638,21 @@ footer {
     height: 1px;
     width: 100%;
     background-color: #ffffff;
-    right: -990px;
+    right: -920px;
     top: 80px;
+  }
+}
+@container body (min-width: 1440px) {
+  .schedule-list:before {
+    left: -985px;
+  }
+  .schedule-list:after {
+    right: -985px;
   }
 }
 @container body (min-width: 1024px) {
   .schedule-list li {
+    position: relative;
     width: 162px;
   }
 }
@@ -650,29 +674,15 @@ footer {
   content: "";
   display: block;
   position: absolute;
-  height: 8px;
-  width: 8px;
+  height: 6px;
+  width: 6px;
   border-right: 1px solid #ffffff;
   border-bottom: 1px solid #ffffff;
   bottom: 0;
-  left: -4px;
+  left: -3px;
   transform: rotate(45deg);
 }
-.schedule-list img {
-  margin-bottom: 8px;
-}
-.schedule-list p {
-  font-size: 1.25rem;
-}
 @container body (min-width: 1024px) {
-  .schedule-list {
-    flex-direction: row;
-    gap: 20px;
-    padding-top: 50px;
-  }
-  .schedule-list li {
-    position: relative;
-  }
   .schedule-list li .arrow {
     position: absolute;
     top: 6px;
@@ -683,12 +693,26 @@ footer {
   .schedule-list li .arrow:after {
     left: unset;
     right: 0;
-    bottom: -4px;
+    bottom: -3px;
     transform: rotate(-45deg);
   }
+}
+@container body (min-width: 1440px) {
+  .schedule-list li .arrow {
+    right: -70px;
+    width: 120px;
+  }
+}
+.schedule-list img {
+  margin-bottom: 8px;
+}
+@container body (min-width: 1024px) {
   .schedule-list img {
     margin-bottom: 16px;
   }
+}
+.schedule-list p {
+  font-size: 1.25rem;
 }
 
 body {
