@@ -4,6 +4,7 @@
 @use './sections/hero';
 @use './sections/mission';
 @use './sections/rules';
+@use './sections/faqs';
 @use './sections/registration';
 @use './sections/footer';
 @use './sections/schedule';
@@ -135,7 +136,7 @@ h3 {
   font-weight: 500;
   font-size: 2rem; // 32px
   line-height: 150%; // 48px
-  padding-top: 64px;
+  padding-top: 24px;
 
   img {
     padding-right: 18px;
@@ -184,7 +185,7 @@ ol {
 
   li::marker {
     font-weight: 500;
-    font-size: 1.125rem; // 18px
+    font-size: 1.125rem; 
   }
 
   li {
@@ -234,16 +235,16 @@ ol {
   position: relative;
   display: block;
   width: 24px;
-}
 
-.close-button:before {
-  content: '';
-  display: block;
-  position: absolute;
-  border: 1px solid colors.$color-white;
-  border-radius: 2px;
-  transform: rotate(45deg);
-  width: 24px;
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    border: 1px solid colors.$color-white;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    width: 24px;
+  }
 }
 
 .close-button:after {

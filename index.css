@@ -505,6 +505,7 @@ table {
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+  padding-top: 64px;
 }
 @container body (min-width: 1024px) {
   .goals {
@@ -530,6 +531,10 @@ table {
 .mission-briefing-wrapper .briefing,
 .mission-briefing-wrapper .debriefing {
   display: block;
+}
+.mission-briefing-wrapper .briefing h3,
+.mission-briefing-wrapper .debriefing h3 {
+  padding-top: 64px;
 }
 @container body (min-width: 1024px) {
   .mission-briefing-wrapper .briefing h3,
@@ -568,6 +573,64 @@ table {
   #rules li {
     padding-top: 24px;
   }
+}
+
+@container body (min-width: 1024px) {
+  .faq-list:first-of-type {
+    display: block;
+  }
+}
+.faq-list li {
+  text-align: left;
+  border-bottom: 1px solid;
+  padding: 24px 0;
+}
+.faq-list li .h4,
+.faq-list li h3 {
+  padding: 0 32px 0 0;
+  margin-bottom: 0;
+  text-transform: none;
+}
+@container body (min-width: 768px) {
+  .faq-list li .h4,
+  .faq-list li h3 {
+    padding-right: 48px;
+  }
+}
+.faq-list li .faq-details {
+  position: relative;
+}
+.faq-list li .faq-details[open] summary:before {
+  display: none;
+}
+.faq-list li .faq-details summary {
+  list-style-type: none;
+  margin-bottom: 8px;
+}
+.faq-list li .faq-details summary:focus-visible {
+  outline: 2px dashed #ffffff;
+  outline-offset: 8px;
+}
+.faq-list li .faq-details summary::-webkit-details-marker {
+  display: none;
+}
+.faq-list li .faq-details summary:before {
+  content: "";
+  display: inline-block;
+  border-right: 1px solid #ffffff;
+  height: 16px;
+  position: absolute;
+  right: 8px;
+  top: 10px;
+}
+.faq-list li .faq-details summary:after {
+  content: "";
+  display: inline-block;
+  border-top: 1px solid #ffffff;
+  width: 17px;
+  position: absolute;
+  top: 17px;
+  right: 0;
 }
 
 #registration {
@@ -832,7 +895,7 @@ h3 {
   font-weight: 500;
   font-size: 2rem;
   line-height: 150%;
-  padding-top: 64px;
+  padding-top: 24px;
 }
 h3 img {
   padding-right: 18px;
@@ -922,7 +985,6 @@ ol li > p {
   display: block;
   width: 24px;
 }
-
 .close-button:before {
   content: "";
   display: block;

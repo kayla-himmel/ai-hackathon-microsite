@@ -61,6 +61,7 @@
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
+  padding-top: 64px;
 
   @container body (min-width: 1024px) {
     padding-top: 202px;
@@ -86,6 +87,8 @@
     display: block;
 
     h3 {
+      padding-top: 64px;
+
       @container body (min-width: 1024px) {
         margin-left: -2px;
         padding: 0;
