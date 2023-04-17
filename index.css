@@ -492,6 +492,14 @@ table {
     position: relative;
   }
 }
+.mission-header-goals-wrapper ul li > img {
+  padding: 50px 0 22px;
+}
+@container body (min-width: 1024px) {
+  .mission-header-goals-wrapper ul li > img {
+    padding: 88px 0 32px;
+  }
+}
 
 .goals {
   justify-content: center;
@@ -588,6 +596,123 @@ footer {
   footer {
     padding: 75px 0 50px 0;
   }
+}
+
+#schedule {
+  padding: 82px 0 0 0;
+}
+@container body (min-width: 768px) {
+  #schedule {
+    padding: 200px 0 0 0;
+  }
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  padding-top: 8px;
+  position: relative;
+  justify-content: center !important;
+}
+@container body (min-width: 1024px) {
+  .schedule-list {
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 50px;
+  }
+  .schedule-list:before {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    left: -920px;
+    top: 80px;
+  }
+  .schedule-list:after {
+    content: "";
+    display: block;
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #ffffff;
+    right: -920px;
+    top: 80px;
+  }
+}
+@container body (min-width: 1440px) {
+  .schedule-list:before {
+    left: -985px;
+  }
+  .schedule-list:after {
+    right: -985px;
+  }
+}
+@container body (min-width: 1024px) {
+  .schedule-list li {
+    position: relative;
+    width: 162px;
+  }
+}
+@container body (min-width: 1440px) {
+  .schedule-list li {
+    min-width: 192px;
+  }
+}
+.schedule-list li .arrow {
+  content: "";
+  display: block;
+  height: 32px;
+  width: 1px;
+  background-color: #ffffff;
+  margin: 24px auto;
+  position: relative;
+}
+.schedule-list li .arrow:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-right: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  bottom: 0;
+  left: -3px;
+  transform: rotate(45deg);
+}
+@container body (min-width: 1024px) {
+  .schedule-list li .arrow {
+    position: absolute;
+    top: 6px;
+    right: -60px;
+    width: 100px;
+    height: 1px;
+  }
+  .schedule-list li .arrow:after {
+    left: unset;
+    right: 0;
+    bottom: -3px;
+    transform: rotate(-45deg);
+  }
+}
+@container body (min-width: 1440px) {
+  .schedule-list li .arrow {
+    right: -70px;
+    width: 120px;
+  }
+}
+.schedule-list img {
+  margin-bottom: 8px;
+}
+@container body (min-width: 1024px) {
+  .schedule-list img {
+    margin-bottom: 16px;
+  }
+}
+.schedule-list p {
+  font-size: 1.25rem;
 }
 
 body {
@@ -743,14 +868,6 @@ ul {
 @container body (min-width: 1440px) {
   ul:first-of-type {
     margin: 0;
-  }
-}
-ul li > img {
-  padding: 50px 0 22px;
-}
-@container body (min-width: 1024px) {
-  ul li > img {
-    padding: 88px 0 32px;
   }
 }
 

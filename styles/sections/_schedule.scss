@@ -1,0 +1,122 @@
+@use '../colors';
+
+#schedule {
+  padding: 82px 0 0 0;
+
+  @container body (min-width: 768px) {
+    padding: 200px 0 0 0;
+  }
+}
+
+.schedule-list {
+  display: flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  padding-top: 8px;
+  position: relative;
+  justify-content: center !important;
+
+  @container body (min-width: 1024px) {
+    flex-direction: row;
+    gap: 20px;
+    padding-top: 50px;
+
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: colors.$color-white;
+      left: -920px;
+      top: 80px;
+    }
+
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 1px;
+      width: 100%;
+      background-color: colors.$color-white;
+      right: -920px;
+      top: 80px;
+    }
+  }
+
+  @container body (min-width: 1440px) {
+    &:before {
+      left: -985px;
+    }
+
+    &:after {
+      right: -985px;
+    }
+  }
+
+  li {
+    @container body (min-width: 1024px) {
+      position: relative;
+      width: 162px;
+    }
+
+    @container body (min-width: 1440px) {
+      min-width: 192px;
+    }
+
+    & .arrow {
+      content: '';
+      display: block;
+      height: 32px;
+      width: 1px;
+      background-color: colors.$color-white;
+      margin: 24px auto;
+      position: relative;
+
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 6px;
+        width: 6px;
+        border-right: 1px solid colors.$color-white;
+        border-bottom: 1px solid colors.$color-white;
+        bottom: 0;
+        left: -3px;
+        transform: rotate(45deg);
+      }
+
+      @container body (min-width: 1024px) {
+        position: absolute;
+        top: 6px;
+        right: -60px;
+        width: 100px;
+        height: 1px;
+
+        &:after {
+          left: unset;
+          right: 0;
+          bottom: -3px;
+          transform: rotate(-45deg);
+        }
+      }
+
+      @container body (min-width: 1440px) {
+        right: -70px;
+        width: 120px;
+      }
+    }
+  }
+
+  img {
+    margin-bottom: 8px;
+
+    @container body (min-width: 1024px) {
+      margin-bottom: 16px;
+    }
+  }
+
+  p {
+    font-size: 1.25rem; // 20px
+  }
+}
