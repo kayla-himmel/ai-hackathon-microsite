@@ -46,6 +46,14 @@
       place-items: start;
       position: relative;
     }
+
+    li > img {
+      padding: 50px 0 22px;
+
+      @container body (min-width: 1024px) {
+        padding: 88px 0 32px;
+      }
+    }
   }
 }
 
