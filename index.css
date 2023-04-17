@@ -592,16 +592,16 @@ table {
 .faq-list li .faq-details {
   position: relative;
 }
-.faq-list li .faq-details:focus-within {
-  outline: 2px dashed #ffffff;
-  outline-offset: 12px;
-}
 .faq-list li .faq-details[open] summary:before {
   display: none;
 }
 .faq-list li .faq-details summary {
   list-style-type: none;
   margin-bottom: 8px;
+}
+.faq-list li .faq-details summary:focus-visible {
+  outline: 2px dashed #ffffff;
+  outline-offset: 8px;
 }
 .faq-list li .faq-details summary::-webkit-details-marker {
   display: none;

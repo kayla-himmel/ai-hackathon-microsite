@@ -26,11 +26,6 @@
     .faq-details {
       position: relative;
 
-      &:focus-within {
-        outline: 2px dashed colors.$color-white;
-        outline-offset: 12px;
-      }
-
       &[open] {
         summary:before {
           display: none;
@@ -40,6 +35,11 @@
       summary {
         list-style-type: none;
         margin-bottom: 8px;
+
+        &:focus-visible {
+          outline: 2px dashed colors.$color-white;
+          outline-offset: 8px;
+        }
 
         &::-webkit-details-marker {
           display: none;
