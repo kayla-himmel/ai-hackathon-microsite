@@ -179,19 +179,21 @@
   & li {
     position: relative;
   }
+
+  & li a {
+    color: colors.$color-white;
+    font-size: 1.5rem; // 24px
+    text-decoration: none;
+    opacity: 0.5;
+    font-weight: 400;
+
+    @container body (min-width: 1024px) {
+      font-size: 0.875rem; // 14px
+    }
+  }
 }
 
 .site-nav-links a {
-  color: colors.$color-white;
-  text-decoration: none;
-  opacity: 0.5;
-  font-size: 1.5rem; // 24px
-  font-weight: 400;
-
-  @container body (min-width: 1024px) {
-    font-size: 0.875rem; // 14px
-  }
-
   &.-active:after {
     content: '';
     display: block;
