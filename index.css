@@ -115,12 +115,17 @@ table {
 
 #top-nav {
   background: #00023d;
-  padding: 25px 0;
-  position: fixed;
+  padding: 16px 0;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 99;
   width: 100%;
+}
+@container body (min-width: 1024px) {
+  #top-nav {
+    padding: 20px 0;
+  }
 }
 
 .container {
@@ -372,8 +377,8 @@ table {
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
-  padding: 0 24px;
+  height: calc(100vh - 100px);
+  padding: 0 48px;
 }
 @container body (min-width: 768px) {
   #hero {
@@ -386,12 +391,9 @@ table {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 100px);
 }
 
-#heroH1 {
-  white-space: pre-line;
-}
 @container body (min-width: 1024px) {
   #heroH1 {
     white-space: normal;

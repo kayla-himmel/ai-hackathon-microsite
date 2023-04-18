@@ -3,12 +3,16 @@
 // Top Navigation Bar
 #top-nav {
   background: colors.$color-blue;
-  padding: 25px 0;
-  position: fixed;
+  padding: 16px 0;
+  position: sticky;
   top: 0;
   left: 0;
   z-index: 99;
   width: 100%;
+
+  @container body (min-width: 1024px) {
+    padding: 20px 0;
+  }
 }
 
 .container {
