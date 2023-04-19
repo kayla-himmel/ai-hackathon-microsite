@@ -4,8 +4,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  height: 100vh;
-  padding: 0 24px;
+  height: calc(100vh - 100px);
+  padding: 0 48px;
 
   @container body (min-width: 768px) {
     padding: 0 72px 0;
@@ -17,12 +17,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: calc(100vh - 100px);
 }
 
 #heroH1 {
-  white-space: pre-line;
-
   @container body (min-width: 1024px) {
     white-space: normal;
 
