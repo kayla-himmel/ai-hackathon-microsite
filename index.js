@@ -101,3 +101,47 @@ const currentYear = new Date().getFullYear();
 copyrightYearElements.forEach((element) => {
   element.innerHTML = currentYear;
 });
+
+// TOP NAVIGATION LINKS
+const userIsAtBottomOfPage = () => {
+  return window.innerHeight + window.pageYOffset >= document.body.offsetHeight;
+};
+
+const userIsAtSection = (section) => {
+  const sectionTop = section.offsetTop;
+  const sectionHeight = section.offsetHeight;
+
+  return (
+    window.pageYOffset >= sectionTop &&
+    window.pageYOffset < sectionTop + sectionHeight - 1
+  );
+};
+
+const setSectionNavLinkAsActive = (section) => {
+  const sectionId = section.id === 'hero' ? 'home' : section.id;
+  const sectionNavLink = document.querySelectorAll(
+    `.site-nav-links li a[href="#${sectionId}"]`
+  )[0];
+  const sectionNavLinkIsNotActive =
+    !sectionNavLink.classList.contains('-active');
+
+  if (sectionNavLinkIsNotActive) {
+    clearActiveLinkStyles();
+    addActiveLinkStyles(sectionNavLink);
+  }
+};
+
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('section');
+
+  if (userIsAtBottomOfPage()) {
+    setSectionNavLinkAsActive(sections[sections.length - 1]);
+    return;
+  }
+
+  sections.forEach((section) => {
+    if (userIsAtSection(section)) {
+      setSectionNavLinkAsActive(section);
+    }
+  });
+});
