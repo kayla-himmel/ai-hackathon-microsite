@@ -1,3 +1,5 @@
+import OktaSignIn from '@okta/okta-signin-widget';
+
 // SOCIAL NAVIGATION
 const socialLinks = document.querySelectorAll('.social-nav a');
 
@@ -101,3 +103,47 @@ const currentYear = new Date().getFullYear();
 copyrightYearElements.forEach((element) => {
   element.innerHTML = currentYear;
 });
+
+// AUTHENTICATION
+const oktaConfig = {
+  issuer: 'https://willowtree.okta.com/oauth2/default',
+  redirectUri: 'http://localhost:3000/',
+  clientId: '0oa975qgku9UmleSU5d7',
+};
+// Search for URL Parameters to see if a user is being routed to the application to recover password
+const searchParams = new URL(window.location.href).searchParams;
+oktaConfig.otp = searchParams.get('otp');
+oktaConfig.state = searchParams.get('state');
+
+const oktaSignIn = new OktaSignIn(oktaConfig);
+
+oktaSignIn.authClient.token.getUserInfo().then(
+  function (user) {
+    document.getElementById('messageBox').innerHTML =
+      'Hello, ' + user.email + '! You are *still* logged in! :)';
+    document.getElementById('logout').style.display = 'block';
+  },
+  function () {
+    oktaSignIn
+      .showSignInToGetTokens({
+        el: '#okta-login-container',
+      })
+      .then(function (tokens) {
+        oktaSignIn.authClient.tokenManager.setTokens(tokens);
+        oktaSignIn.remove();
+
+        const idToken = tokens.idToken;
+        document.getElementById('messageBox').innerHTML =
+          'Hello, ' + idToken.claims.email + '! You just logged in! :)';
+        document.getElementById('logout').style.display = 'block';
+      })
+      .catch(function (err) {
+        console.error(err);
+      });
+  }
+);
+
+function logout() {
+  oktaSignIn.authClient.signOut();
+  location.reload();
+}

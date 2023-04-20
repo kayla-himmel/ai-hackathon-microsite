@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+    src="https://global.oktacdn.com/okta-auth-js/7.0.0/okta-auth-js.polyfill.js"
+    type="text/javascript"
+  ></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -11,11 +15,29 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
+    <link
+      href="https://global.oktacdn.com/okta-signin-widget/7.5.2/css/okta-sign-in.min.css"
+      type="text/css"
+      rel="stylesheet"
+    />
     <title>AI Hackathon</title>
   </head>
   <body>
+    <body>
+      <div class="container">
+        <h1 class="text-center">Simple Web Page</h1>
+        <div id="messageBox" class="jumbotron">
+          You are not logged in.
+        </div>
+        <!-- where the sign-in form appears -->
+        <div id="okta-login-container"></div>
+        <button id="logout" class="button" onclick="logout()" style="display: none">Logout</button>
+      </div>
+  </body>
+  <!-- <body>
     <div class="body-container">
       <div id="gradient"></div>
+      <div id="widget-container"></div>
       <div id="login-container">
         <form method="get" action="login">
           <button id="login-button" class="button" type="submit">Login</button>
@@ -102,7 +124,7 @@
         </div> -->
 
         <!-- HERO SECTION -->
-        <section id="hero">
+        <!-- <section id="hero">
           <div id="hero-content">
             <h1 id="heroH1" aria-label="#Chat Saves TD">
               <span aria-hidden="true">#Chat</span>
@@ -122,10 +144,10 @@
             </a>
           </div>
           <a href="#mission" id="hero-scroll">Scroll</a>
-        </section>
+        </section> -->
 
         <!-- THE MISSION SECTION -->
-        <section id="mission">
+        <!-- <section id="mission">
           <div class="mission-header-goals-wrapper">
             <div>
               <h2>
@@ -268,10 +290,10 @@
               </ol>
             </div>
           </div>
-        </section>
+        </section> -->
 
         <!-- SCHEDULE SECTION -->
-        <section id="schedule">
+        <!-- <section id="schedule">
           <h2>
             <mark class="mark-teal -center">Schedule</mark>
           </h2>
@@ -301,10 +323,10 @@
               <p>share learnings</p>
             </li>
           </ul>
-        </section>
+        </section> -->
 
         <!-- RULES SECTION -->
-        <section id="rules" class="max-width-686">
+        <!-- <section id="rules" class="max-width-686">
           <h2>
             <mark class="mark-teal -center">Rules</mark>
           </h2>
@@ -376,10 +398,10 @@
               </p>
             </li>
           </ol>
-        </section>
+        </section> -->
 
         <!-- FAQS SECTION -->
-        <section id="faqs" class="max-width-686">
+        <!-- <section id="faqs" class="max-width-686">
           <h2>
             <mark class="mark-teal -center">FAQs</mark>
           </h2>
@@ -481,10 +503,10 @@
               </details>
             </li>
           </ul>
-        </section>
+        </section> -->
 
         <!-- REGISTRATION SECTION -->
-        <section id="registration" class="max-width-686">
+        <!-- <section id="registration" class="max-width-686">
           <h2>
             <mark class="mark-teal -center">Registration</mark>
           </h2>
@@ -513,10 +535,10 @@
           >
             Register Now
           </a>
-        </section>
+        </section> -->
 
         <!-- FOOTER SECTION -->
-        <footer>
+        <!-- <footer>
           <ul class="social-nav">
             <li>
               <a href="https://www.facebook.com/willowtreeapps/" target="_blank"
@@ -549,10 +571,6 @@
         </footer>
       </main>
     </div>
-  </body>
-  <script
-    src="https://global.oktacdn.com/okta-auth-js/7.0.0/okta-auth-js.polyfill.js"
-    type="text/javascript"
-  ></script>
-  <script src="index.js" type="text/javascript"></script>
+  </body> -->
+  <!-- <script src="index.js" type="text/javascript"></script> -->
 </html>
