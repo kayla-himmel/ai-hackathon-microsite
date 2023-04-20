@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "build": "sass --watch styles/index.scss index.css"
+    "build": "sass --watch styles/index.scss index.css",
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
     "sass": "^1.60.0"
   },
   "dependencies": {
-    "@okta/okta-auth-js": "^7.2.0"
+    "@okta/okta-auth-js": "^7.2.0",
+    "dotenv": "^16.0.3"
   }
 }

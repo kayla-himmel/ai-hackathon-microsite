@@ -964,7 +964,9 @@ ol li > p {
   border-radius: 54px;
   font-weight: 300;
   line-height: 118.75%;
+  min-width: 175px;
   text-decoration: none;
+  box-sizing: border-box;
 }
 .button:hover, .button:focus {
   background-color: #ffffff;
@@ -1004,6 +1006,17 @@ ol li > p {
   transform: rotate(-45deg);
   left: -1px;
   width: 24px;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.login-container p {
+  display: none;
 }
 
 /*# sourceMappingURL=index.css.map */

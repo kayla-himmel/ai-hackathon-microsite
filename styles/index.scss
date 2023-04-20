@@ -185,7 +185,7 @@ ol {
 
   li::marker {
     font-weight: 500;
-    font-size: 1.125rem; 
+    font-size: 1.125rem;
   }
 
   li {
@@ -213,7 +213,9 @@ ol {
   border-radius: 54px;
   font-weight: 300;
   line-height: 118.75%; // 19px
+  min-width: 175px;
   text-decoration: none;
+  box-sizing: border-box;
 
   &:hover,
   &:focus {
@@ -256,4 +258,16 @@ ol {
   transform: rotate(-45deg);
   left: -1px;
   width: 24px;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  p {
+    display: none;
+  }
 }
