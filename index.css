@@ -113,6 +113,10 @@ table {
   border-spacing: 0;
 }
 
+#login-container {
+  display: block;
+}
+
 #top-nav {
   background: #00023d;
   padding: 25px 0;
@@ -804,6 +808,10 @@ body mark {
 
 .body-container {
   container: body/inline-size;
+}
+
+#protected-content {
+  display: none;
 }
 
 .mark-teal {

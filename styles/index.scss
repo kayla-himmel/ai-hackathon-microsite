@@ -1,5 +1,6 @@
 @use './reset';
 @use './colors';
+@use './sections/login';
 @use './sections/nav';
 @use './sections/hero';
 @use './sections/mission';
@@ -36,6 +37,10 @@ body {
 
 .body-container {
   container: body / inline-size;
+}
+
+#protected-content {
+  display: none;
 }
 
 .mark-teal {
