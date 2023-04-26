@@ -1,7 +1,7 @@
 {
   "name": "ai-hackathon-microsite",
   "version": "1.0.0",
-  "description": "",
+  "description": "AI Hackathon site where Okta auth is required to view content.",
   "main": "index.js",
   "scripts": {
     "test": "test",
@@ -20,5 +20,10 @@
   "devDependencies": {
     "prettier": "^2.8.7",
     "sass": "^1.60.0"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
   }
 }
