@@ -5,7 +5,7 @@
 First-time users:
 
 1. `npm install`
-2. `npm run build`
+2. `npm run build` to watch for SCSS changes (and update the compiled CSS file) and launch the project
 
 Any other time after the first time:
 
@@ -17,7 +17,7 @@ Any other time after the first time:
   - type of ticket / short name of ticket
   - Ex: `feature/project-setup`
 - Commit Messages:
-  - Ticket number: Commit message in past tense
+  - Ticket number: Commit message written in past tense
   - Ex: `AI-16: Added project setup`
 - See for ticket numbers: <https://github.com/users/kayla-himmel/projects/1>
 
