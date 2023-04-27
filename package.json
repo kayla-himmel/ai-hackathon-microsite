@@ -1,5 +1,5 @@
 {
-  "name": "ai-hackathon-microsite",
+  "name": "ai-hackathon",
   "version": "1.0.0",
   "description": "AI Hackathon site where Okta auth is required to view content.",
   "main": "index.js",

@@ -5,7 +5,7 @@
 First-time users:
 
 1. `npm install`
-2. `npm run build` to watch for SCSS changes (and update the compiled CSS file) and launch the project
+2. `npm run build` to watch for SCSS changes (and update the compiled CSS file) and launch the project with node
 
 Any other time after the first time:
 
