@@ -1,5 +1,6 @@
 # Dependency directories
 node_modules/
+.env
 
 # macOS general
 .DS_Store
