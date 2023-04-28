@@ -2,14 +2,16 @@
 
 ## Building the Project
 
-First-time users:
+First-time users, run these commands in the terminal:
 
 1. `npm install`
 2. `npm run build` to watch for SCSS changes (and update the compiled CSS file) and launch the project with node
 
-Any other time after the first time:
+After the time, you can just run:
 
 1. `npm run build`
+
+View the built project at http://localhost:8080/
 
 ## Git Naming Conventions
 
