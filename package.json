@@ -6,7 +6,7 @@
   "scripts": {
     "test": "test",
     "build": "sass --watch styles/index.scss index.css",
-    "start": "node . --watch"
+    "start": "node ."
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,6 @@
   "dependencies": {
     "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
-    "express": "^4.18.2"
+    "express": "^4.18.2",
   }
 }
