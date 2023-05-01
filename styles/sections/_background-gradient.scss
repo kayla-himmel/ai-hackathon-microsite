@@ -1,0 +1,221 @@
+@use '../colors';
+
+@function add-repeating-gradient(
+  $left: 0px,
+  $top: 500,
+  $numberOfGradients: 1,
+  $transparencySize: 380px,
+  $distanceBetweenGradients: 1000
+) {
+  $val: radial-gradient(
+    circle at $left $top + #{'px'},
+    colors.$color-teal-35,
+    transparent $transparencySize
+  );
+  @for $i from 1 to $numberOfGradients {
+    $top: $top + $distanceBetweenGradients;
+    $val: #{$val},
+      radial-gradient(
+        circle at $left $top + #{'px'},
+        colors.$color-teal-35,
+        transparent $transparencySize
+      );
+  }
+  @return $val;
+}
+
+@mixin addBackgroundGradients(
+  $left-amount: 0,
+  $left-top: 0,
+  $right-amount: 0,
+  $right-top: 0
+) {
+  background: add-repeating-gradient(0px, $left-top, $left-amount, 380px, 1000),
+    add-repeating-gradient(100%, $right-top, $right-amount, 380px, 1000);
+
+  @container body (min-width: 1024px) {
+    background: add-repeating-gradient(
+        0px,
+        $left-top,
+        $left-amount,
+        600px,
+        1400
+      ),
+      add-repeating-gradient(100%, $right-top, $right-amount, 600px, 1400);
+  }
+}
+
+.background-gradient-image {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+
+  &.-top {
+    @include addBackgroundGradients(
+      $left-amount: 1,
+      $left-top: 0,
+      $right-amount: 1,
+      $right-top: 800
+    );
+  }
+
+  &.-mission {
+    @include addBackgroundGradients(
+      $left-amount: 4,
+      $left-top: 500,
+      $right-amount: 3,
+      $right-top: 1000
+    );
+
+    @container body (min-width: 768px) {
+      @include addBackgroundGradients(
+        $left-amount: 3,
+        $left-top: 500,
+        $right-amount: 2,
+        $right-top: 1000
+      );
+    }
+
+    @container body (min-width: 1024px) {
+      @include addBackgroundGradients(
+        $left-amount: 2,
+        $left-top: 500,
+        $right-amount: 2,
+        $right-top: 1000
+      );
+    }
+  }
+
+  &.-schedule {
+    @include addBackgroundGradients(
+      $left-amount: 1,
+      $left-top: 950,
+      $right-amount: 1,
+      $right-top: 350
+    );
+
+    @container body (min-width: 1024px) {
+      @include addBackgroundGradients(
+        $left-amount: 2,
+        $left-top: 750,
+        $right-amount: 1,
+        $right-top: 1300
+      );
+    }
+  }
+
+  &.-rules {
+    @include addBackgroundGradients(
+      $left-amount: 2,
+      $left-top: 1200,
+      $right-amount: 2,
+      $right-top: 700
+    );
+
+    @container body (min-width: 1024px) {
+      background: none;
+    }
+  }
+
+  &.-faqs {
+    @include addBackgroundGradients(
+      $left-amount: 1,
+      $left-top: 1700,
+      $right-amount: 1,
+      $right-top: 1000
+    );
+
+    @container body (min-width: 1024px) {
+      @include addBackgroundGradients(
+        $left-amount: 1,
+        $left-top: 1500,
+        $right-amount: 1,
+        $right-top: 900
+      );
+    }
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+
+    @container body (min-width: 1024px) {
+      width: 500px;
+      height: 500px;
+    }
+
+    &#headImage {
+      top: 60px;
+    }
+
+    &#magnifyingGlassImage {
+      right: 24px;
+      top: 625px;
+
+      @container body (min-width: 1024px) {
+        top: 500px;
+      }
+    }
+
+    &#stairsImage {
+      left: -40px;
+      top: 450px;
+
+      @container body (min-width: 1024px) {
+        top: 200px;
+      }
+    }
+
+    &#decagonImage {
+      right: -40px;
+      top: 2850px;
+
+      @container body (min-width: 768px) {
+        top: 1900px;
+      }
+
+      @container body (min-width: 1024px) {
+        right: 0;
+        top: 2000px;
+      }
+    }
+
+    &#exclamationMarkImage {
+      left: -20px;
+      top: 950px;
+
+      @container body (min-width: 1024px) {
+        top: 500px;
+      }
+    }
+
+    &#eyeImage {
+      right: -50px;
+      top: 575px;
+
+      @container body (min-width: 1024px) {
+        top: 650px;
+      }
+    }
+
+    &#squareBubbleImage {
+      left: -40px;
+      top: 2075px;
+
+      @container body (min-width: 1024px) {
+        top: 1550px;
+      }
+    }
+
+    &#secondSquareBubbleImage {
+      right: -50px;
+      top: 850px;
+
+      @container body (min-width: 1024px) {
+        top: 650px;
+      }
+    }
+  }
+}
