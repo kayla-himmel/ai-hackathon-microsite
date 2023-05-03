@@ -153,6 +153,11 @@
     position: absolute;
 
     @container body (min-width: 1024px) {
+      width: 350px;
+      height: 350px;
+    }
+
+    @container body (min-width: 1440px) {
       width: 500px;
       height: 500px;
     }
