@@ -127,12 +127,22 @@ table {
     background: radial-gradient(circle at 0px 0px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 800px, rgba(26, 187, 169, 0.35), transparent 600px);
   }
 }
+@container body (min-width: 1440px) {
+  .background-gradient-image.-top {
+    background: radial-gradient(circle at 0px 0px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 800px, rgba(26, 187, 169, 0.35), transparent 700px);
+  }
+}
 .background-gradient-image.-mission {
   background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 2500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 3500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 2000px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 3000px, rgba(26, 187, 169, 0.35), transparent 380px);
 }
 @container body (min-width: 1024px) {
   .background-gradient-image.-mission {
     background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 4700px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 3800px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-mission {
+    background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 4700px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 3800px, rgba(26, 187, 169, 0.35), transparent 700px);
   }
 }
 @container body (min-width: 768px) {
@@ -142,6 +152,11 @@ table {
   @container body (min-width: 1024px) {
     .background-gradient-image.-mission {
       background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 600px);
+    }
+  }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-mission {
+      background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 700px);
     }
   }
 }
@@ -154,6 +169,11 @@ table {
       background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 600px);
     }
   }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-mission {
+      background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 700px);
+    }
+  }
 }
 .background-gradient-image.-schedule {
   background: radial-gradient(circle at 0px 950px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 350px, rgba(26, 187, 169, 0.35), transparent 380px);
@@ -161,6 +181,11 @@ table {
 @container body (min-width: 1024px) {
   .background-gradient-image.-schedule {
     background: radial-gradient(circle at 0px 950px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 350px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-schedule {
+    background: radial-gradient(circle at 0px 950px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 350px, rgba(26, 187, 169, 0.35), transparent 700px);
   }
 }
 @container body (min-width: 1024px) {
@@ -172,6 +197,11 @@ table {
       background: radial-gradient(circle at 0px 750px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 2150px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1300px, rgba(26, 187, 169, 0.35), transparent 600px);
     }
   }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-schedule {
+      background: radial-gradient(circle at 0px 750px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 2150px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1300px, rgba(26, 187, 169, 0.35), transparent 700px);
+    }
+  }
 }
 .background-gradient-image.-rules {
   background: radial-gradient(circle at 0px 1200px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 2200px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 700px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1700px, rgba(26, 187, 169, 0.35), transparent 380px);
@@ -179,6 +209,11 @@ table {
 @container body (min-width: 1024px) {
   .background-gradient-image.-rules {
     background: radial-gradient(circle at 0px 1200px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 2600px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 700px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2100px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-rules {
+    background: radial-gradient(circle at 0px 1200px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 2600px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 700px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2100px, rgba(26, 187, 169, 0.35), transparent 700px);
   }
 }
 @container body (min-width: 1024px) {
@@ -194,6 +229,11 @@ table {
     background: radial-gradient(circle at 0px 1700px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px);
   }
 }
+@container body (min-width: 1440px) {
+  .background-gradient-image.-faqs {
+    background: radial-gradient(circle at 0px 1700px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px);
+  }
+}
 @container body (min-width: 1024px) {
   .background-gradient-image.-faqs {
     background: radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 900px, rgba(26, 187, 169, 0.35), transparent 380px);
@@ -203,6 +243,11 @@ table {
       background: radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 900px, rgba(26, 187, 169, 0.35), transparent 600px);
     }
   }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-faqs {
+      background: radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 900px, rgba(26, 187, 169, 0.35), transparent 700px);
+    }
+  }
 }
 .background-gradient-image img {
   width: 200px;
@@ -210,6 +255,12 @@ table {
   position: absolute;
 }
 @container body (min-width: 1024px) {
+  .background-gradient-image img {
+    width: 350px;
+    height: 350px;
+  }
+}
+@container body (min-width: 1440px) {
   .background-gradient-image img {
     width: 500px;
     height: 500px;
@@ -309,6 +360,11 @@ table {
     padding: 20px 150px;
     justify-content: space-between;
     background: radial-gradient(circle at -100px -200px, rgba(26, 187, 169, 0.5), #00023d 750px);
+  }
+  @container body (min-width: 1440px) {
+    .container {
+      background: radial-gradient(circle at -100px -200px, rgba(26, 187, 169, 0.5), #00023d 810px);
+    }
   }
 }
 @container body (min-width: 1240px) {
