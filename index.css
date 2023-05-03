@@ -113,36 +113,263 @@ table {
   border-spacing: 0;
 }
 
+.background-gradient-image {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: -1;
+}
+.background-gradient-image.-top {
+  background: radial-gradient(circle at 0px 0px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 800px, rgba(26, 187, 169, 0.35), transparent 380px);
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-top {
+    background: radial-gradient(circle at 0px 0px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 800px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-top {
+    background: radial-gradient(circle at 0px 0px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 800px, rgba(26, 187, 169, 0.35), transparent 700px);
+  }
+}
+.background-gradient-image.-mission {
+  background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 2500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 3500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 2000px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 3000px, rgba(26, 187, 169, 0.35), transparent 380px);
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-mission {
+    background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 4700px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 3800px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-mission {
+    background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 4700px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 3800px, rgba(26, 187, 169, 0.35), transparent 700px);
+  }
+}
+@container body (min-width: 768px) {
+  .background-gradient-image.-mission {
+    background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 2500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 2000px, rgba(26, 187, 169, 0.35), transparent 380px);
+  }
+  @container body (min-width: 1024px) {
+    .background-gradient-image.-mission {
+      background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 600px);
+    }
+  }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-mission {
+      background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 3300px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 700px);
+    }
+  }
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-mission {
+    background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 2000px, rgba(26, 187, 169, 0.35), transparent 380px);
+  }
+  @container body (min-width: 1024px) {
+    .background-gradient-image.-mission {
+      background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 600px);
+    }
+  }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-mission {
+      background: radial-gradient(circle at 0px 500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 1900px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2400px, rgba(26, 187, 169, 0.35), transparent 700px);
+    }
+  }
+}
+.background-gradient-image.-schedule {
+  background: radial-gradient(circle at 0px 950px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 350px, rgba(26, 187, 169, 0.35), transparent 380px);
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-schedule {
+    background: radial-gradient(circle at 0px 950px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 350px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-schedule {
+    background: radial-gradient(circle at 0px 950px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 350px, rgba(26, 187, 169, 0.35), transparent 700px);
+  }
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-schedule {
+    background: radial-gradient(circle at 0px 750px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 1750px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1300px, rgba(26, 187, 169, 0.35), transparent 380px);
+  }
+  @container body (min-width: 1024px) {
+    .background-gradient-image.-schedule {
+      background: radial-gradient(circle at 0px 750px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 2150px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1300px, rgba(26, 187, 169, 0.35), transparent 600px);
+    }
+  }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-schedule {
+      background: radial-gradient(circle at 0px 750px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 2150px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1300px, rgba(26, 187, 169, 0.35), transparent 700px);
+    }
+  }
+}
+.background-gradient-image.-rules {
+  background: radial-gradient(circle at 0px 1200px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 0px 2200px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 700px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1700px, rgba(26, 187, 169, 0.35), transparent 380px);
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-rules {
+    background: radial-gradient(circle at 0px 1200px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 0px 2600px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 700px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 2100px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-rules {
+    background: radial-gradient(circle at 0px 1200px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 0px 2600px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 700px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 2100px, rgba(26, 187, 169, 0.35), transparent 700px);
+  }
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-rules {
+    background: none;
+  }
+}
+.background-gradient-image.-faqs {
+  background: radial-gradient(circle at 0px 1700px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 380px);
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-faqs {
+    background: radial-gradient(circle at 0px 1700px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 600px);
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image.-faqs {
+    background: radial-gradient(circle at 0px 1700px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 1000px, rgba(26, 187, 169, 0.35), transparent 700px);
+  }
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image.-faqs {
+    background: radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 380px), radial-gradient(circle at 100% 900px, rgba(26, 187, 169, 0.35), transparent 380px);
+  }
+  @container body (min-width: 1024px) {
+    .background-gradient-image.-faqs {
+      background: radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 600px), radial-gradient(circle at 100% 900px, rgba(26, 187, 169, 0.35), transparent 600px);
+    }
+  }
+  @container body (min-width: 1440px) {
+    .background-gradient-image.-faqs {
+      background: radial-gradient(circle at 0px 1500px, rgba(26, 187, 169, 0.35), transparent 700px), radial-gradient(circle at 100% 900px, rgba(26, 187, 169, 0.35), transparent 700px);
+    }
+  }
+}
+.background-gradient-image img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img {
+    width: 350px;
+    height: 350px;
+  }
+}
+@container body (min-width: 1440px) {
+  .background-gradient-image img {
+    width: 500px;
+    height: 500px;
+  }
+}
+.background-gradient-image img#headImage {
+  top: 60px;
+}
+.background-gradient-image img#magnifyingGlassImage {
+  right: 24px;
+  top: 625px;
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img#magnifyingGlassImage {
+    top: 500px;
+  }
+}
+.background-gradient-image img#stairsImage {
+  left: -40px;
+  top: 450px;
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img#stairsImage {
+    top: 200px;
+  }
+}
+.background-gradient-image img#decagonImage {
+  right: -40px;
+  top: 2850px;
+}
+@container body (min-width: 768px) {
+  .background-gradient-image img#decagonImage {
+    top: 1900px;
+  }
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img#decagonImage {
+    right: 0;
+    top: 2000px;
+  }
+}
+.background-gradient-image img#exclamationMarkImage {
+  left: -20px;
+  top: 950px;
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img#exclamationMarkImage {
+    top: 500px;
+  }
+}
+.background-gradient-image img#eyeImage {
+  right: -50px;
+  top: 575px;
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img#eyeImage {
+    top: 650px;
+  }
+}
+.background-gradient-image img#squareBubbleImage {
+  left: -40px;
+  top: 2075px;
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img#squareBubbleImage {
+    top: 1550px;
+  }
+}
+.background-gradient-image img#secondSquareBubbleImage {
+  right: -50px;
+  top: 850px;
+}
+@container body (min-width: 1024px) {
+  .background-gradient-image img#secondSquareBubbleImage {
+    top: 650px;
+  }
+}
+
 #top-nav {
-  background: #00023d;
-  padding: 16px 0;
+  background-color: #00023d;
   position: sticky;
   top: 0;
   left: 0;
   z-index: 99;
   width: 100%;
 }
-@container body (min-width: 1024px) {
-  #top-nav {
-    padding: 20px 0;
-  }
-}
 
 .container {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0 24px;
+  padding: 16px 24px;
+  background: radial-gradient(circle at -100px -110px, rgba(26, 187, 169, 0.5), #00023d 500px);
 }
 @container body (min-width: 1024px) {
   .container {
-    padding: 0 150px;
+    padding: 20px 150px;
     justify-content: space-between;
+    background: radial-gradient(circle at -100px -200px, rgba(26, 187, 169, 0.5), #00023d 750px);
+  }
+  @container body (min-width: 1440px) {
+    .container {
+      background: radial-gradient(circle at -100px -200px, rgba(26, 187, 169, 0.5), #00023d 810px);
+    }
   }
 }
 @container body (min-width: 1240px) {
   .container {
-    padding: 0 200px;
+    padding: 20px 200px;
   }
 }
 
@@ -444,22 +671,6 @@ table {
   margin-top: 8px;
 }
 
-/* #mission {
-  position: relative;
-  height: 100%;
-} */
-.mission-header-goals-wrapper {
-  /* &:before {
-    content: ' ';
-    display: block;
-    position: absolute;
-    top: 545px;
-    left: 0;
-    width: 200px;
-    height: 200px;
-    background: url('./assets/stairs-wireframe.svg') no-repeat;
-  } */
-}
 .mission-header-goals-wrapper h2 {
   margin: 0 0 24px -10px;
 }
@@ -809,14 +1020,6 @@ body mark {
   background-color: rgba(26, 187, 169, 0.5);
 }
 
-#gradient {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: radial-gradient(circle at top left, rgba(26, 187, 169, 0.5), transparent 30%), radial-gradient(circle at bottom right, rgba(26, 187, 169, 0.5), #00023d 30%);
-  z-index: -1;
-}
-
 section {
   margin: 0 auto;
   padding: 82px 24px 0;
@@ -908,7 +1111,7 @@ h4,
 
 a {
   letter-spacing: 0.05em;
-  color: #1abba9;
+  color: #ffffff;
   text-decoration: underline;
 }
 a:hover, a:focus, a:active {

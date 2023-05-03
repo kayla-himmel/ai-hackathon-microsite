@@ -145,3 +145,17 @@ window.addEventListener('scroll', () => {
     }
   });
 });
+
+// BACKGROUND GRADIENTS
+// Note: I originally had the height set as 100% on the .background-gradient-image class,
+// this worked on all browsers except for Firefox. Firefox did not appreciate
+// elements being absolutely positioned with 100% height, so the elements overflowed the body.
+// I tried a few different things to fix this, but I came up with using javascript to set the height
+// of the background gradient containers to 100% minus the offset of the container.
+const backgroundGradientContainers = document.querySelectorAll(
+  '.background-gradient-image'
+);
+
+backgroundGradientContainers.forEach((container) => {
+  container.style.height = `calc(100% - ${container.offsetTop}px)`;
+});
