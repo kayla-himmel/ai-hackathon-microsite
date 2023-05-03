@@ -15,6 +15,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 16px 24px;
+  // nav gradient lines up with background gradient so it's seamless at top of page
   background: radial-gradient(
     circle at -100px -110px,
     colors.$color-teal-50,
@@ -29,6 +30,14 @@
       colors.$color-teal-50,
       colors.$color-blue 750px
     );
+
+    @container body (min-width: 1440px) {
+      background: radial-gradient(
+        circle at -100px -200px,
+        colors.$color-teal-50,
+        colors.$color-blue 810px
+      );
+    }
   }
 
   @container body (min-width: 1240px) {

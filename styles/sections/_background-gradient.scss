@@ -43,6 +43,17 @@
       ),
       add-repeating-gradient(100%, $right-top, $right-amount, 600px, 1400);
   }
+
+  @container body (min-width: 1440px) {
+    background: add-repeating-gradient(
+        0px,
+        $left-top,
+        $left-amount,
+        700px,
+        1400
+      ),
+      add-repeating-gradient(100%, $right-top, $right-amount, 700px, 1400);
+  }
 }
 
 .background-gradient-image {
